@@ -1,0 +1,24 @@
+[submodule ".config/base16-shell"]
+	path = .config/base16-shell
+	url = https://github.com/chriskempson/base16-shell.git
+[submodule ".config/nvim/pack/bundle/opt/base16-vim"]
+	path = .config/nvim/pack/bundle/opt/base16-vim
+	url = https://github.com/chriskempson/base16-vim.git
+[submodule ".config/nvim/pack/bundle/opt/command-t"]
+	path = .config/nvim/pack/bundle/opt/command-t
+	url = https://github.com/wincent/command-t.git
+[submodule ".config/nvim/pack/bundle/opt/deoplete.nvim"]
+	path = .config/nvim/pack/bundle/opt/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule ".config/nvim/pack/bundle/opt/LanguageClient-neovim"]
+	path = .config/nvim/pack/bundle/opt/LanguageClient-neovim
+	url = https://github.com/autozimu/LanguageClient-neovim.git
+[submodule ".config/nvim/pack/bundle/opt/tabular"]
+	path = .config/nvim/pack/bundle/opt/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule ".config/nvim/pack/bundle/opt/ultisnips"]
+	path = .config/nvim/pack/bundle/opt/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule ".config/nvim/pack/bundle/opt/vim-surround"]
+	path = .config/nvim/pack/bundle/opt/vim-surround
+	url = https://github.com/tpope/vim-surround.git

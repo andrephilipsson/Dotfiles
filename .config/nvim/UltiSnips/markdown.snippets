@@ -1,0 +1,16 @@
+snippet note "Notes header" b
+<!--
+Datum: `date +%F` 
+Kurs: `!p snip.rv = __import__("os").getcwd().split("/")[-3]`
+-->
+
+# `!p snip.rv = snip.basename`
+$0
+endsnippet
+
+snippet table
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+endsnippet
