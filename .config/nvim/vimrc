@@ -2,6 +2,8 @@ let mapleader="\<Space>" " Change leader key
 
 " Define neovim-ruby-host path
 let g:ruby_host_prog = "$HOME/.gem/ruby/2.7.0/bin/neovim-ruby-host"
+let g:python3_host_prog = "/usr/bin/python"
+let g:loaded_python_provider = 0  " Disable python2 support
 
 let g:deoplete#enable_at_startup = 1
 " Cycle through completions with <tab> and <S-tab>
@@ -52,3 +54,6 @@ hi Comment cterm=italic
 hi clear SpellCap
 hi SpellCap cterm=underline ctermfg=yellow
 hi SpellBad cterm=underline 
+
+filetype indent plugin on
+syntax on
