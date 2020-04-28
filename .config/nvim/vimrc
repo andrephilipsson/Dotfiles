@@ -20,7 +20,8 @@ let g:LanguageClient_hoverPreview='Always'
 let g:LanguageClient_serverCommands = {
     \ 'python': ['~/.local/bin/pyls'],
     \ 'sh': ['bash-language-server', 'start'],
-    \ 'latex': ['texlab']
+    \ 'latex': ['texlab'],
+    \ 'kotlin': ['~/.local/share/kotlin-language-server/server/build/install/server/bin/kotlin-language-server']
     \ }
 
 " Load plugins
@@ -29,12 +30,15 @@ if &loadplugins
     packadd! base16-vim
     packadd! command-t
     packadd! deoplete.nvim
+    packadd! kotlin-vim
     packadd! LanguageClient-neovim
     packadd! tabular
     packadd! ultisnips
     packadd! vim-surround
   endif
 endif
+
+let g:netrw_home="~/.config/nvim/"
 
 let base16colorspace=256 " Enable 256 bit colors
 set background=dark
