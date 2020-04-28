@@ -32,3 +32,4 @@ set relativenumber              " Use relative line numbers
 set splitbelow                  " Open horizontal splits below
 set splitright                  " Open vertical splits to the right
 set scrolloff=3                 " Always show 3 lines under the current line
+set mouse=a                     " Enable mouse support
