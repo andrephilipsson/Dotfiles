@@ -28,3 +28,6 @@
 [submodule ".config/nvim/pack/bundle/opt/follow-markdown-links"]
 	path = .config/nvim/pack/bundle/opt/follow-markdown-links
 	url = https://github.com/ykrivopalov/follow-markdown-links.git
+[submodule ".config/nvim/pack/bundle/opt/vim-markdown"]
+	path = .config/nvim/pack/bundle/opt/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git

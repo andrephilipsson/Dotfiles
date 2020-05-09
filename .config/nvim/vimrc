@@ -24,6 +24,15 @@ let g:LanguageClient_serverCommands = {
     \ 'kotlin': ['~/.local/share/kotlin-language-server/server/build/install/server/bin/kotlin-language-server']
     \ }
 
+" Disable some unnecessary features of vim-markdown
+let g:vim_markdown_override_foldtext=0
+let g:vim_markdown_no_default_key_mappings=1
+let g:vim_markdown_emphasis_multiline=0
+let g:vim_markdown_conceal=0
+let g:vim_markdown_frontmatter=1
+let g:vim_markdown_new_list_item_indent=0
+let g:vim_markdown_folding_level=3
+
 " Load plugins
 if &loadplugins
   if has("packages")
@@ -35,6 +44,7 @@ if &loadplugins
     packadd! LanguageClient-neovim
     packadd! tabular
     packadd! ultisnips
+    packadd! vim-markdown
     packadd! vim-surround
   endif
 endif
