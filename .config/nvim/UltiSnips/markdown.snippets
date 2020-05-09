@@ -8,9 +8,21 @@ Kurs: `!p snip.rv = __import__("os").getcwd().split("/")[-3]`
 $0
 endsnippet
 
-snippet table
+snippet table "Table" b
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
+endsnippet
+
+snippet tablerow "New table row" b
+| Content Cell  | Content Cell  |
+endsnippet
+
+snippet link "Link"
+[$1]($2) $0
+endsnippet
+
+snippet img "Image"
+![$1]($2) $0
 endsnippet
