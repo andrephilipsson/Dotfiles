@@ -13,3 +13,6 @@ let g:CommandTCancelMap=['<ESC>', '<C-c>']
 let g:CommandTWildIgnore=&wildignore
 let g:CommandTWildIgnore.=",*/.git/*"
 let g:CommandTWildIgnore.=",*/tmp/*"
+let g:CommandTWildIgnore.=",*/Böcker/*"
+let g:CommandTWildIgnore.=",*/Film/*"
+let g:CommandTWildIgnore.=",*/Musik/*"

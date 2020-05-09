@@ -24,22 +24,6 @@ let g:LanguageClient_serverCommands = {
     \ 'kotlin': ['~/.local/share/kotlin-language-server/server/build/install/server/bin/kotlin-language-server']
     \ }
 
-" Disable some unnecessary features of vim-markdown
-let g:vim_markdown_override_foldtext=0
-let g:vim_markdown_no_default_key_mappings=1
-let g:vim_markdown_emphasis_multiline=0
-let g:vim_markdown_conceal=0
-let g:vim_markdown_frontmatter=1
-let g:vim_markdown_new_list_item_indent=0
-let g:vim_markdown_folding_level=3
-
-" Python syntax
-let g:python_version_2=0
-let b:python_version_2=0
-let g:python_highlight_indent_errors=0
-let g:python_highlight_space_errors=0
-let g:python_highlight_all=1
-
 " Load plugins
 if &loadplugins
   if has("packages")
@@ -57,7 +41,8 @@ if &loadplugins
   endif
 endif
 
-let g:netrw_home="~/.config/nvim/"
+" Move annoying files out of the way
+let g:netrw_home="~/.cache/nvim/"
 
 let base16colorspace=256 " Enable 256 bit colors
 set background=dark
