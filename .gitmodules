@@ -31,3 +31,6 @@
 [submodule ".config/nvim/pack/bundle/opt/vim-markdown"]
 	path = .config/nvim/pack/bundle/opt/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule ".config/nvim/pack/bundle/opt/python-syntax"]
+	path = .config/nvim/pack/bundle/opt/python-syntax
+	url = https://github.com/vim-python/python-syntax.git

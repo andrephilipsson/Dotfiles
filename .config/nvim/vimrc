@@ -33,6 +33,13 @@ let g:vim_markdown_frontmatter=1
 let g:vim_markdown_new_list_item_indent=0
 let g:vim_markdown_folding_level=3
 
+" Python syntax
+let g:python_version_2=0
+let b:python_version_2=0
+let g:python_highlight_indent_errors=0
+let g:python_highlight_space_errors=0
+let g:python_highlight_all=1
+
 " Load plugins
 if &loadplugins
   if has("packages")
@@ -42,6 +49,7 @@ if &loadplugins
     packadd! follow-markdown-links
     packadd! kotlin-vim
     packadd! LanguageClient-neovim
+    packadd! python-syntax
     packadd! tabular
     packadd! ultisnips
     packadd! vim-markdown
