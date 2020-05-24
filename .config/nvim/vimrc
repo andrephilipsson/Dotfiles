@@ -11,8 +11,6 @@ let g:LanguageClient_useFloatingHover=1
 let g:LanguageClient_hoverPreview='Always'
 let g:LanguageClient_serverCommands = {
     \ 'python': ['~/.local/bin/pyls'],
-    \ 'sh': ['bash-language-server', 'start'],
-    \ 'latex': ['texlab'],
     \ 'kotlin': ['~/.local/share/kotlin-language-server/server/build/install/server/bin/kotlin-language-server']
     \ }
 

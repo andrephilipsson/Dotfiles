@@ -1,5 +1,6 @@
 let base16colorspace=256  " Enables 256 bit colors
 set background=dark
+set termguicolors
 
 " Enable italic comment
 hi Comment cterm=italic
