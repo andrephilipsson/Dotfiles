@@ -1,10 +1,13 @@
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<C-Space>"
-"let g:UltiSnipsJumpForwardTrigger="<C-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 
-" YouCompleteMe
-"let g:ycm_filetype_whitelist={"*": 1}
-"let g:ycm_filetype_blacklist={"text": 1}
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+" Cycle through completions with <tab> and <S-tab>
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
+
+" Close documentation window when completion is done
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
