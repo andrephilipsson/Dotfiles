@@ -3,9 +3,9 @@ alias lock="dm-tool switch-to-greeter"
 alias vim="nvim"
 alias v="nvim"
 alias g="git"
-alias ls="ls --color=auto"
-alias ll="ls -l --color=auto"
-alias la="ls -la --color=auto"
+alias ls="ls -F"
+alias ll="ls -lF"
+alias la="ls -laF"
 
 setopt autocd		# Automatically cd into typed directory.
 
