@@ -6,6 +6,9 @@ let g:CommandTScanDotDirectories=1
 
 let g:CommandTMaxCachedDirectories=10
 
+" Use current working directory as base path
+let g:CommandTTraverseSCM="pwd"
+
 let g:CommandTMaxFiles=1000000
 
 let g:CommandTCancelMap=['<ESC>', '<C-c>']
