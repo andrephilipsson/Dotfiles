@@ -17,6 +17,7 @@ brew tap homebrew/homebrew-cask-versions
 # Install formulae
 brew install docker
 brew install git
+brew install github/gh/gh
 brew install gnupg
 brew install grep
 brew install htop
