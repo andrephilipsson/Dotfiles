@@ -34,7 +34,10 @@ endif
 " Move annoying files out of the way
 let g:netrw_home="~/.cache/nvim/"
 
-colorscheme base16-seti  " Set the colorscheme
+if filereadable(expand("~/.cache/base16-shell/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.cache/base16-shell/.vimrc_background
+endif
 
 filetype indent plugin on
 syntax on
