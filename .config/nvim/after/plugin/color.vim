@@ -1,5 +1,5 @@
 set background=dark
-set termguicolors
+"set termguicolors
 
 " Enable italic comment
 hi Comment cterm=italic
@@ -11,5 +11,5 @@ hi Comment cterm=italic
 " Remove underline
 hi CursorLineNr cterm=none
 
-" Don't check for capital letters at start of sentence 
+" Don't check for capital letters at start of sentence
 set spellcapcheck=
