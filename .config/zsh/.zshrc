@@ -15,6 +15,7 @@ export PS1="[%n@%m]%(!.#.$) "
 source $HOME/dotfiles/.config/zsh/path
 
 # Base16 Shell
+export BASE16_SHELL_FILE_DIR="$XDG_CACHE_HOME/base16-shell"
 export BASE16_SHELL_SET_BACKGROUND=false
 BASE16_SHELL="$HOME/.config/zsh/base16-shell/"
 [ -n "$PS1" ] && \
