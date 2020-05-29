@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Change the keyboard layout to swedish
+setxkbmap se
+
+# Remap CapsLock to AltGr
+xmodmap -e "keycode 66 = ISO_Level3_Shift"
+
+# But when pressed only once, remap it to Escape
+xcape -e "ISO_Level3_Shift=Escape"
+
+# Increase key speed
+xset r rate 300 50
