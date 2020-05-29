@@ -11,3 +11,6 @@ xwallpaper --center ~/.config/wall.png
 
 # Remap CapsLock to AltGr
 remap
+
+# Hide the mouse cursor while inactive
+unclutter &
