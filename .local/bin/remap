@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Change the keyboard layout to swedish
-setxkbmap se
-
 # Remap CapsLock to AltGr
 xmodmap -e "keycode 66 = ISO_Level3_Shift"
 
