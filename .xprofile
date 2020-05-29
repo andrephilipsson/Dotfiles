@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Make sure we use 144Hz refresh rate
+xrandr --output DP-1 --mode 1920x1080 --rate 144 &
+
+# For transparency
+xcompmgr &
+
+# Set the wallpaper
+xwallpaper --center ~/.config/wall.png
+
+# Remap CapsLock to AltGr
+remap
