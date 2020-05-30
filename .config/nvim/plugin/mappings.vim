@@ -5,6 +5,5 @@ nnoremap <Leader>x :xit<CR>
 nnoremap <Tab> zA
 
 " Toggle spell checking
-nnoremap <F5> :set spell spelllang=sv<CR>
-nnoremap <F6> :set spell spelllang=en<CR>
-nnoremap <F7> :set nospell<CR>
+nnoremap <silent> <F5> :setlocal spell! spelllang=sv<CR>
+nnoremap <silent> <F6> :setlocal spell! spelllang=en<CR>
