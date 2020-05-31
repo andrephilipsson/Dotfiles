@@ -5,5 +5,5 @@ set textwidth=0
 nnoremap <Leader>T :TableFormat<CR>
 
 " Enable spell checking
-set spelllang=en_us,sv_se
+set spelllang=en,sv
 set spell
