@@ -8,24 +8,16 @@ let g:ruby_host_prog="$HOME/.gem/ruby/2.7.0/bin/neovim-ruby-host"
 let g:python3_host_prog="/usr/bin/python"
 let g:loaded_python_provider=0  " Disable python2 support
 
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-
-let g:LanguageClient_useFloatingHover=1
-let g:LanguageClient_hoverPreview='Always'
-let g:LanguageClient_serverCommands = {
-    \ 'python': ['~/.local/bin/pyls'],
-    \ 'kotlin': ['~/.local/share/kotlin-language-server/server/build/install/server/bin/kotlin-language-server']
-    \ }
-
 " Load plugins
 if &loadplugins
   if has("packages")
     packadd! base16-vim
     packadd! command-t
+    packadd! deoplete-lsp
     packadd! deoplete.nvim
     packadd! follow-markdown-links
     packadd! kotlin-vim
-    packadd! LanguageClient-neovim
+    packadd! nvim-lsp
     packadd! python-syntax
     packadd! tabular
     packadd! ultisnips
@@ -33,6 +25,11 @@ if &loadplugins
     packadd! vim-surround
   endif
 endif
+
+lua << END
+  require"nvim_lsp".pyls.setup{}
+  require'nvim_lsp'.kotlin_language_server.setup{}
+END
 
 " Move annoying files out of the way
 let g:netrw_home="~/.cache/nvim/"
