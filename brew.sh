@@ -61,6 +61,7 @@ brew cask install sdformatter
 brew cask install signal
 brew cask install tor-browser
 brew cask install veracrypt
+brew cask install wireshark
 
 # Install fonts
 brew cask install font-source-code-pro
