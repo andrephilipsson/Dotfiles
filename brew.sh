@@ -13,6 +13,7 @@ brew upgrade
 
 # Tap into other repositories
 brew tap homebrew/homebrew-cask-versions
+brew tap homebrew/cask-fonts
 
 # Install formulae
 brew install docker
@@ -24,7 +25,7 @@ brew install htop
 brew install kotlin
 brew install less
 brew install mat2
-brew install neovim
+brew install neovim --HEAD
 brew install node
 brew install openjdk@11
 brew install pandoc
