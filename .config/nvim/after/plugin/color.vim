@@ -1,8 +1,8 @@
 set background=dark
-"set termguicolors
+set termguicolors
 
 " Enable italic comment
-hi Comment cterm=italic
+hi Comment cterm=italic gui=italic
 
 " Enable transparent background
 " hi Normal ctermbg=none
