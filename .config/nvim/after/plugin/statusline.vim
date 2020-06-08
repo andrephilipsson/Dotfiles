@@ -1,6 +1,3 @@
-execute "highlight User1 cterm=italic gui=italic ctermbg=19 guibg=#373b41"
-execute "highlight User2 cterm=bold gui=bold ctermbg=19 guibg=#373b41"
-
 function statusline#filepath()
   let l:basename = expand("%:h")
   
@@ -18,6 +15,19 @@ function statusline#spell()
   else
     return " [" . &spelllang . "]"
   endif
+endfunction
+
+function statusline#color()
+  let bgcolor = synIDattr(hlID("StatusLine"), "bg#") 
+
+  if &termguicolors
+    let group = "guibg="
+  else
+    let group = "ctermbg="
+  endif
+
+  execute "highlight User1 cterm=italic gui=italic " . group . bgcolor
+  execute "highlight User2 cterm=bold gui=bold " . group . bgcolor
 endfunction
 
 function statusline#ft()
@@ -63,3 +73,9 @@ function statusline#right()
 
   return l:status
 endfunction
+
+call statusline#color()
+
+" Update the statusline color when termguicolors is set or when a new
+" colorscheme is selected
+autocmd ColorScheme * call statusline#color()
