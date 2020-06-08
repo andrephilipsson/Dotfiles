@@ -10,7 +10,7 @@ alias la="ls -laF"
 setopt autocd		# Automatically cd into typed directory.
 
 # Prompt
-export PS1="[%n@%m]%(!.#.$) "
+export PS1="[%n@%m %1~]%(!.#.$) "
 
 source $HOME/dotfiles/.config/zsh/path
 
