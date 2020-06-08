@@ -1,5 +1,5 @@
-execute "highlight User1 cterm=italic ctermbg=19"
-execute "highlight User2 cterm=bold ctermbg=19"
+execute "highlight User1 cterm=italic gui=italic ctermbg=19 guibg=#373b41"
+execute "highlight User2 cterm=bold gui=bold ctermbg=19 guibg=#373b41"
 
 function statusline#filepath()
   let l:basename = expand("%:h")
