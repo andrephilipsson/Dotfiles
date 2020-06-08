@@ -1,1 +1,1 @@
-/home/ape/dotfiles/.config/nvim/vimrc
+source ~/dotfiles/.config/nvim/vimrc
