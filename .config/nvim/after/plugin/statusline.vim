@@ -18,16 +18,14 @@ function statusline#spell()
 endfunction
 
 function statusline#color()
-  let bgcolor = synIDattr(hlID("StatusLine"), "bg#") 
-
-  if &termguicolors
-    let group = "guibg="
-  else
-    let group = "ctermbg="
-  endif
-
-  execute "highlight User1 cterm=italic gui=italic " . group . bgcolor
-  execute "highlight User2 cterm=bold gui=bold " . group . bgcolor
+  execute "highlight User1 cterm=italic gui=italic " . pinnacle#highlight({
+    \ "bg": pinnacle#extract_bg("StatusLine"),
+    \ "fg": pinnacle#extract_fg("StatusLine")
+    \ })
+  execute "highlight User2 cterm=bold gui=bold " . pinnacle#highlight({
+    \ "bg": pinnacle#extract_bg("StatusLine"),
+    \ "fg": pinnacle#extract_fg("StatusLine")
+    \ })
 endfunction
 
 function statusline#ft()

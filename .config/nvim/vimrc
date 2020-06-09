@@ -4,8 +4,7 @@ let mapleader="\<Space>" " Change leader key
 au TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 300)
 
 " Define neovim-ruby-host path
-let g:ruby_host_prog="$HOME/.gem/ruby/2.7.0/bin/neovim-ruby-host"
-let g:python3_host_prog="/usr/bin/python"
+"let g:ruby_host_prog="$HOME/.gem/ruby/2.7.0/bin/neovim-ruby-host"
 let g:loaded_python_provider=0  " Disable python2 support
 
 " Load plugins
@@ -18,6 +17,7 @@ if &loadplugins
     packadd! follow-markdown-links
     packadd! kotlin-vim
     packadd! nvim-lsp
+    packadd! pinnacle
     packadd! python-syntax
     packadd! tabular
     packadd! ultisnips
