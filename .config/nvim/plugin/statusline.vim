@@ -9,4 +9,4 @@ set statusline+=%0*
 
 set statusline+=%=
 
-set statusline+=%{statusline#right()}
+"set statusline+=%{statusline#right()}
