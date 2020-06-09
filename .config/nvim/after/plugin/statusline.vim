@@ -1,6 +1,3 @@
-execute "highlight User1 cterm=italic ctermbg=19"
-execute "highlight User2 cterm=bold ctermbg=19"
-
 function statusline#filepath()
   let l:basename = expand("%:h")
   
@@ -18,6 +15,17 @@ function statusline#spell()
   else
     return " [" . &spelllang . "]"
   endif
+endfunction
+
+function statusline#color()
+  execute "highlight User1 cterm=italic gui=italic " . pinnacle#highlight({
+    \ "bg": pinnacle#extract_bg("StatusLine"),
+    \ "fg": pinnacle#extract_fg("StatusLine")
+    \ })
+  execute "highlight User2 cterm=bold gui=bold " . pinnacle#highlight({
+    \ "bg": pinnacle#extract_bg("StatusLine"),
+    \ "fg": pinnacle#extract_fg("StatusLine")
+    \ })
 endfunction
 
 function statusline#ft()
@@ -63,3 +71,9 @@ function statusline#right()
 
   return l:status
 endfunction
+
+call statusline#color()
+
+" Update the statusline color when termguicolors is set or when a new
+" colorscheme is selected
+autocmd ColorScheme * call statusline#color()
