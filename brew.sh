@@ -25,7 +25,9 @@ brew install htop
 brew install kotlin
 brew install less
 brew install mat2
+brew install mpv
 brew install neovim --HEAD
+brew install newsboat
 brew install node
 brew install openjdk@11
 brew install pandoc
