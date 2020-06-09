@@ -47,11 +47,11 @@ brew install zsh
 brew cask install android-platform-tools
 brew cask install android-studio
 brew cask install balenaetcher
-brew cask install brave-browser
 brew cask install firefox
 brew cask install firefox-developer-edition
 brew cask install geogebra
 brew cask install gimp
+brew cask install google-chrome-canary
 brew cask install inkscape
 brew cask install iterm2
 brew cask install keepassxc
