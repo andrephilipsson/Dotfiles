@@ -1,3 +1,8 @@
 #!/bin/sh
 
-echo "$(pamixer --get-volume)%"
+val=$(pamixer --get-volume-human)
+
+case $val in
+  "muted") echo "🔇 0%";;
+  *) echo "🔉 $val";;
+esac
