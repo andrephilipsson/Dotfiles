@@ -1,0 +1,11 @@
+#!/bin/sh
+
+VOL="${2:-5}"
+
+case $1 in
+  toggle) pulsemixer --toggle-mute;;
+  up) pulsemixer --change-volume +${VOL};;
+  down) pulsemixer --change-volume -${VOL};;
+esac
+
+kill -44 $(pidof dwmblocks)
