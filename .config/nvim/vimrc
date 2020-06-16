@@ -21,6 +21,7 @@ if &loadplugins
     packadd! python-syntax
     packadd! tabular
     packadd! ultisnips
+    packadd! vim-jsx-pretty
     packadd! vim-markdown
     packadd! vim-surround
   endif

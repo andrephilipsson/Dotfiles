@@ -46,3 +46,6 @@
 [submodule ".config/nvim/pack/bundle/opt/pinnacle"]
 	path = .config/nvim/pack/bundle/opt/pinnacle
 	url = https://github.com/wincent/pinnacle.git
+[submodule ".config/nvim/pack/bundle/opt/vim-jsx-pretty"]
+	path = .config/nvim/pack/bundle/opt/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
