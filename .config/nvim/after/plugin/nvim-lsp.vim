@@ -30,4 +30,4 @@ sign define LspDiagnosticsInformationSign text=ℹ
 sign define LspDiagnosticsHintSign text=➤
 
 autocmd ColorScheme * call s:SetUpLspHighlights()
-autocmd FileType python,kotlin call s:SetUpLspHighlights()
+autocmd FileType python,kotlin,javascript call s:SetUpLspHighlights()
