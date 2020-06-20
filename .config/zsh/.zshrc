@@ -8,6 +8,7 @@ alias ll="ls -lF"
 alias la="ls -laF"
 
 setopt autocd		# Automatically cd into typed directory.
+set -o vi   # Press <ESC> to use vi on the command line
 
 # Prompt
 export PS1="[%n@%m %1~]%(!.#.$) "
