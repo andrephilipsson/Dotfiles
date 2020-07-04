@@ -14,6 +14,7 @@ set -o vi   # Press <ESC> to use vi on the command line
 export PS1="[%n@%m %1~]%(!.#.$) "
 
 source $HOME/dotfiles/.config/zsh/path
+source $HOME/dotfiles/.config/zsh/exports.secret
 
 # Base16 Shell
 export BASE16_SHELL_FILE_DIR="$XDG_CACHE_HOME/base16-shell"

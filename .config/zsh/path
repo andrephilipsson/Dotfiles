@@ -4,8 +4,9 @@ SYSTEM_PATH=$PATH
 unset PATH
 
 PATH="$HOME/.local/bin"
-PATH="$PATH:/$HOME/.local/bin/statusbar"
+PATH="$PATH:$HOME/.local/bin/statusbar"
 PATH="$PATH:/usr/local/bin"
 PATH="$PATH:/usr/local/sbin"
+PATH="$PATH:$HOME/.local/share/kotlin-language-server/server/build/install/server/bin"
 PATH="$PATH:$SYSTEM_PATH"
 export PATH
