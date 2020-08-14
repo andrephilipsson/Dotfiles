@@ -52,7 +52,6 @@ brew cask install firefox
 brew cask install firefox-developer-edition
 brew cask install geogebra
 brew cask install gimp
-brew cask install google-chrome-canary
 brew cask install inkscape
 brew cask install iterm2
 brew cask install keepassxc
