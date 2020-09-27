@@ -20,7 +20,9 @@ sudo apt install -y \
 	libtool-bin \
 	ninja-build \
 	pkg-config \
+	tmux \
 	unzip \
+	zsh \
 
 # Install Github-cli
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
