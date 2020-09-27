@@ -1,6 +1,0 @@
-[alias]
-	co = checkout
-	br = branch
-	st = status
-	ci = commit
-	last = log -1 HEAD
