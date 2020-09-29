@@ -22,6 +22,7 @@ sudo apt install -y \
 	ninja-build \
 	pkg-config \
 	ruby \
+	ruby-dev \
 	scala \
 	tmux \
 	unzip \
