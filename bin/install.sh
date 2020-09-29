@@ -13,6 +13,7 @@ sudo apt install -y \
 	autoconf \
 	automake \
 	cmake \
+	default-jre \
 	g++ \
 	gettext \
 	keepassxc
@@ -20,11 +21,11 @@ sudo apt install -y \
 	libtool-bin \
 	ninja-build \
 	pkg-config \
+	ruby \
+	scala \
 	tmux \
 	unzip \
 	zsh \
-	default-jre \
-	scala
 
 # Install Github-cli
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
