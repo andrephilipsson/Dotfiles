@@ -1,0 +1,3 @@
+[submodule "config/nvim/pack/bundle/opt/tabular"]
+	path = config/nvim/pack/bundle/opt/tabular
+	url = https://github.com/godlygeek/tabular.git

@@ -1,1 +1,13 @@
-set number relativenumber
+let mapleader="\<Space>"          " Change leader key to <Space>
+
+let g:netrw_home="~/.cache/nvim/" " Move annoying files out of the way
+
+if &loadplugins
+  if has("packages")
+    packadd! tabular
+  endif
+endif
+
+
+filetype indent plugin on	  " Enable ft detection, indentation and load plugin file 
+syntax on			  " Enable syntax highlighting
