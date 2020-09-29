@@ -51,5 +51,13 @@ cd neovim
 make CMAKE_BUILD_TYPE=Release
 sudo make install
 
+# Install provider-ruby for Neovim
+sudo gem install neovim
+
+# Compile Command-t vim-plugin
+cd pack/bundle/opt/command-t/ruby/command-t/ext/command-t
+ruby extconf.rb
+make
+
 # Symlink dotfiles
 # TODO

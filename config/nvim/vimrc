@@ -4,6 +4,7 @@ let g:netrw_home="~/.cache/nvim/" " Move annoying files out of the way
 
 if &loadplugins
   if has("packages")
+    packadd! command-t
     packadd! tabular
   endif
 endif
