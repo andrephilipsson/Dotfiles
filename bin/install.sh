@@ -20,6 +20,7 @@ sudo apt install -y \
 	libtool \
 	libtool-bin \
 	ninja-build \
+	pip3 \
 	pkg-config \
 	ruby \
 	ruby-dev \
