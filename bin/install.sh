@@ -47,7 +47,7 @@ mkdir Projects
 mkdir Passwords
 
 # Install and build neovim from source
-cd Projects
+cd ~/Projects
 gh repo clone neovim/neovim
 cd neovim
 make CMAKE_BUILD_TYPE=Release
@@ -56,8 +56,15 @@ sudo make install
 # Install provider-ruby for Neovim
 sudo gem install neovim
 
+# Install provider-python for Neovim
+cd ~/.local/share/
+mkdir neovim-virtualenv
+cd neovim-virtualenv
+pipenv install pynvim
+# TODO: Possibly echo path to python executable in the created virtualenv
+
 # Compile Command-t vim-plugin
-cd pack/bundle/opt/command-t/ruby/command-t/ext/command-t
+cd ~/Projects/dotfiles/config/nvim/pack/bundle/opt/command-t/ruby/command-t/ext/command-t
 ruby extconf.rb
 make
 
