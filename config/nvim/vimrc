@@ -1,12 +1,22 @@
-let mapleader="\<Space>"          " Change leader key to <Space>
+let mapleader="\<Space>"             " Change leader key to <Space>
 
-let g:netrw_home="~/.cache/nvim/" " Move annoying files out of the way
+let g:netrw_home="~/.cache/nvim/"    " Move annoying files out of the way
+
+let g:python3_host_prog="~/.local/share/virtualenvs/neovim-virtualenv-OrBhBdWR/bin/python"
+let g:loaded_python_provider=0	     " Disable python2
+
+let g:deoplete#enable_at_startup = 1 " Use deoplete
 
 if &loadplugins
   if has("packages")
     packadd! command-t
-    packadd! corpus
     packadd! tabular
+    packadd! ultisnips
+
+    if has("nvim")
+      packadd! corpus
+      packadd! deoplete.nvim
+    endif
   endif
 endif
 
@@ -24,6 +34,5 @@ if has('nvim')
 .
 endif
 
-
-filetype indent plugin on	  " Enable ft detection, indentation and load plugin file 
-syntax on			  " Enable syntax highlighting
+filetype indent plugin on	     " Enable ft detection, indentation and load plugin file 
+syntax on			     " Enable syntax highlighting

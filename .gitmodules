@@ -4,3 +4,12 @@
 [submodule "config/nvim/pack/bundle/opt/command-t"]
 	path = config/nvim/pack/bundle/opt/command-t
 	url = https://github.com/wincent/command-t.git
+[submodule "config/nvim/pack/bundle/opt/ultisnips"]
+	path = config/nvim/pack/bundle/opt/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "config/nvim/pack/bundle/opt/corpus"]
+	path = config/nvim/pack/bundle/opt/corpus
+	url = https://github.com/wincent/corpus.git
+[submodule "config/nvim/pack/bundle/opt/deoplete.nvim"]
+	path = config/nvim/pack/bundle/opt/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
