@@ -21,6 +21,7 @@ sudo apt install -y \
 	libtool-bin \
 	ninja-build \
 	pip3 \
+	pipenv \
 	pkg-config \
 	ruby \
 	ruby-dev \
