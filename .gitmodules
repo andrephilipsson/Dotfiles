@@ -13,3 +13,6 @@
 [submodule "config/nvim/pack/bundle/opt/deoplete.nvim"]
 	path = config/nvim/pack/bundle/opt/deoplete.nvim
 	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "config/nvim/pack/bundle/opt/vim-snippets"]
+	path = config/nvim/pack/bundle/opt/vim-snippets
+	url = https://github.com/honza/vim-snippets/
