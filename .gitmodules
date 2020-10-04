@@ -16,3 +16,9 @@
 [submodule "config/nvim/pack/bundle/opt/vim-snippets"]
 	path = config/nvim/pack/bundle/opt/vim-snippets
 	url = https://github.com/honza/vim-snippets/
+[submodule "config/nvim/pack/bundle/opt/vim-surround"]
+	path = config/nvim/pack/bundle/opt/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "config/nvim/pack/bundle/opt/python-syntax"]
+	path = config/nvim/pack/bundle/opt/python-syntax
+	url = https://github.com/vim-python/python-syntax

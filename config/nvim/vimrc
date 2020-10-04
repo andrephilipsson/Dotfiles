@@ -10,8 +10,11 @@ let g:deoplete#enable_at_startup = 1 " Use deoplete
 if &loadplugins
   if has("packages")
     packadd! command-t
+    packadd! python-syntax
     packadd! tabular
     packadd! ultisnips
+    packadd! vim-snippets
+    packadd! vim-surround
 
     if has("nvim")
       packadd! corpus
