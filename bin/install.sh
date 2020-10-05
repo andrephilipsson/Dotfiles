@@ -42,6 +42,9 @@ curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89
 sudo apt update
 sudo apt install sbt
 
+# Install Mark Text
+flatpak install flathub com.github.marktext.marktext
+
 # Create directories
 mkdir Projects
 mkdir Passwords
