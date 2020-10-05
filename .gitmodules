@@ -22,3 +22,12 @@
 [submodule "config/nvim/pack/bundle/opt/python-syntax"]
 	path = config/nvim/pack/bundle/opt/python-syntax
 	url = https://github.com/vim-python/python-syntax
+[submodule "config/nvim/pack/bundle/opt/vim-fugitive"]
+	path = config/nvim/pack/bundle/opt/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "config/nvim/pack/bundle/opt/kotlin-vim"]
+	path = config/nvim/pack/bundle/opt/kotlin-vim
+	url = https://github.com/udalov/kotlin-vim.git
+[submodule "config/nvim/pack/bundle/opt/vim-jsx-pretty"]
+	path = config/nvim/pack/bundle/opt/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
