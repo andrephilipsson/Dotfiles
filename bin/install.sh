@@ -26,6 +26,7 @@ sudo apt install -y \
 	ruby \
 	ruby-dev \
 	scala \
+	snapd \
 	tmux \
 	unzip \
 	zsh \
