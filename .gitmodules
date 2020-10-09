@@ -31,3 +31,9 @@
 [submodule "config/nvim/pack/bundle/opt/vim-jsx-pretty"]
 	path = config/nvim/pack/bundle/opt/vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
+[submodule "config/nvim/pack/bundle/opt/deoplete-lsp"]
+	path = config/nvim/pack/bundle/opt/deoplete-lsp
+	url = https://github.com/Shougo/deoplete-lsp/
+[submodule "config/nvim/pack/bundle/opt/nvim-lspconfig"]
+	path = config/nvim/pack/bundle/opt/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig

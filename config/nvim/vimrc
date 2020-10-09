@@ -21,7 +21,9 @@ if &loadplugins
 
     if has("nvim")
       packadd! corpus
+      packadd! deoplete-lsp
       packadd! deoplete.nvim
+      packadd! nvim-lspconfig
     endif
   endif
 endif
