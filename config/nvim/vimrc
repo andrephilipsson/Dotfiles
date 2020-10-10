@@ -43,4 +43,4 @@ if has('nvim')
 endif
 
 filetype indent plugin on	     " Enable ft detection, indentation and load plugin file 
-syntax on			     " Enable syntax highlighting
+syntax on			                 " Enable syntax highlighting

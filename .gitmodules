@@ -37,3 +37,9 @@
 [submodule "config/nvim/pack/bundle/opt/nvim-lspconfig"]
 	path = config/nvim/pack/bundle/opt/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
+[submodule "config/nvim/pack/bundle/opt/base16-vim"]
+	path = config/nvim/pack/bundle/opt/base16-vim
+	url = https://github.com/chriskempson/base16-vim.git
+[submodule "config/base16-shell"]
+	path = config/base16-shell
+	url = https://github.com/j-c-m/base16-shell.git
