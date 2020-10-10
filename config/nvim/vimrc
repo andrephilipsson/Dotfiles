@@ -7,6 +7,11 @@ let g:loaded_python_provider=0	     " Disable python2
 
 let g:deoplete#enable_at_startup = 1 " Use deoplete
 
+if has("nvim")
+  " Highlight yanked text
+  au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, timeout=300}
+endif
+
 if &loadplugins
   if has("packages")
     packadd! command-t
@@ -28,7 +33,7 @@ if &loadplugins
   endif
 endif
 
-if has('nvim')
+if has("nvim")
   lua <<
     CorpusDirectories = {
       ['~/Documents/notes'] = {
