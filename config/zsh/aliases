@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+alias v="nvim"
+alias g="git"
+alias ls="ls -F"

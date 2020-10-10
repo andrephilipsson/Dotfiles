@@ -46,8 +46,10 @@ sudo apt install sbt
 # Install Mark Text
 flatpak install flathub com.github.marktext.marktext
 
+# Change shell to zsh
+chsh -s $(which zsh)
+
 # Create directories
-mkdir Projects
 mkdir Passwords
 
 # Install and build neovim from source
@@ -71,6 +73,9 @@ pipenv install pynvim
 cd ~/Projects/dotfiles/config/nvim/pack/bundle/opt/command-t/ruby/command-t/ext/command-t
 ruby extconf.rb
 make
+
+# Install python-language-server
+pip install "python-language-server[all]"
 
 # Symlink dotfiles
 # TODO
