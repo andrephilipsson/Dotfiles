@@ -18,7 +18,6 @@ setopt HIST_VERIFY             # confirm history expansion (!$, !!, !foo)
 setopt IGNORE_EOF              # [default] prevent accidental C-d from exiting shell
 setopt INTERACTIVE_COMMENTS    # [default] allow comments, even in interactive shells
 setopt LIST_PACKED             # make completion lists more densely packed
-setopt MENU_COMPLETE           # auto-insert first possible ambiguous completion
 setopt NO_NOMATCH              # [default] unmatched patterns are left unchanged
 setopt PRINT_EXIT_VALUE        # [default] for non-zero exit status
 setopt SHARE_HISTORY           # share history across shells
