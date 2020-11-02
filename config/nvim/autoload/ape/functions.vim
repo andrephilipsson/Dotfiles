@@ -16,6 +16,7 @@ function! ape#functions#plaintext() abort
   setlocal textwidth=0
   setlocal wrap
   setlocal wrapmargin=0
+  setlocal breakindentopt=""
 
   call ape#functions#spell()
 
