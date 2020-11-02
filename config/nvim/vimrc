@@ -2,7 +2,7 @@ let mapleader="\<Space>"             " Change leader key to <Space>
 
 let g:netrw_home="~/.cache/nvim/"    " Move annoying files out of the way
 
-let g:python3_host_prog="~/.local/share/virtualenvs/neovim-virtualenv-OrBhBdWR/bin/python"
+let g:python3_host_prog="~/.local/share/nvim/neovim-virtualenv/bin/python"
 let g:loaded_python_provider=0	     " Disable python2
 
 let g:deoplete#enable_at_startup = 1 " Use deoplete

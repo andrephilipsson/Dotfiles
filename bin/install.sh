@@ -63,11 +63,11 @@ sudo make install
 sudo gem install neovim
 
 # Install provider-python for Neovim
-cd ~/.local/share/
-mkdir neovim-virtualenv
-cd neovim-virtualenv
-pipenv install pynvim
-# TODO: Possibly echo path to python executable in the created virtualenv
+cd ~/.local/share/nvim
+virtualenv neovim-virtualenv
+source neovim-virtualenv/bin/activate
+pip install pynvim
+deactivate
 
 # Compile Command-t vim-plugin
 cd ~/Projects/dotfiles/config/nvim/pack/bundle/opt/command-t/ruby/command-t/ext/command-t
