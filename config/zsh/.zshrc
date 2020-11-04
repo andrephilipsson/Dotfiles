@@ -15,7 +15,6 @@ setopt AUTO_PARAM_SLASH        # tab completing directory appends a slash
 setopt HIST_IGNORE_DUPS        # do filter contiguous duplicates from history
 setopt HIST_IGNORE_SPACE       # [default] don't record commands starting with a space
 setopt HIST_VERIFY             # confirm history expansion (!$, !!, !foo)
-setopt IGNORE_EOF              # [default] prevent accidental C-d from exiting shell
 setopt INTERACTIVE_COMMENTS    # [default] allow comments, even in interactive shells
 setopt LIST_PACKED             # make completion lists more densely packed
 setopt NO_NOMATCH              # [default] unmatched patterns are left unchanged
