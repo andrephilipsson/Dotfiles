@@ -13,3 +13,4 @@ let g:CommandTWildIgnore=&wildignore
 let g:CommandTWildIgnore.=",*/.git/*"
 let g:CommandTWildIgnore.=",*/tmp/*"
 let g:CommandTWildIgnore.=",*.class"
+let g:CommandTWildIgnore.=",*/target/*"
