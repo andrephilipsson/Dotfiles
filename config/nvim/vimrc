@@ -16,6 +16,7 @@ if &loadplugins
   if has("packages")
     packadd! command-t
     packadd! kotlin-vim
+    packadd! pinnacle
     packadd! python-syntax
     packadd! tabular
     packadd! ultisnips
