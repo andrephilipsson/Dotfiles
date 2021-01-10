@@ -13,3 +13,6 @@
 [submodule "corpus"]
 	path = config/nvim/pack/bundle/opt/corpus
 	url = https://github.com/wincent/corpus.git
+[submodule "deoplate.nvim"]
+	path = config/nvim/pack/bundle/opt/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
