@@ -1,16 +1,25 @@
-let g:CommandTCancelMap=["<ESC>", "<C-c>"] " Close file listing with <Esc>
+" Close file listing with <Esc>
+let g:CommandTCancelMap=["<ESC>", "<C-c>"]
 
 let g:CommandTEncoding="UTF-8"
-let g:CommandTFileScanner="find"	   " Use 'find' instead of 'ruby' to index files
-let g:CommandTInputDebounce=50		   " Add 50ms delay before listing updates
-let g:CommandTMaxCachedDirectories=10	   " Number of cached directories for faster searches
-let g:CommandTMaxFiles=1000000		   " Maximum number of indexed files
-let g:CommandTScanDotDirectories=1	   " Index dot-directories
+let g:CommandTFileScanner="watchman"
+" Add 50ms delay before listing updates
+let g:CommandTInputDebounce=50
+let g:CommandTMaxCachedDirectories=10
+let g:CommandTMaxFiles=1000000
+let g:CommandTScanDotDirectories=1     " Index dot-directories
 
-let g:CommandTTraverseSCM="pwd"            " Use current working directory as base path
+" Use current working directory as base path
+let g:CommandTTraverseSCM="pwd"
 
+" Ignore these files
 let g:CommandTWildIgnore=&wildignore
 let g:CommandTWildIgnore.=",*/.git/*"
 let g:CommandTWildIgnore.=",*/tmp/*"
 let g:CommandTWildIgnore.=",*.class"
 let g:CommandTWildIgnore.=",*/target/*"
+
+" Search the help docs with <Space> + h
+nmap <unique> <Leader>h <Plug>(CommandTHelp)
+" Search for lines in the current file with <Space> + l
+nmap <unique> <Leader>l <Plug>(CommandTLine)
