@@ -25,3 +25,6 @@
 [submodule "nvim-lspconfig"]
 	path = config/nvim/pack/bundle/opt/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "nvim-metals"]
+	path = config/nvim/pack/bundle/opt/nvim-metals
+	url = https://github.com/scalameta/nvim-metals.git
