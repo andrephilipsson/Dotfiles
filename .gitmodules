@@ -16,3 +16,9 @@
 [submodule "deoplate.nvim"]
 	path = config/nvim/pack/bundle/opt/deoplete.nvim
 	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "tcomment_vim"]
+	path = config/nvim/pack/bundle/opt/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "pinnacle"]
+	path = config/nvim/pack/bundle/opt/pinnacle
+	url = https://github.com/wincent/pinnacle.git
