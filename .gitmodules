@@ -22,3 +22,6 @@
 [submodule "pinnacle"]
 	path = config/nvim/pack/bundle/opt/pinnacle
 	url = https://github.com/wincent/pinnacle.git
+[submodule "nvim-lspconfig"]
+	path = config/nvim/pack/bundle/opt/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
