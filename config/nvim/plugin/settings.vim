@@ -31,6 +31,7 @@ set splitbelow                         " Open horizontal splits below
 set splitright                         " Open vertical splits to the right
 set scrolloff=3                        " Always show 3 lines under the current line
 set mouse=a                            " Enable mouse support
+set clipboard=unnamedplus              " Enable copy paste between vim and everything else
 
 set list                               " show whitespace
 set listchars=nbsp:⦸                   " CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)

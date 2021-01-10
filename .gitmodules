@@ -1,51 +1,6 @@
-[submodule "config/nvim/pack/bundle/opt/tabular"]
-	path = config/nvim/pack/bundle/opt/tabular
-	url = https://github.com/godlygeek/tabular.git
-[submodule "config/nvim/pack/bundle/opt/command-t"]
-	path = config/nvim/pack/bundle/opt/command-t
-	url = https://github.com/wincent/command-t.git
-[submodule "config/nvim/pack/bundle/opt/ultisnips"]
-	path = config/nvim/pack/bundle/opt/ultisnips
-	url = https://github.com/SirVer/ultisnips
-[submodule "config/nvim/pack/bundle/opt/corpus"]
-	path = config/nvim/pack/bundle/opt/corpus
-	url = https://github.com/wincent/corpus.git
-[submodule "config/nvim/pack/bundle/opt/deoplete.nvim"]
-	path = config/nvim/pack/bundle/opt/deoplete.nvim
-	url = https://github.com/Shougo/deoplete.nvim.git
-[submodule "config/nvim/pack/bundle/opt/vim-snippets"]
-	path = config/nvim/pack/bundle/opt/vim-snippets
-	url = https://github.com/honza/vim-snippets/
-[submodule "config/nvim/pack/bundle/opt/vim-surround"]
-	path = config/nvim/pack/bundle/opt/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule "config/nvim/pack/bundle/opt/python-syntax"]
-	path = config/nvim/pack/bundle/opt/python-syntax
-	url = https://github.com/vim-python/python-syntax
-[submodule "config/nvim/pack/bundle/opt/vim-fugitive"]
-	path = config/nvim/pack/bundle/opt/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "config/nvim/pack/bundle/opt/kotlin-vim"]
-	path = config/nvim/pack/bundle/opt/kotlin-vim
-	url = https://github.com/udalov/kotlin-vim.git
-[submodule "config/nvim/pack/bundle/opt/vim-jsx-pretty"]
-	path = config/nvim/pack/bundle/opt/vim-jsx-pretty
-	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
-[submodule "config/nvim/pack/bundle/opt/deoplete-lsp"]
-	path = config/nvim/pack/bundle/opt/deoplete-lsp
-	url = https://github.com/Shougo/deoplete-lsp/
-[submodule "config/nvim/pack/bundle/opt/nvim-lspconfig"]
-	path = config/nvim/pack/bundle/opt/nvim-lspconfig
-	url = https://github.com/neovim/nvim-lspconfig
-[submodule "config/nvim/pack/bundle/opt/base16-vim"]
-	path = config/nvim/pack/bundle/opt/base16-vim
-	url = https://github.com/chriskempson/base16-vim.git
 [submodule "config/base16-shell"]
 	path = config/base16-shell
 	url = git@github.com:andrephilipsson/base16-shell.git
 [submodule "config/zsh/zsh-syntax-highlighting"]
 	path = config/zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "config/nvim/pack/bundle/opt/pinnacle"]
-	path = config/nvim/pack/bundle/opt/pinnacle
-	url = https://github.com/wincent/pinnacle.git
