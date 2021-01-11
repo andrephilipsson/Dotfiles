@@ -1,1 +1,1 @@
-let g:ultisnips_python_style="numpy"
+let g:UltiSnipsEnableSnipMate = 0   " Disable SnipMate support

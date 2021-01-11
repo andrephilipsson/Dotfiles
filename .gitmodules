@@ -13,9 +13,6 @@
 [submodule "corpus"]
 	path = config/nvim/pack/bundle/opt/corpus
 	url = https://github.com/wincent/corpus.git
-[submodule "deoplate.nvim"]
-	path = config/nvim/pack/bundle/opt/deoplete.nvim
-	url = https://github.com/Shougo/deoplete.nvim.git
 [submodule "tcomment_vim"]
 	path = config/nvim/pack/bundle/opt/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
@@ -28,3 +25,9 @@
 [submodule "nvim-metals"]
 	path = config/nvim/pack/bundle/opt/nvim-metals
 	url = https://github.com/scalameta/nvim-metals.git
+[submodule "completion-nvim"]
+	path = config/nvim/pack/bundle/opt/completion-nvim
+	url = https://github.com/nvim-lua/completion-nvim.git
+[submodule "ultisnips"]
+	path = config/nvim/pack/bundle/opt/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
