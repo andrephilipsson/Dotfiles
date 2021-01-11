@@ -34,7 +34,7 @@ set mouse=a                            " Enable mouse support
 set clipboard=unnamedplus              " Enable copy paste between vim and everything else
 
 set shortmess-=F                       " Needed for nvim-metals
-set shortmess+=I
+set shortmess+=I                       " Disable intro message
 
 set list                               " show whitespace
 set listchars=nbsp:⦸                   " CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
