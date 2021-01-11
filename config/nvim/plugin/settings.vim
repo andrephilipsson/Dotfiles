@@ -33,6 +33,11 @@ set scrolloff=3                        " Always show 3 lines under the current l
 set mouse=a                            " Enable mouse support
 set clipboard=unnamedplus              " Enable copy paste between vim and everything else
 
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
 set shortmess-=F                       " Needed for nvim-metals
 set shortmess+=I                       " Disable intro message
 
