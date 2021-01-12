@@ -31,3 +31,6 @@
 [submodule "ultisnips"]
 	path = config/nvim/pack/bundle/opt/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim-dirvish"]
+	path = config/nvim/pack/bundle/opt/vim-dirvish
+	url = https://github.com/justinmk/vim-dirvish.git
