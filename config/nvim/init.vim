@@ -11,6 +11,7 @@ if &loadplugins
   packadd! command-t
   packadd! completion-nvim
   packadd! corpus
+  packadd! java-syntax.vim
   packadd! nvim-lspconfig
   packadd! nvim-metals
   packadd! pinnacle

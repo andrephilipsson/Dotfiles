@@ -34,3 +34,6 @@
 [submodule "vim-dirvish"]
 	path = config/nvim/pack/bundle/opt/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish.git
+[submodule "java-syntax.vim"]
+	path = config/nvim/pack/bundle/opt/java-syntax.vim
+	url = https://github.com/uiiaoo/java-syntax.vim.git
