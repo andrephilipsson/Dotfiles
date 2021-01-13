@@ -16,6 +16,7 @@ if &loadplugins
   packadd! pinnacle
   packadd! tcomment_vim
   packadd! ultisnips
+  packadd! vim-dirvish
 endif
 
 " Highlight yanked text
