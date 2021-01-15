@@ -54,16 +54,16 @@ echo -n "${__ENCRYPTION_PASSPHRASE__}" | cryptsetup open --type luks /dev/sda2 c
 
 log "Creating logical volumes"
 pvcreate --dataalignment 1m /dev/mapper/cryptroot
-vgcreate volgroup0 /dev/mapper/cryptroot
-lvcreate -L 32GB volgroup0 -n root
-lvcreate -l 100%FREE volgroup0 -n home
+vgcreate volgroup /dev/mapper/cryptroot
+lvcreate -L 32GB volgroup -n root
+lvcreate -l 100%FREE volgroup -n home
 
-mkfs.ext4 /dev/volgroup0/root
-mkfs.ext4 /dev/volgroup0/home
+mkfs.ext4 /dev/volgroup/root
+mkfs.ext4 /dev/volgroup/home
 
-mount /dev/volgroup0/root /mnt
+mount /dev/volgroup/root /mnt
 mkdir -p /mnt/home
-mount /dev/volgroup0/home /mnt/home
+mount /dev/volgroup/home /mnt/home
 mkdir -p /mnt/boot
 mount /dev/sda1 /mnt/boot
 
