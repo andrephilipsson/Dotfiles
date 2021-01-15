@@ -2,6 +2,7 @@
 
 # Basically a copy of: https://github.com/wincent/wincent/blob/master/contrib/arch-linux/arch-linux-install.sh
 
+# curl -LO https://raw.githubusercontent.com/andrephilipsson/dotfiles/next/bin/arch-linux-install.sh
 # bash arch-linux-install.sh
 
 set -e
