@@ -89,7 +89,7 @@ log "Setting up database for 'pacman -F filename' searching"
 pacman -Fy
 
 log "Installing kernel and other packages"
-pacman -S --noconfirm linux linux-lts linux-headers linux-lts-headers linux-firmware intel-ucode
+pacman -S --noconfirm linux linux-lts linux-headers linux-lts-headers linux-firmware intel-ucode lvm2
 
 log "Installing other packages you want"
 pacman -S --noconfirm man-db terminus-font
@@ -136,7 +136,7 @@ mkswap /swapfile
 echo -e '\n/swapfile none swap sw 0 0' >> /etc/fstab
 
 log "Installing other dependencies"
-pacman -S --noconfirm git xorg-server dhcpcd networkmanager lvm2
+pacman -S --noconfirm git xorg-server dhcpcd networkmanager
 
 log "Enabling networkmanager"
 systemctl enable NetworkManager
