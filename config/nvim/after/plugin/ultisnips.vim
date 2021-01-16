@@ -1,0 +1,4 @@
+let g:UltiSnipsEnableSnipMate = 0                                     " Disable SnipMate support
+let g:UltiSnipsEditSplit = "vertical"                                 " UltiSnipsEdit opens a vertical split
+let g:UltiSnipsSnippetDirectories = ["ultisnips"]                     " Directory for custom snippets
+let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "ultisnips"  " UltiSnipsEdit will save the snippets here
