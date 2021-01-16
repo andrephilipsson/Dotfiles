@@ -98,7 +98,7 @@ log "Preparing ramdisks for kernel boot"
 sed -i 's/^HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)/HOOKS=(base udev autodetect keyboard keymap modconf block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
 
 echo KEYMAP=se-lat6 >> /etc/vconsole.conf
-echo FONT=ter-132n >> /etc/vconsole.conf
+echo FONT=ter-116n >> /etc/vconsole.conf
 
 mkinitcpio -p linux
 mkinitcpio -p linux-lts
