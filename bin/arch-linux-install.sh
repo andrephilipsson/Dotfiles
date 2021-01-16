@@ -123,9 +123,10 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --re
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 grub-mkconfig -o /boot/grub/grub.cfg
 
-UUID=\$(lsblk /dev/sda2 -o UUID -d -n)
+#UUID=\$(lsblk /dev/sda2 -o UUID -d -n)
 
-sed -i "s/^GRUB_CMDLINE_LINUX=\"\"/GRUB_CMDLINE_LINUX=\"cryptdevice=UUID=\${UUID}:cryptroot root=\/dev\/volgroup\/root\"/" /etc/default/grub
+#sed -i "s/^GRUB_CMDLINE_LINUX=\"\"/GRUB_CMDLINE_LINUX=\"cryptdevice=UUID=\${UUID}:cryptroot root=\/dev\/volgroup\/root\"/" /etc/default/grub
+sed -i "s/^GRUB_CMDLINE_LINUX=\"\"/GRUB_CMDLINE_LINUX=\"cryptdevice=/dev/volgroup/root:cryptroot"/" /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
