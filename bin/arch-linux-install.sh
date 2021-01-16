@@ -126,7 +126,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #UUID=\$(lsblk /dev/sda2 -o UUID -d -n)
 
 #sed -i "s/^GRUB_CMDLINE_LINUX=\"\"/GRUB_CMDLINE_LINUX=\"cryptdevice=UUID=\${UUID}:cryptroot root=\/dev\/volgroup\/root\"/" /etc/default/grub
-sed -i "s/^GRUB_CMDLINE_LINUX=\"\"/GRUB_CMDLINE_LINUX=\"cryptdevice=/dev/volgroup/root:cryptroot"/" /etc/default/grub
+sed -i "s/^GRUB_CMDLINE_LINUX=\"\"/GRUB_CMDLINE_LINUX=\"cryptdevice=\/dev\/volgroup\/root:cryptroot\"/" /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
