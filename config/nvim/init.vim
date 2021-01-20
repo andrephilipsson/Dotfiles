@@ -1,6 +1,5 @@
 " Disable python2
 let g:loaded_python_provider=0
-let g:python3_host_prog="~/.local/share/nvim/neovim-virtualenv/bin/python"
 
 " Change leader key to <Space>
 let mapleader="\<Space>"
@@ -11,13 +10,17 @@ if &loadplugins
   packadd! command-t
   packadd! completion-nvim
   packadd! corpus
-  packadd! java-syntax.vim
+  packadd! markdown-preview.nvim
   packadd! nvim-lspconfig
   packadd! nvim-metals
+  packadd! nvim-treesitter
   packadd! pinnacle
+  packadd! tabular
   packadd! tcomment_vim
   packadd! ultisnips
   packadd! vim-dirvish
+  packadd! vim-fugitive
+  packadd! vim-surround
 endif
 
 " Highlight yanked text

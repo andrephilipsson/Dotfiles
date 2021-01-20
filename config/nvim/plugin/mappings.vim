@@ -1,4 +1,8 @@
-nnoremap Y y$   " Make 'Y' yank the rest of the line
+" Make 'Y' yank the rest of the line
+nnoremap Y y$
+
+" Open and close folds with tab
+nnoremap <Tab> za
 
 " Easier navigation between splits
 nnoremap <C-h> <C-w>h

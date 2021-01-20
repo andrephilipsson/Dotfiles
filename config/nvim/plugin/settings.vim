@@ -41,6 +41,9 @@ set shortmess+=c
 set shortmess-=F                       " Needed for nvim-metals
 set shortmess+=I                       " Disable intro message
 
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 set list                               " show whitespace
 set listchars=nbsp:⦸                   " CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
 set listchars+=tab:▷┅                  " WHITE RIGHT-POINTING TRIANGLE (U+25B7, UTF-8: E2 96 B7)

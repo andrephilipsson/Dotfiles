@@ -6,20 +6,19 @@ lua << END
   -- Python Language Server
   require'lspconfig'.pyls.setup{}
 
-  -- HTML Language Server
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities.textDocument.completion.completionItem.snippetSupport = true
-  require'lspconfig'.html.setup {
-    capabilities = capabilities,
-  }
-
   -- Vue Language Server
   require'lspconfig'.vuels.setup{}
 
   -- Tex Language Server
   require'lspconfig'.texlab.setup{}
 
+  -- Java Language Server
+  require'lspconfig'.jdtls.setup{}
+
+  -- Kotlin Language Server
+  require'lspconfig'.kotlin_language_server.setup{}
 END
+
 
 " Change signs that show up in sign-column
 sign define LspDiagnosticsErrorSign text=✖
