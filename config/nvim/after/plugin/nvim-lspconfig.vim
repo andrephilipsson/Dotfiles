@@ -13,7 +13,10 @@ lua << END
   require'lspconfig'.texlab.setup{}
 
   -- Java Language Server
-  require'lspconfig'.jdtls.setup{}
+  local lspconfig = require'lspconfig'
+  require'lspconfig'.jdtls.setup{
+     root_dir = lspconfig.util.root_pattern('settings.gradle')
+  }
 
   -- Kotlin Language Server
   require'lspconfig'.kotlin_language_server.setup{}
