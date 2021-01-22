@@ -41,6 +41,8 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c                       " For completion
 set shortmess-=F                       " Needed for nvim-metals
 set shortmess+=I                       " Disable intro message
+set shortmess+=W                       " Don't show '[w]'/'[written]' when writing
+set shortmess+=a                       " Use abbreviations in messages
 
 " Don't show warning about an already existing swapfile
 " This isn't a problem since we are using neovim which reloads a file when the
@@ -59,7 +61,6 @@ set foldexpr=nvim_treesitter#foldexpr()
 set list                               " Show whitespace
 set listchars=nbsp:⦸                   " CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
 set listchars+=tab:▷┅                  " WHITE RIGHT-POINTING TRIANGLE (U+25B7, UTF-8: E2 96 B7)
-                                       " + BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL (U+2505, UTF-8: E2 94 85)
 set listchars+=extends:»               " RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
 set listchars+=precedes:«              " LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
 set listchars+=trail:•                 " BULLET (U+2022, UTF-8: E2 80 A2)
