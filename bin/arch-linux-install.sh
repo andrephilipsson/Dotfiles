@@ -115,7 +115,8 @@ echo "\$__USER__:\$__PASSPHRASE__" | chpasswd
 echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel
 
 log "Setting up hostname"
-echo -e "127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t${__HOSTNAME__}.localdomain\t${__HOSTNAME__}"
+echo -e
+"127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t${__HOSTNAME__}.localdomain\t${__HOSTNAME__}" >> /etc/hosts
 
 log "Setting up boot"
 pacman -S --noconfirm grub efibootmgr dosfstools os-prober mtools
