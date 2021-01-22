@@ -39,4 +39,6 @@ nnoremap <silent> gr          <cmd>lua vim.lsp.buf.references()<CR>
 " Rename the symbol under the cursor on all occurrences
 nnoremap <silent> <leader>rn  <cmd>lua vim.lsp.buf.rename()<CR>
 " Show line diagnostics in floating window
-nnoremap <silent> <leader>ld  <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap <silent> <leader>e  <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+" Rename the symbol under the cursor
+nnoremap <silent> <space>rn <cmd>lua vim.lsp.buf.rename()<CR>
