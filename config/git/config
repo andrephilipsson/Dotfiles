@@ -7,3 +7,5 @@
 	st = status
 	ci = commit
 	last = log -1 HEAD
+[init]
+	defaultBranch = main
