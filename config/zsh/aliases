@@ -1,6 +1,7 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
 alias v="nvim"
 alias g="git"
-alias ls="ls -F"
+alias ls="ls -h --color=auto"
 alias week="date +%V"
+alias R="R --quiet"

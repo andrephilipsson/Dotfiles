@@ -1,8 +1,10 @@
-source $HOME/Projects/dotfiles/config/zsh/aliases
-source $HOME/Projects/dotfiles/config/zsh/path
+#!/bin/zsh
 
-export HISTSIZE=100000 
-export HISTFILE=~/.cache/zsh/history
+# Source other files
+source $XDG_CONFIG_HOME/zsh/aliases
+
+export HISTSIZE=100000
+export HISTFILE=$XDG_DATA_HOME/zsh/history
 export SAVEHIST=$HISTSIZE
 
 bindkey -e # emacs bindings, set to -v for vi bindings
@@ -45,7 +47,7 @@ function +vi-git-untracked() {
 }
 
 RPROMPT="\${vcs_info_msg_0_}%F{blue}%~%f"
-export PS1="%b%F{blue}%B%1~%b%F{yellow}%B%(1j.*.)%(?..!)%b%f %F{red}➜%f "
+export PS1="%b%F{blue}%B%1~%b%F{yellow}%B%(1j.*.)%(?..!)%b%f %F{red}➜ %f"
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
@@ -53,5 +55,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
   [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
     eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-# Syntax highlighting
-source $HOME/Projects/dotfiles/config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $XDG_CONFIG_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Syntax highlighting should be last
+source $XDG_CONFIG_HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
