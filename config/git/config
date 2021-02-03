@@ -9,3 +9,5 @@
 	last = log -1 HEAD
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
