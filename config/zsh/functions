@@ -14,7 +14,7 @@ function scratch() {
 
 function fd() {
   local DIR
-  DIR=$(find -type d 2> /dev/null | sk --no-multi --preview='test -n "{}" && ls {}' -q "$*") && cd "$DIR"
+  DIR=$(bfs -type d 2> /dev/null | sk --no-multi --preview='test -n "{}" && ls {}' -q "$*") && cd "$DIR"
 }
 
 # Convenience function for jumping to hashed directory aliases
