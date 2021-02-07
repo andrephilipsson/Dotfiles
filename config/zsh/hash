@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+local DOTFILES=~/Code/dotfiles
+
+test -d "$DOTFILES" && hash -d alloy="$DOTFILES"

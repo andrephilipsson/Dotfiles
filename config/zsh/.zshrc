@@ -2,6 +2,7 @@
 
 # Source other files
 source $XDG_CONFIG_HOME/zsh/aliases
+source $XDG_CONFIG_HOME/zsh/functions
 
 export HISTSIZE=100000
 export HISTFILE=$XDG_DATA_HOME/zsh/history

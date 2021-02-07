@@ -1,0 +1,48 @@
+#!/bin/zsh
+
+# Most of these are stolen from:
+# https://github.com/wincent/wincent/blob/master/aspects/dotfiles/files/.zsh/functions
+
+function scratch() {
+  local SCRATCH=$(mktemp -d)
+  echo 'Spawing subshell in scratch directory:'
+  echo "  $SCRATCH"
+  (cd $SCRATCH; zsh)
+  echo "Removing scratch directory"
+  rm -rf "$SCRATCH"
+}
+
+function fd() {
+  local DIR
+  DIR=$(find -type d 2> /dev/null | sk --no-multi --preview='test -n "{}" && ls {}' -q "$*") && cd "$DIR"
+}
+
+# Convenience function for jumping to hashed directory aliases
+# (ie. `j rn` -> `jump rn` -> `cd ~rn`).
+function jump() {
+  emulate -L zsh
+
+  if [ $# -eq 0 ]; then
+    fd
+  else
+    local DIR="${*%%/}"
+
+    if [ $(hash -d|cut -d= -f1|grep -c "^${DIR}\$") = 0 ]; then
+      # Not in `hash -d`: use as initial argument to fd.
+      fd "$*"
+    else
+      cd ~"$DIR"
+    fi
+  fi
+}
+
+function _jump_complete() {
+  emulate -L zsh
+
+  local COMPLETIONS
+  COMPLETIONS="$(hash -d|cut -d= -f1)"
+  reply=( "${(ps:\n:)COMPLETIONS}" )
+}
+
+# Complete filenames and `hash -d` entries.
+compctl -f -K _jump_complete jump
