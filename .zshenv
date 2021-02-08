@@ -33,3 +33,6 @@ export WORKSPACE="$XDG_CACHE_HOME/workspace"
 export EDITOR=nvim
 export BROWSER=firefox
 export TERMINAL=alacritty
+
+# Other exports
+export XSECURELOCK_SHOW_DATETIME=1
