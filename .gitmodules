@@ -58,3 +58,6 @@
 [submodule "base16-shell"]
 	path = config/base16-shell
 	url = git@github.com:andrephilipsson/base16-shell.git
+[submodule "vim-speeddating"]
+	path = config/nvim/pack/bundle/opt/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
