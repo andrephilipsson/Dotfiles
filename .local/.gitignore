@@ -1,0 +1,3 @@
+/lib
+/share
+!share/kotlin-language-server
