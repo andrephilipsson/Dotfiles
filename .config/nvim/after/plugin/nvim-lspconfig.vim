@@ -24,10 +24,10 @@ END
 
 
 " Change signs that show up in sign-column
-sign define LspDiagnosticsErrorSign text=✖
-sign define LspDiagnosticsWarningSign text=⚠
-sign define LspDiagnosticsInformationSign text=ℹ
-sign define LspDiagnosticsHintSign text=➤
+sign define LspDiagnosticsSignError text=✖
+sign define LspDiagnosticsSignWarning text=⚠
+sign define LspDiagnosticsSignInformation text=ℹ
+sign define LspDiagnosticsSignHint text=➤
 
 " LSP mappings
 " Jumps to the definition of the symbol under the cursor
@@ -40,5 +40,3 @@ nnoremap <silent> gr          <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>rn  <cmd>lua vim.lsp.buf.rename()<CR>
 " Show line diagnostics in floating window
 nnoremap <silent> <leader>e  <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
-" Rename the symbol under the cursor
-nnoremap <silent> <space>rn <cmd>lua vim.lsp.buf.rename()<CR>
