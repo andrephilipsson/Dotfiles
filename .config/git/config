@@ -11,3 +11,7 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[pager]
+	status = true
+[log]
+	decorate = short
