@@ -19,6 +19,7 @@ let g:CommandTWildIgnore.=",*/tmp/*"
 let g:CommandTWildIgnore.=",*.class"
 let g:CommandTWildIgnore.=",*/target/*"
 let g:CommandTWildIgnore.=",*~"
+let g:CommandTWildIgnore.=",*/node_modules/*"
 
 " Search the help docs with <Space> + h
 nmap <unique> <Leader>h <Plug>(CommandTHelp)
