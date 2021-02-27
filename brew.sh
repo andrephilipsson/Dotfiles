@@ -3,6 +3,9 @@
 # Make sure we use the latest version of brew
 brew update
 
+# Turn of analytics
+brew analytics off
+
 brew install docker
 brew install firebase-cli
 brew install gh

@@ -14,6 +14,9 @@ ln -sf ~/Code/dotfiles/.config ~
 ln -s ~/Code/dotfiles/bin ~
 ln -s ~/Code/dotfiles/.zshenv ~
 
+# Setup macOS settings
+./macos
+
 # Setup Neovim
 sudo gem install neovim
 pip install pynvim
