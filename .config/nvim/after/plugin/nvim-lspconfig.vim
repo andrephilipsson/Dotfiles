@@ -15,7 +15,7 @@ lua << END
   -- Java Language Server
   local lspconfig = require'lspconfig'
   require'lspconfig'.jdtls.setup{
-     root_dir = lspconfig.util.root_pattern('settings.gradle', '.git')
+    root_dir = lspconfig.util.root_pattern('settings.gradle', '.git')
   }
 
   -- Kotlin Language Server

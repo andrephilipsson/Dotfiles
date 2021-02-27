@@ -3,6 +3,7 @@
 # Source other files
 source $XDG_CONFIG_HOME/zsh/aliases
 source $XDG_CONFIG_HOME/zsh/functions
+source $XDG_CONFIG_HOME/zsh/hash
 
 export HISTSIZE=100000
 export HISTFILE=$XDG_DATA_HOME/zsh/history
@@ -56,6 +57,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
   [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
     eval "$("$BASE16_SHELL/profile_helper.sh")"
 
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+autoload -Uz compinit
+compinit
 
 source $XDG_CONFIG_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^t' autosuggest-accept

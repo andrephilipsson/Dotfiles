@@ -4,13 +4,21 @@ alias v="nvim"
 alias j="jump"
 alias vim="nvim"
 alias g="git"
-alias ls="ls -hF --color=auto"
-alias l="ls -hF --color=auto"
-alias ll="ls -lAhF --color=auto"
+alias ls="ls -hFG"
+alias l="ls -hFG"
+alias ll="ls -lAhFG"
 alias week="date +%V"
 alias R="R --quiet"
 alias e="exit"
 alias f="find -name"
 alias t="tmux"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'

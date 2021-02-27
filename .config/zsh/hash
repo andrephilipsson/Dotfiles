@@ -1,5 +1,13 @@
 #!/bin/zsh
 
 local DOTFILES=~/Code/dotfiles
+local HBG_ADMIN=~/Code/elteamhbg/admin
+local HBG_PUBLIC=~/Code/elteamhbg/public
+local PFK=~/Code/EDAA01
+local UTV=~/Code/EDAA35
 
-test -d "$DOTFILES" && hash -d alloy="$DOTFILES"
+test -d "$DOTFILES" && hash -d dot="$DOTFILES"
+test -d "$HBG_ADMIN" && hash -d hbg-admin="$HBG_ADMIN"
+test -d "$HBG_PUBLIC" && hash -d hbg-public="$HBG_PUBLIC"
+test -d "$PFK" && hash -d pfk="$PFK"
+test -d "$UTV" && hash -d utv="$UTV"
