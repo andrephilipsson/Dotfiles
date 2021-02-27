@@ -25,7 +25,7 @@ brew install pandoc
 brew install r
 brew install sbt
 brew install scala
-brew install skim
+brew install sk
 brew install ssh-copy-id
 brew install svtplay-dl
 brew install tavianator/tap/bfs
