@@ -19,6 +19,11 @@ font:
 # Needed for macOS keyboards where for example backslash '\' is <Alt> + <Shift> + 7
 alt_send_esc: false
 
+window:
+  padding:
+    x: 2
+    y: 0
+
 # Base16 OneDark 256 - alacritty color config
 # Lalit Magant (http://github.com/tilal6991)
 colors:
