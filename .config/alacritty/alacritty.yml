@@ -14,7 +14,10 @@ font:
   bold_italic:
     family: Source Code Pro
     style: Bold Italic
-  size: 13
+  size: 14
+
+# Needed for macOS keyboards where for example backslash '\' is <Alt> + <Shift> + 7
+alt_send_esc: false
 
 # Base16 OneDark 256 - alacritty color config
 # Lalit Magant (http://github.com/tilal6991)
