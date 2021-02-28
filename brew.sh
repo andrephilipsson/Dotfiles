@@ -6,6 +6,9 @@ brew update
 # Turn of analytics
 brew analytics off
 
+brew tap "homebrew/cask-fonts"
+brew tap "homebrew/homebrew-cask-versions"
+
 brew install docker
 brew install firebase-cli
 brew install gh
