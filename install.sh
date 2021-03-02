@@ -9,6 +9,8 @@ sudo -v
 # Install Homebrew packages
 ./brew.sh
 
+chmod -R go-w '$(brew --prefix)/share/zsh'
+
 # Symlink dotfiles
 ln -sf ~/Code/dotfiles/.config ~
 ln -s ~/Code/dotfiles/bin ~
@@ -26,8 +28,12 @@ cd ~/Code/dotfiles/.config/nvim/pack/bundle/opt/command-t/ruby/command-t/ext/com
 ruby extconf.rb
 make
 
+# Install necessary packages for markdown-preview.nvim
+cd ~/Code/dotfiles/.config/nvim/pack/bundle/opt/markdown-previeww.nvim
+yarn install
+
 # Install language servers
-pip install "python-language-server[all]"
+pip3 install "python-language-server[all]"
 yarn global add vls tsserver
 R -e "install.packages('languageserver')"
 
