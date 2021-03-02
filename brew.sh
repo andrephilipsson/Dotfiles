@@ -6,6 +6,7 @@ brew update
 # Turn of analytics
 brew analytics off
 
+brew tap "homebrew/cask-drivers"
 brew tap "homebrew/cask-fonts"
 brew tap "homebrew/homebrew-cask-versions"
 
@@ -54,6 +55,7 @@ brew install --cask font-source-code-pro
 brew install --cask google-cloud-sdk
 brew install --cask keepassxc
 brew install --cask libreoffice
+brew install --cask logitech-options
 brew install --cask mactex-no-gui
 brew install --cask rectangle
 brew install --cask sdformatter
