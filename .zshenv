@@ -6,6 +6,7 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+
 export LESSHISTFILE="-"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export GEM_HOME="$XDG_DATA_HOME"/gem
@@ -16,9 +17,16 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export R_ENVIRON_USER="$XDG_CONFIG_HOME/R/Renviron"
 
 # Path
-export PATH=$PATH:$HOME/.local/bin
+# export PATH=$PATH:$HOME/.local/bin
+export PATH=/bin
+export PATH=$PATH:/sbin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/usr/bin
+export PATH=$PATH:/usr/sbin
+
 export PATH=$PATH:$XDG_DATA_HOME/gem/bin
-export PATH="$(yarn global bin):$PATH"
+export PATH="$PATH:$XDG_DATA_HOME/npm/bin"
 
 # Default programs
 export EDITOR=nvim
