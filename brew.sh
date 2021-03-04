@@ -19,6 +19,7 @@ brew install gradle
 brew install grep
 brew install htop
 brew install kotlin
+brew install kotlin-language-server
 brew install less
 brew install lf
 brew install mat2
