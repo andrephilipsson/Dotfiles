@@ -43,9 +43,6 @@
 [submodule "vim-surround"]
 	path = .config/nvim/pack/bundle/opt/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "kotlin-language-server"]
-	path = .local/share/kotlin-language-server
-	url = https://github.com/fwcd/kotlin-language-server.git
 [submodule "nvim-treesitter"]
 	path = .config/nvim/pack/bundle/opt/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
