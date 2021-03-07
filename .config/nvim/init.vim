@@ -10,6 +10,7 @@ if &loadplugins
   packadd! command-t
   packadd! completion-nvim
   packadd! corpus
+  packadd! loupe
   packadd! markdown-preview.nvim
   packadd! nvim-lspconfig
   packadd! nvim-metals

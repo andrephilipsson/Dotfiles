@@ -61,3 +61,6 @@
 [submodule "vim-repeat"]
 	path = .config/nvim/pack/bundle/opt/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "loupe"]
+	path = .config/nvim/pack/bundle/opt/loupe
+	url = https://github.com/wincent/loupe.git
