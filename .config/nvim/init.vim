@@ -20,6 +20,7 @@ if &loadplugins
   packadd! ultisnips
   packadd! vim-dirvish
   packadd! vim-fugitive
+  packadd! vim-repeat
   packadd! vim-speeddating
   packadd! vim-surround
 endif

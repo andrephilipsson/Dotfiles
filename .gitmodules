@@ -58,3 +58,6 @@
 [submodule "vim-speeddating"]
 	path = .config/nvim/pack/bundle/opt/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
+[submodule "vim-repeat"]
+	path = .config/nvim/pack/bundle/opt/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
