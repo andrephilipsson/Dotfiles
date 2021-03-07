@@ -16,11 +16,17 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export R_ENVIRON_USER="$XDG_CONFIG_HOME/R/Renviron"
 
 # Path
-export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$XDG_DATA_HOME/gem/bin
-export PATH=$PATH:$HOME/.local/bin/statusbar
-export PATH="$(yarn global bin):$PATH"
-export PATH="$PATH:$XDG_DATA_HOME/kotlin-language-server/server/build/install/server/bin"
+export PATH="/bin"
+export PATH="$PATH/sbin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/bin/statusbar"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$XDG_DATA_HOME/gem/bin"
+export PATH="$PATH:$(yarn global bin)"
 
 # Variables for Java language server
 export JAR="/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_1.6.0.v20200915-1508.jar"
