@@ -6,15 +6,21 @@ set linebreak                          " Wrap long lines on full word
 set breakindent                        " Indent wrapped lines to match start
 set breakindentopt=shift:2             " Emphasize broken lines by indenting them
 set textwidth=80                       " Automatically hard wrap at 80 columns
+set colorcolumn=80                     " Displays vertical gray line at 80 columns
 
 set backspace=indent,start,eol         " Enable unlimited backspacing in insert mode
 set whichwrap=b,h,l,s,<,>,[,],~        " Allow <BS>,h,l to cross line boundaries
 set virtualedit=block                  " Allow cursor to move where there is no text
 
-set formatoptions+=j                   " Remove comment leader when joining comments
 set nojoinspaces                       " Don't insert two spaces after special chars
-set formatoptions-=o                   " Don't insert comment leader when pressing 'o' or 'O'
+set formatoptions+=j                   " Remove comment leader when joining comments
 set formatoptions+=n                   " Smart auto-indent in lists
+
+" TODO: using `verbose set formatoptions?` I can see that formatoptions is being
+" last set in `/usr/share/nvim/runtime/ftplugin/help.vim`. And removing `o`
+" doesn't help since it is being set somewhere else, presumably in the
+" `help.vim` above. So where should I put this so it doesn't get overwritten?
+set formatoptions-=o                   " Don't insert comment leader when pressing 'o' or 'O'
 
 set expandtab                          " Convert tabs to spaces
 set tabstop=2                          " Spaces per tab
