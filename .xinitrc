@@ -16,4 +16,4 @@ redshift -l 59.32938:18.06871 &
 dwmblocks &
 
 # start window manager
-exec dwm
+exec awesome
