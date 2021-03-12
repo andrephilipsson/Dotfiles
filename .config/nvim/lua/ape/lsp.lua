@@ -35,14 +35,6 @@ lsp.bind = function ()
       nnoremap('<Esc>', ':call nvim_win_close(0, v:true)<CR>')
 
       vim.api.nvim_win_set_option(0, 'cursorline', false)
-
-      -- I believe this is supposed to happen automatically because I can see
-      -- this in lsp/util.lua:
-      --
-      --     api.nvim_buf_set_option(floating_bufnr, 'modifiable', false)
-      --
-      -- but it doesn't seem to be working.
-      vim.api.nvim_buf_set_option(0, 'modifiable', false)
     end
   end)
 end

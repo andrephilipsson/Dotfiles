@@ -17,9 +17,10 @@ set formatoptions+=j                   " Remove comment leader when joining comm
 set formatoptions+=n                   " Smart auto-indent in lists
 
 " TODO: using `verbose set formatoptions?` I can see that formatoptions is being
-" last set in `/usr/share/nvim/runtime/ftplugin/help.vim`. And removing `o`
-" doesn't help since it is being set somewhere else, presumably in the
-" `help.vim` above. So where should I put this so it doesn't get overwritten?
+" last set in `/usr/share/nvim/runtime/ftplugin/`. And removing `o`
+" doesn't help since it is being set somewhere else.
+" So where should I put this so it doesn't get overwritten? The obvious answer
+" is to put in after/ftplugin but I don't want manually to set it in every filetype. The other choice is to put it in an autocommand but I feel like there must be a more elegant solution.
 set formatoptions-=o                   " Don't insert comment leader when pressing 'o' or 'O'
 
 set expandtab                          " Convert tabs to spaces
@@ -70,6 +71,10 @@ set listchars+=tab:▷┅                  " WHITE RIGHT-POINTING TRIANGLE (U+25
 set listchars+=extends:»               " RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
 set listchars+=precedes:«              " LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
 set listchars+=trail:•                 " BULLET (U+2022, UTF-8: E2 80 A2)
+
+set wildignore=*/.git/*
+set wildignore+=*.class
+set wildignore+=*~
 
 set termguicolors
 if exists('$BASE16_THEME')
