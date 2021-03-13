@@ -17,7 +17,7 @@ export R_ENVIRON_USER="$XDG_CONFIG_HOME/R/Renviron"
 
 # Path
 export PATH="/bin"
-export PATH="$PATH/sbin"
+export PATH="$PATH:/sbin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/bin"

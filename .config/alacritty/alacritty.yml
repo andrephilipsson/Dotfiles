@@ -14,7 +14,7 @@ font:
   bold_italic:
     family: Source Code Pro
     style: Bold Italic
-  size: 13
+  size: 12
 
 # Base16 OneDark 256 - alacritty color config
 # Lalit Magant (http://github.com/tilal6991)
