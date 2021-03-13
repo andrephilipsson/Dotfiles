@@ -15,3 +15,6 @@ lua if require('ape.packer_exists') then return end
 
 " Load packer.nvim file.
 lua require('ape.plugins')
+
+" Load Lsp
+lua require('ape.lsp').init()
