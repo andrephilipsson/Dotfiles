@@ -252,7 +252,7 @@ globalkeys = gears.table.join(
               {description = "select previous", group = "layout"}),
 
     -- Start lockscreen
-    awful.key({ modkey, "Control"   }, "q", function () awful.spawn(terminal.." -e xsecurelock")                end,
+    awful.key({ modkey, "Control"   }, "q", function () awful.spawn(terminal.." -e xset s activate")                end,
               {description = "start lockscreen", group = "layout"}),
 
 

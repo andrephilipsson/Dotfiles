@@ -15,5 +15,8 @@ redshift -l 59.32938:18.06871 &
 # make placerctl target the last used source
 playerctld daemon &
 
+xset s 300 5 &
+xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
+
 # start window manager
 exec awesome
