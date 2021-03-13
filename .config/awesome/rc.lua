@@ -270,7 +270,29 @@ globalkeys = gears.table.join(
 
     -- Dmenu
     awful.key({ modkey }, "p", function() awful.spawn("dmenu_run") end,
-              {description = "run dmenu", group = "launcher"})
+              {description = "run dmenu", group = "launcher"}),
+
+    -- Volume Keys
+       awful.key({}, "XF86AudioLowerVolume", function ()
+         awful.util.spawn("pamixer -d 5", false)
+       end),
+       awful.key({}, "XF86AudioRaiseVolume", function ()
+         awful.util.spawn("pamixer -i 5", false)
+       end),
+       awful.key({}, "XF86AudioMute", function ()
+         awful.util.spawn("pamixer -t", false)
+       end),
+
+    -- Media Keys
+       awful.key({}, "XF86AudioPlay", function()
+         awful.util.spawn("playerctl play-pause", false)
+       end),
+       awful.key({}, "XF86AudioNext", function()
+         awful.util.spawn("playerctl next", false)
+       end),
+       awful.key({}, "XF86AudioPrev", function()
+         awful.util.spawn("playerctl previous", false)
+       end)
 )
 
 local clientkeys = gears.table.join(
