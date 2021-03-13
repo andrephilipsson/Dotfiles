@@ -1,3 +1,9 @@
+-- Change signs that show up in sign-column
+vim.fn.sign_define('LspDiagnosticsSignError', { text = '✖' })
+vim.fn.sign_define('LspDiagnosticsSignWarning', { text = '⚠' })
+vim.fn.sign_define('LspDiagnosticsSignInformation', { text = 'ℹ' })
+vim.fn.sign_define('LspDiagnosticsSignHint', { text = '➤' })
+
 local lsp = {}
 
 

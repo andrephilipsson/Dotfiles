@@ -36,5 +36,9 @@ return require('packer').startup {
     use 'junegunn/vim-easy-align'
     use 'tjdevries/astronauta.nvim'
     use 'SirVer/ultisnips'
+
+    -- TODO: Look into setting up these
+    -- use 'mfussenegger/nvim-dap'
+    -- use 'theHamsta/nvim-dap-virtual-text'
   end
 }
