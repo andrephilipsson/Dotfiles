@@ -76,6 +76,12 @@ set wildignore=*/.git/*
 set wildignore+=*.class
 set wildignore+=*~
 
+" Enable filetype detection, indentation and load plugin file
+filetype indent plugin on
+
+" Enable syntax highlighting
+syntax on
+
 set termguicolors
 if exists('$BASE16_THEME')
       \ && (!exists('g:colors_name') || g:colors_name != 'base16-$BASE16_THEME')

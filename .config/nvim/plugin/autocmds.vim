@@ -12,3 +12,8 @@ augroup LspAutocommands
   au ColorScheme * lua require'ape.lsp'.set_up_highlights()
   au WinEnter * lua require'ape.lsp'.bind()
 augroup END
+
+augroup lsp
+  au!
+  au FileType scala,sbt lua require('metals').initialize_or_attach(metals_config)
+augroup end

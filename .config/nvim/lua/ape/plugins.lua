@@ -7,13 +7,13 @@ return require('packer').startup {
       run = 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
     }
 
-    use 'nvim-lua/completion-nvim'
     use 'wincent/corpus'
     use {
       'iamcco/markdown-preview.nvim',
       run = 'cd app && yarn install'
     }
-    use {'neovim/nvim-lspconfig'}
+    use 'neovim/nvim-lspconfig'
+    use 'nvim-lua/completion-nvim'
 
     use 'scalameta/nvim-metals'
 
@@ -35,7 +35,14 @@ return require('packer').startup {
     use 'norcalli/nvim-colorizer.lua'
     use 'junegunn/vim-easy-align'
     use 'tjdevries/astronauta.nvim'
-    use 'SirVer/ultisnips'
+    use 'norcalli/snippets.nvim'
+
+    -- TODO: Set up these and possibly replace command-t
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = {{ 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }}
+    }
+    use 'nvim-telescope/telescope-fzy-native.nvim'
 
     -- TODO: Look into setting up these
     -- use 'mfussenegger/nvim-dap'
