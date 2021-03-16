@@ -9,8 +9,7 @@ return require('packer').startup {
 
     use {
       'iamcco/markdown-preview.nvim',
-      run = 'cd app && yarn install',
-      cmd = 'MarkdownPreview'
+      run = 'cd app && yarn install'
     }
 
     use {
@@ -23,6 +22,7 @@ return require('packer').startup {
     use 'justinmk/vim-dirvish'
     use 'norcalli/nvim-colorizer.lua'
     use 'norcalli/snippets.nvim'
+    use 'rhysd/git-messenger.vim'
     use 'tomtom/tcomment_vim'
     use 'tpope/vim-fugitive'
     use 'tpope/vim-repeat'
