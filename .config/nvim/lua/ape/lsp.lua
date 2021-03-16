@@ -22,8 +22,8 @@ local on_attach = function ()
     ['K'] = '<cmd>lua vim.lsp.buf.hover()<CR>',
     -- Opens a quickfix listing with all references to the symbol under the cursor
     ['gr'] = '<cmd>lua vim.lsp.buf.references()<CR>',
-    -- Rename the symbol under the cursor on all occurrences
-    ['<Leader>rn'] = '<cmd>lua vim.lsp.buf.rename()<CR>',
+    -- Rename the symbol under the cursor
+    ['<Leader>rn'] = '<cmd>lua require("lspsaga.rename").rename()<CR>',
   }
 
   for lhs, rhs in pairs(mappings) do

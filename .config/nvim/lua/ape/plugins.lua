@@ -7,15 +7,11 @@ return require('packer').startup {
       run = 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
     }
 
-    use 'wincent/corpus'
     use {
       'iamcco/markdown-preview.nvim',
-      run = 'cd app && yarn install'
+      run = 'cd app && yarn install',
+      cmd = 'MarkdownPreview'
     }
-    use 'neovim/nvim-lspconfig'
-    use 'nvim-lua/completion-nvim'
-
-    use 'scalameta/nvim-metals'
 
     use {
       'nvim-treesitter/nvim-treesitter',
@@ -23,26 +19,28 @@ return require('packer').startup {
     }
 
     use 'chriskempson/base16-vim'
-    use 'wincent/loupe'
-    use 'wincent/pinnacle'
-    use 'tomtom/tcomment_vim'
+    use 'junegunn/vim-easy-align'
     use 'justinmk/vim-dirvish'
+    use 'norcalli/nvim-colorizer.lua'
+    use 'norcalli/snippets.nvim'
+    use 'tomtom/tcomment_vim'
     use 'tpope/vim-fugitive'
     use 'tpope/vim-repeat'
     use 'tpope/vim-speeddating'
     use 'tpope/vim-surround'
+    use 'wincent/corpus'
+    use 'wincent/loupe'
+    use 'wincent/pinnacle'
     use 'windwp/nvim-autopairs'
-    use 'norcalli/nvim-colorizer.lua'
-    use 'junegunn/vim-easy-align'
-    use 'tjdevries/astronauta.nvim'
-    use 'norcalli/snippets.nvim'
 
-    -- TODO: Set up these and possibly replace command-t
-    use {
-      'nvim-telescope/telescope.nvim',
-      requires = {{ 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }}
-    }
-    use 'nvim-telescope/telescope-fzy-native.nvim'
+    -- Lsp
+    use 'glepnir/lspsaga.nvim'  -- only used for fancy rename popup
+    use 'neovim/nvim-lspconfig'
+    use 'nvim-lua/completion-nvim'
+    use 'scalameta/nvim-metals'
+
+    -- This will most likely be available 0.5 release
+    use 'tjdevries/astronauta.nvim'
 
     -- TODO: Look into setting up these
     -- use 'mfussenegger/nvim-dap'
