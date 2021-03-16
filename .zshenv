@@ -29,7 +29,7 @@ export PATH="$PATH:$XDG_DATA_HOME/gem/bin"
 export PATH="$PATH:$(yarn global bin)"
 
 # Variables for Java language server
-export JAR="/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_1.6.0.v20200915-1508.jar"
+export JAR="/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_1.6.100.v20201223-0822.jar"
 export GRADLE_HOME="/usr/share/java/gradle/"
 export JAVA_HOME="/usr/"
 export JDTLS_CONFIG="$XDG_DATA_HOME/jdtls/config_linux"
