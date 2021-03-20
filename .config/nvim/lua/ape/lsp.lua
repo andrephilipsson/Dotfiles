@@ -60,7 +60,16 @@ lsp.init = function ()
 
   -- Tex Language Server
   require'lspconfig'.texlab.setup{
-    on_attach = on_attach
+    on_attach = on_attach,
+    settings = {
+      latex = {
+        build = {
+          args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+          executable = "latexmk",
+          onSave = true
+        }
+      }
+    }
   }
 
   -- Java Language Server
