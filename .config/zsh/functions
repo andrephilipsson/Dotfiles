@@ -31,6 +31,10 @@ function tmux() {
       return
     fi
   fi
+
+  # Attach to existing session, or create one, based on current directory.
+  local SESSION_NAME=$(basename "${$(pwd)//[.:]/_}")
+  env SSH_AUTH_SOCK=$SOCK_SYMLINK tmux new -A -s "$SESSION_NAME"
 }
 
 function scratch() {
