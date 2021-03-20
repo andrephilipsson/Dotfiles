@@ -93,6 +93,11 @@ lsp.init = function ()
     on_attach = on_attach
   }
 
+  -- Clojure Language Server
+  require'lspconfig'.clojure_lsp.setup{
+    on_attach = on_attach
+  }
+
   -- Lua Language Server
   local cmd = vim.fn.expand(
     'lua-language-server'
