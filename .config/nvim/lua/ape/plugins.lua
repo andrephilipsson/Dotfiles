@@ -3,9 +3,11 @@ return require('packer').startup {
     use 'wbthomason/packer.nvim'
 
     use {
-      'wincent/command-t',
-      run = 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+      'nvim-telescope/telescope.nvim',
+      requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
+    use 'nvim-telescope/telescope-fzy-native.nvim'
+    use 'kyazdani42/nvim-web-devicons'
 
     use {
       'iamcco/markdown-preview.nvim',
