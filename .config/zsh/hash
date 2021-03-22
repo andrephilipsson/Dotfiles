@@ -1,5 +1,19 @@
 #!/bin/zsh
 
-local DOTFILES=~/Code/dotfiles
+local DOT=~/Code/dotfiles
+local CODE=~/Code
+local DISK=~/Code/EDAA40
+local UTV=~/Code/EDAA35
+local STATS=~/Documents/Stats
+local HBG=~/Code/elteamhbg
+local DOC=~/Documents
+local DOW=~/Downloads
 
-test -d "$DOTFILES" && hash -d alloy="$DOTFILES"
+test -d "$DOT" && hash -d dot="$DOT"
+test -d "$CODE" && hash -d code="$CODE"
+test -d "$DISK" && hash -d disk="$DISK"
+test -d "$UTV" && hash -d utv="$UTV"
+test -d "$STATS" && hash -d stats="$STATS"
+test -d "$HBG" && hash -d hbg="$HBG"
+test -d "$DOC" && hash -d doc="$DOC"
+test -d "$DOW" && hash -d dow="$DOW"
