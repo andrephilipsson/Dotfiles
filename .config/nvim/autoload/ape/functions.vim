@@ -2,7 +2,6 @@
 function! ape#functions#spell() abort
   if has('syntax')
     setlocal spell
-    setlocal spellfile=~/.config/nvim/spell/sv.utf-8.add
     setlocal spelllang=sv,en
   endif
 endfunction
