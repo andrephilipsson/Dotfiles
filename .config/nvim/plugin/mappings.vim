@@ -14,3 +14,7 @@ nnoremap <leader>ff <cmd> lua require('telescope.builtin').find_files { hidden =
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').file_browser { hidden = true }<cr>
+nnoremap <leader>fc <cmd>lua require('telescope.builtin').commands()<cr>
+nnoremap <leader>fo <cmd>lua require('telescope.builtin').vim_options()<cr>
+nnoremap <leader>fd <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
+nnoremap <leader>fl <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
