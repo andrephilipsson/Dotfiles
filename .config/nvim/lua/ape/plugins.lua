@@ -2,31 +2,39 @@ return require('packer').startup {
   function(use)
     use 'wbthomason/packer.nvim'
 
+    -- Telescope.nvim
     use {
       'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
     use 'nvim-telescope/telescope-fzy-native.nvim'
-    use 'kyazdani42/nvim-web-devicons'
 
     use {
       'iamcco/markdown-preview.nvim',
       run = 'cd app && yarn install'
     }
 
+    -- Treesitter
     use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
     }
 
+    -- Git
+    use 'tpope/vim-fugitive'
+    use 'rhysd/git-messenger.vim'
+    use {
+      'lewis6991/gitsigns.nvim',
+      requires = {'nvim-lua/plenary.nvim'}
+    }
+
     use 'chriskempson/base16-vim'
     use 'junegunn/vim-easy-align'
     use 'justinmk/vim-dirvish'
+    use 'kyazdani42/nvim-web-devicons'
     use 'norcalli/nvim-colorizer.lua'
     use 'norcalli/snippets.nvim'
-    use 'rhysd/git-messenger.vim'
     use 'tomtom/tcomment_vim'
-    use 'tpope/vim-fugitive'
     use 'tpope/vim-repeat'
     use 'tpope/vim-speeddating'
     use 'tpope/vim-surround'
@@ -41,7 +49,7 @@ return require('packer').startup {
     use 'nvim-lua/completion-nvim'
     use 'scalameta/nvim-metals'
 
-    -- This will most likely be available 0.5 release
+    -- This will most likely be available in neovim 0.5 release
     use 'tjdevries/astronauta.nvim'
 
     -- TODO: Look into setting up these
