@@ -4,6 +4,9 @@ vim.g.loaded_python_provider = 0
 -- Change leader key to <Space>
 vim.g.mapleader = ' '
 
+-- Load options
+require("ape.options")
+
 -- Return early if packer.nvim doesn't exist.
 if require('ape.packer_exists') then return end
 
