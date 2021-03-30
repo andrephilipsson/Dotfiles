@@ -15,5 +15,3 @@ tmux send-keys -t dot:nvim.left "vim -c 'Telescope find_files hidden=true'" Ente
 tmux send-keys -t dot:nvim.right "git st" Enter
 
 tmux attach -t dot:nvim.right
-
-nnoremap <leader>ff <cmd> <cr>
