@@ -43,6 +43,9 @@ return require('packer').startup {
     use 'wincent/pinnacle'
     use 'windwp/nvim-autopairs'
 
+    -- Got to stop that jjjjjjj-ing and kkkkkkkk-ing
+    use 'takac/vim-hardtime'
+
     -- Lsp
     use 'glepnir/lspsaga.nvim'  -- only used for fancy rename popup
     use 'neovim/nvim-lspconfig'
