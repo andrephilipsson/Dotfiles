@@ -7,6 +7,9 @@ vim.g.mapleader = ' '
 -- Load options
 require("ape.options")
 
+-- Load utils
+require("ape.utils")
+
 -- Return early if packer.nvim doesn't exist.
 if require('ape.packer_exists') then return end
 
