@@ -3,7 +3,7 @@ local indent = require'snippets.utils'.match_indentation
 local java = {}
 
 java.getter = indent [[
-public ${1: int} get${2:Num|S.v:gsub("^%l", string.upper)}() {
+public ${1:int} get${2:Num|S.v:gsub("^%l", string.upper)}() {
     return ${|S[2]:gsub("^%u", string.lower)};
 }]]
 
@@ -16,5 +16,9 @@ java.main = indent [[
 public static void main(String[] args) {
     $0
 }]]
+
+java.println = "System.out.println($0);"
+java.print = "System.out.print($0);"
+java.package = "package $1;$0"
 
 return java
