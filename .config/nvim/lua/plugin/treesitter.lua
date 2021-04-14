@@ -19,3 +19,13 @@ require'nvim-treesitter.configs'.setup {
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+require'nvim-treesitter.configs'.setup {
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+  },
+  context_commentstring = {
+    enable = true
+  }
+}

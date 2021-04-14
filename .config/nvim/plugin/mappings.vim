@@ -17,3 +17,11 @@ nnoremap <leader>fs <cmd>lua require('telescope.builtin').lsp_document_symbols()
 " Navigate the quickfix list with <C-j> and <C-k>
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprev<CR>
+
+nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
