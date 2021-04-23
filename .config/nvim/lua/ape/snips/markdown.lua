@@ -1,4 +1,4 @@
-local indent = require'snippets.utils'.match_indentation
+local indent = require("snippets.utils").match_indentation
 
 local markdown = {}
 
@@ -7,9 +7,9 @@ function make_table(csv)
   local headers_complete = false
   local headers = {}
 
-  for cell in csv:gmatch('([^,]+)') do
+  for cell in csv:gmatch("([^,]+)") do
     -- match and remove EOL char
-    if cell:sub(-1) == '.' then
+    if cell:sub(-1) == "." then
       cell = cell:sub(1, -2)
       headers_complete = true
     end
@@ -22,11 +22,11 @@ function make_table(csv)
 
     -- build the header separator
     if headers_complete then
-      str = str .. '\n|'
+      str = str .. "\n|"
       for i=1, #headers do
-        str = str .. string.format(" %s |", string.rep('-', headers[i]))
+        str = str .. string.format(" %s |", string.rep("-", headers[i]))
       end
-      str = str .. '\n|'
+      str = str .. "\n|"
     end
   end
   return str

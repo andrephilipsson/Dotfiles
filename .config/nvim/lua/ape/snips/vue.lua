@@ -1,7 +1,7 @@
-local indent = require'snippets.utils'.match_indentation
+local indent = require("snippets.utils").match_indentation
 
 -- Extend the html snippets
-local vue = require'snippets.html'
+local vue = require("ape.snips.html")
 
 vue.new = [[
 <template>
