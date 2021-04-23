@@ -98,6 +98,10 @@ lsp.init = function ()
     on_attach = on_attach
   }
 
+  require'lspconfig'.clangd.setup{
+    on_attach = on_attach
+  }
+
   -- Lua Language Server
   local cmd = vim.fn.expand(
     'lua-language-server'
@@ -118,21 +122,21 @@ end
 
 
 lsp.set_up_highlights = function ()
-  local pinnacle = require'wincent.pinnacle'
+   local pinnacle = require"wincent.pinnacle"
 
-  vim.cmd('highlight LspDiagnosticsError ' .. pinnacle.decorate('italic,underline', 'ModeMsg'))
+   vim.cmd("highlight LspDiagnosticsError " .. pinnacle.decorate("italic,underline", "ModeMsg"))
 
-  vim.cmd('highlight LspDiagnosticsHint ' .. pinnacle.decorate('bold,italic,underline', 'Type'))
+   vim.cmd('highlight LspDiagnosticsHint ' .. pinnacle.decorate("bold,italic,underline", "Type"))
 
-  vim.cmd('highlight LspDiagnosticsHintSign ' .. pinnacle.highlight({
-    bg = pinnacle.extract_bg('ColorColumn'),
-    fg = pinnacle.extract_fg('Type'),
-  }))
+   vim.cmd("highlight LspDiagnosticsHintSign " .. pinnacle.highlight({
+     bg = pinnacle.extract_bg("ColorColumn"),
+     fg = pinnacle.extract_fg("Type"),
+   }))
 
-  vim.cmd('highlight LspDiagnosticsErrorSign ' .. pinnacle.highlight({
-    bg = pinnacle.extract_bg('ColorColumn'),
-    fg = pinnacle.extract_fg('ErrorMsg'),
-  }))
+   vim.cmd("highlight LspDiagnosticsErrorSign " .. pinnacle.highlight({
+     bg = pinnacle.extract_bg("ColorColumn"),
+     fg = pinnacle.extract_fg("ErrorMsg"),
+   }))
 end
 
 return lsp
