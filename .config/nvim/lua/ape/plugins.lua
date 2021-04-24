@@ -15,14 +15,6 @@ return require("packer").startup {
       ft = "markdown"
     }
 
-    -- Treesitter
-    use {
-      "nvim-treesitter/nvim-treesitter",
-      run = ":TSUpdate"
-    }
-    use "JoosepAlviste/nvim-ts-context-commentstring"
-    use { "p00f/nvim-ts-rainbow", ft =  "clojure" }
-
     -- Git
     use "tpope/vim-fugitive"
     use "rhysd/git-messenger.vim"
@@ -65,6 +57,16 @@ return require("packer").startup {
 
     -- Got to stop that jjjjjjj-ing and kkkkkkkk-ing
     use "takac/vim-hardtime"
+
+    -- Treesitter
+    use {
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate"
+    }
+    use "nvim-treesitter/playground"
+    use "JoosepAlviste/nvim-ts-context-commentstring"
+    use { "p00f/nvim-ts-rainbow", ft =  "clojure" }
+
 
     -- Lsp
     use "glepnir/lspsaga.nvim"
