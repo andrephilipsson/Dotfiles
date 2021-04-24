@@ -16,6 +16,9 @@ if require('ape.packer_exists') then return end
 -- Load packer.nvim file.
 require('ape.plugins')
 
+-- Statusline
+require("ape.statusline")
+
 -- Load Lsp
 require('ape.lsp').init()
 

@@ -58,6 +58,11 @@ return require("packer").startup {
       end
     }
 
+    use {
+      "hoob3rt/lualine.nvim",
+      requires = {"kyazdani42/nvim-web-devicons"}
+    }
+
     -- Got to stop that jjjjjjj-ing and kkkkkkkk-ing
     use "takac/vim-hardtime"
 
