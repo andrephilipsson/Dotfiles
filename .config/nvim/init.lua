@@ -20,6 +20,6 @@ require('ape.plugins')
 require('ape.lsp').init()
 
 -- Load snippets
-require('ape.snippets')
+require('ape.snips')
 
 vim.g.hardtime_default_on = 1
