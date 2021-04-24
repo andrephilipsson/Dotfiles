@@ -1,15 +1,15 @@
-local actions = require('telescope.actions')
+local actions = require("telescope.actions")
 
-require('telescope').setup{
+require("telescope").setup{
   defaults = {
-    prompt_prefix = '❯ ',
-    selection_caret = '❯ ',
+    prompt_prefix = "❯ ",
+    selection_caret = "❯ ",
     file_ignore_patterns = { "node_modules/", ".git/"},
     mappings = {
       i = {
         ["<esc>"] = actions.close,
-        ["<c-k>"] = actions.move_selection_next,
-        ["<c-j>"] = actions.move_selection_previous
+        ["<c-j>"] = actions.move_selection_next,
+        ["<c-k>"] = actions.move_selection_previous
       }
     }
   },
@@ -21,19 +21,19 @@ require('telescope').setup{
   }
 }
 
-require('telescope').load_extension('fzy_native')
+require("telescope").load_extension("fzy_native")
 
 
 local M = {}
 
 M.find_files = function()
-  require('telescope.builtin').find_files({
+  require("telescope.builtin").find_files({
     hidden = true
   })
 end
 
 M.file_browser = function()
-  require('telescope.builtin').file_browser({
+  require("telescope.builtin").file_browser({
     hidden = true,
   })
 end
