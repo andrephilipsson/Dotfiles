@@ -277,7 +277,7 @@ globalkeys = gears.table.join(
          awful.util.spawn("pamixer -d 5", false)
        end),
        awful.key({}, "XF86AudioRaiseVolume", function ()
-         awful.util.spawn("pamixer -i 5", false)
+         awful.util.spawn("pamixer -i 5 --allow-boost", false)
        end),
        awful.key({}, "XF86AudioMute", function ()
          awful.util.spawn("pamixer -t", false)
@@ -448,6 +448,8 @@ awful.rules.rules = {
     -- Set Firefox to always map on the tag named "2" on screen 1.
     { rule = { class = "firefox" },
       properties = { screen = 1, tag = "2" } },
+    { rule = { class = "KeePassXC" },
+      properties = { screen = 1, tag = "8" } },
 }
 -- }}}
 
