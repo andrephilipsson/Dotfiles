@@ -56,3 +56,5 @@ opt.shortmess = opt.shortmess
                 + "a" -- Use abbreviated messages
                 + "A" -- Don't show waring about existing swapfile
                 - "F" -- Needed for nvim-metals
+
+opt.termguicolors = true
