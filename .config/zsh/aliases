@@ -14,3 +14,4 @@ alias f="find -name"
 alias t="tmux"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+alias tree="tree -I node_modules"
