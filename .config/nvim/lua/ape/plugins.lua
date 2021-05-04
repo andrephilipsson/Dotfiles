@@ -30,6 +30,7 @@ return require("packer").startup {
     use "kyazdani42/nvim-web-devicons"
     use "norcalli/snippets.nvim"
     use "tpope/vim-commentary"
+    use "tpope/vim-eunuch"
     use "tpope/vim-repeat"
     use "tpope/vim-speeddating"
     use "tpope/vim-surround"
