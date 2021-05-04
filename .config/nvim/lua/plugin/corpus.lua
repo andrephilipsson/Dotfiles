@@ -1,11 +1,11 @@
 CorpusDirectories = {
-  ['~/Documents/notes'] = {
+  ["~/Documents/notes"] = {
     autocommit = true,
     autoreference = 1,
     autotitle = 1,
-    base = './',
-    transform = 'local',
+    base = "./",
+    transform = "local",
   }
 }
 
-vim.g.CorpusPreviewWinhighlight='Normal:NonText'
+vim.g.CorpusPreviewWinhighlight="Normal:NonText"
