@@ -29,6 +29,7 @@ opt.signcolumn     = "yes:1"       -- Always display signcolumn (max 1 sign)
 opt.undofile = true       -- Save undofiles
 opt.backup   = true       -- Save backup files
 opt.backupdir:remove(".") -- Don't save backup files in the current directory
+-- TODO: create backup, swap, and undo dirs if they don't exist
 
 -- For a better completion experience
 opt.completeopt = "menuone,noinsert,noselect"
