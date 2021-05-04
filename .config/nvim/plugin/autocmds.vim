@@ -4,16 +4,12 @@ au BufWritePost plugins.lua PackerCompile
 " Highlight yanked text
 au TextYankPost * silent! lua vim.highlight.on_yank { timeout = 300 }
 
-" Enable the autocompletion in all buffers
-au BufEnter * lua require'completion'.on_attach()
-
 augroup LspAutocommands
   au!
-  au ColorScheme * lua require'ape.lsp'.set_up_highlights()
   au WinEnter * lua require'ape.lsp'.bind()
 augroup END
 
-augroup lsp
+augroup MetalsLsp
   au!
-  au FileType scala,sbt lua require('metals').initialize_or_attach(metals_config)
+  au FileType scala,sbt lua require("metals").initialize_or_attach(Metals_config())
 augroup end

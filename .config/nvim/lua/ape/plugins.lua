@@ -12,6 +12,7 @@ return require("packer").startup {
     use {
       "iamcco/markdown-preview.nvim",
       run = "cd app && yarn install",
+      opt = true,
       ft = "markdown"
     }
 
@@ -35,6 +36,7 @@ return require("packer").startup {
     use "wincent/corpus"
     use "wincent/loupe"
     use "wincent/pinnacle"
+    use "tjdevries/astronauta.nvim"
 
     use {
       "windwp/nvim-autopairs",
@@ -55,15 +57,11 @@ return require("packer").startup {
       requires = {"kyazdani42/nvim-web-devicons"}
     }
 
-    -- Got to stop that jjjjjjj-ing and kkkkkkkk-ing
-    use "takac/vim-hardtime"
-
     -- Treesitter
     use {
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate"
     }
-    use "nvim-treesitter/playground"
     use "JoosepAlviste/nvim-ts-context-commentstring"
     use { "p00f/nvim-ts-rainbow", ft =  "clojure" }
 
@@ -71,14 +69,10 @@ return require("packer").startup {
     -- Lsp
     use "glepnir/lspsaga.nvim"
     use "neovim/nvim-lspconfig"
-    use "nvim-lua/completion-nvim"
     use "scalameta/nvim-metals"
+    use "hrsh7th/nvim-compe"
 
-    -- This will most likely be available in neovim 0.5 release
-    use "tjdevries/astronauta.nvim"
-
-    -- TODO: Look into setting up these
-    -- use 'mfussenegger/nvim-dap'
-    -- use 'theHamsta/nvim-dap-virtual-text'
+    -- Dap
+    use "mfussenegger/nvim-dap"
   end
 }

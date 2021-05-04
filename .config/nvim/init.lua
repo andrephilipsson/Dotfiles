@@ -1,9 +1,3 @@
--- Disable python2
-vim.g.loaded_python_provider = 0
-
--- Change leader key to <Space>
-vim.g.mapleader = ' '
-
 -- Load options
 require("ape.options")
 
@@ -11,18 +5,25 @@ require("ape.options")
 require("ape.utils")
 
 -- Return early if packer.nvim doesn't exist.
-if require('ape.packer_exists') then return end
+if require("ape.packer_exists") then return end
 
 -- Load packer.nvim file.
-require('ape.plugins')
+require("ape.plugins")
+
+-- Setup autocompletion
+require("ape.completion")
 
 -- Statusline
 require("ape.statusline")
 
 -- Load Lsp
-require('ape.lsp').init()
+require("ape.lsp").setup()
+
+-- For debugging code
+require("ape.dap")
+
+-- Treesitter
+require("ape.treesitter")
 
 -- Load snippets
-require('ape.snips')
-
-vim.g.hardtime_default_on = 1
+require("ape.snips")
