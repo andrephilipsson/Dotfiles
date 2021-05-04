@@ -51,5 +51,5 @@ vim.cmd("highlight LspDiagnosticsSignHint " .. pinnacle.highlight({
 -- vim.cmd("highlight LspDiagnosticsHint " .. pinnacle.decorate("italic,underline", "ModeMsg"))
 
 -- Dap
-vim.fn.sign_define("DapBreakpoint", {text="🛑"})
-vim.fn.sign_define("DapStopped", {text="🟢"})
+vim.fn.sign_define("DapBreakpoint", { text="🔴", texthl = "ColorColumn" })
+vim.fn.sign_define("DapStopped", { text="🟢", texthl = "ColorColumn" })
