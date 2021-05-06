@@ -15,3 +15,5 @@ augroup MetalsLsp
 augroup end
 
 au FileType dap-repl lua require("dap.ext.autocompl").attach()
+
+autocmd FileType * setlocal formatoptions-=o
