@@ -45,6 +45,11 @@ vim.cmd("highlight LspDiagnosticsSignHint " .. pinnacle.highlight({
     -- fg = pinnacle.extract_fg("ErrorMsg"),
 }))
 
+vim.cmd("highlight LspSagaLightBulbSign " .. pinnacle.highlight({
+    bg = pinnacle.extract_bg("ColorColumn"),
+    -- fg = pinnacle.extract_fg("ErrorMsg"),
+}))
+
 -- vim.cmd("highlight LspDiagnosticsError " .. pinnacle.decorate("italic,underline", "ModeMsg"))
 -- vim.cmd("highlight LspDiagnosticsWarning " .. pinnacle.decorate("italic,underline", "Type"))
 -- vim.cmd("highlight LspDiagnosticsInformation " .. pinnacle.decorate("italic,underline", "Function"))

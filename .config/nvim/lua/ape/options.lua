@@ -25,6 +25,7 @@ opt.tabstop        = 2             -- Spaces per tab
 opt.textwidth      = 80            -- Wrap lines at 80 columns
 opt.virtualedit    = "block"       -- Allow cursor to move freely in visual mode
 opt.signcolumn     = "yes:1"       -- Always display signcolumn (max 1 sign)
+opt.updatetime     = 500           -- Update signs etc. on cursor hold. Default 4000
 
 opt.undofile = true       -- Save undofiles
 opt.backup   = true       -- Save backup files
