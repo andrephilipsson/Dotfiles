@@ -58,3 +58,7 @@ vim.cmd("highlight LspSagaLightBulbSign " .. pinnacle.highlight({
 -- Dap
 vim.fn.sign_define("DapBreakpoint", { text="🔴", texthl = "ColorColumn" })
 vim.fn.sign_define("DapStopped", { text="🟢", texthl = "ColorColumn" })
+
+vim.cmd("highlight SpellBad " .. pinnacle.highlight({
+    fg = pinnacle.extract_fg("ErrorMsg")
+}))
