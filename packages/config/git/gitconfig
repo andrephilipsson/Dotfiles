@@ -1,0 +1,17 @@
+[user]
+	name = André Philipsson
+	email = 62261582+andrephilipsson@users.noreply.github.com
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+	last = log -1 HEAD
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[pager]
+	status = true
+[log]
+	decorate = short
