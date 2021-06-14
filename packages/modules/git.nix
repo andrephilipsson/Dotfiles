@@ -9,6 +9,7 @@
   ];
 
   home.file.".config/git/ignore".text = ''
+    result
     tags
   '';
 

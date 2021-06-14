@@ -1,5 +1,5 @@
 -- Load options
-require("ape.options")
+--require("ape.options")
 
 -- Load utils
 require("ape.utils")

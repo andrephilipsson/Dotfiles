@@ -59,7 +59,7 @@ lsp.setup = function ()
   lsp_config.r_language_server.setup({})
   lsp_config.tsserver.setup({})
   lsp_config.clojure_lsp.setup({})
-  lsp_config.clangd.setup({})
+  -- lsp_config.clangd.setup({})
 
   lsp_config.jdtls.setup{
     root_dir = require("lspconfig").util.root_pattern("settings.gradle", ".git")
