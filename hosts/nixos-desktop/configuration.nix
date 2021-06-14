@@ -51,6 +51,7 @@
  fonts = {
     fontDir.enable = true;
     fonts = with pkgs; [
+      source-code-pro
       nerdfonts
     ];
     fontconfig.defaultFonts = {
@@ -87,12 +88,7 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-
-  # Enable the Plasma 5 Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  /* services.xserver.desktopManager.plasma5.enable = true; */
   services.xserver.windowManager.awesome.enable = true;
-  
 
   # Configure keymap in X11
   services.xserver.layout = "se";
