@@ -1,7 +1,7 @@
 { config, pkgs, libs, ... }:
 {
   home.packages = with pkgs; [
-    # TODO: install prompt here
+    starship
     zsh-autosuggestions
     zsh-syntax-highlighting
   ];
@@ -13,4 +13,16 @@
   # this is necessary since zsh might source it in the zsh/ directory. But I
   # do think we need to symlink .zshenv to ~ because how would zsh know ehich
   # directory is the ZSH_DIR otherwise since we set it in .zshenv?
+
+  programs.zsh = {
+    enable = true;
+    /* autosuggestions = true; */
+    enableAutosuggestions = true;
+    /* enableSyntaxHighlighting = true; */
+
+    initExtraBeforeCompInit = ''
+      bindkey '^t' autosuggest-accept
+    '';
+  };
+
 }

@@ -23,6 +23,7 @@
     watchman
     wget
     youtube-dl
+    bfs
     zsh # TODO: Do I want to install it here or in the zsh module?
   ];
 

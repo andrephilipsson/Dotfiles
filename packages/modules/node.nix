@@ -3,6 +3,6 @@
   home.packages = with pkgs; [
     nodejs
     yarn
-    # TODO: intsall typescript language server
+    # TODO: install typescript language server
   ];
 }

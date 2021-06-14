@@ -30,6 +30,10 @@
                 ./modules/cli.nix
                 ./modules/zsh.nix
                 ./modules/chat.nix
+                ./modules/c.nix
+                ./modules/node.nix
+                ./modules/awesome.nix
+                ./modules/python.nix
               ];
             };
           system = "x86_64-linux";

@@ -21,7 +21,9 @@ export R_ENVIRON_USER="$XDG_CONFIG_HOME/R/Renviron"
 # export JDTLS_CONFIG="$XDG_DATA_HOME/jdtls/config_linux"
 # export WORKSPACE="$XDG_CACHE_HOME/workspace"
 
+export PATH="$PATH:$HOME/.yarn/bin"
+
 # Default programs
-# export EDITOR=nvim
+export EDITOR=nvim
 # export BROWSER=firefox
-# export TERMINAL=alacritty
+export TERMINAL=alacritty
