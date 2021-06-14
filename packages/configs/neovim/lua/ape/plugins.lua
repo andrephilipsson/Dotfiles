@@ -24,7 +24,7 @@ return require("packer").startup {
       requires = {"nvim-lua/plenary.nvim"}
     }
 
-    use "chriskempson/base16-vim"
+    use "joshdick/onedark.vim"
     use "junegunn/vim-easy-align"
     use "justinmk/vim-dirvish"
     use "kyazdani42/nvim-web-devicons"

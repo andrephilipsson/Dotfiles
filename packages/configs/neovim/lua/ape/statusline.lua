@@ -1,6 +1,6 @@
 require("lualine").setup{
   options = {
-    theme = "seoul256",
+    theme = "onedark",
     section_separators = {"", ""},
     component_separators = {"", ""},
     icons_enabled = true,
