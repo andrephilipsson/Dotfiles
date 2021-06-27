@@ -12,6 +12,15 @@
 [pull]
 	rebase = false
 [pager]
-	status = true
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+    status = true
+
+[interactive]
+    diffFilter = delta --color-only
+
 [log]
 	decorate = short
+
