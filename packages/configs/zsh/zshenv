@@ -22,6 +22,7 @@ export R_ENVIRON_USER="$XDG_CONFIG_HOME/R/Renviron"
 # export WORKSPACE="$XDG_CACHE_HOME/workspace"
 
 export PATH="$PATH:$HOME/.yarn/bin"
+export PATH="$PATH:$XDG_DATA_HOME/coursier/bin"
 
 # Default programs
 export EDITOR=nvim

@@ -25,7 +25,6 @@ return require("packer").startup {
     }
 
     use "joshdick/onedark.vim"
-    use "junegunn/vim-easy-align"
     use "justinmk/vim-dirvish"
     use "kyazdani42/nvim-web-devicons"
     use "norcalli/snippets.nvim"

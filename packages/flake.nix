@@ -20,20 +20,22 @@
         nixos-desktop = inputs.home-manager.lib.homeManagerConfiguration {
           configuration = { pkgs, ... }:
             {
-	      nixpkgs.config = import ./configs/nix/config.nix;
+        nixpkgs.config = import ./configs/nix/config.nix;
               nixpkgs.overlays = overlays;
               imports = [
-                ./modules/neovim.nix
+                ./modules/awesome.nix
+                ./modules/c.nix
+                ./modules/chat.nix
+                ./modules/cli.nix
+                ./modules/clojure.nix
                 ./modules/git.nix
                 ./modules/gui.nix
-                ./modules/clojure.nix
-                ./modules/cli.nix
-                ./modules/zsh.nix
-                ./modules/chat.nix
-                ./modules/c.nix
+                ./modules/neovim.nix
                 ./modules/node.nix
-                ./modules/awesome.nix
                 ./modules/python.nix
+                ./modules/scala.nix
+                ./modules/tex.nix
+                ./modules/zsh.nix
               ];
             };
           system = "x86_64-linux";

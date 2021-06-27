@@ -53,7 +53,7 @@ lsp.setup = function ()
     return metals_config
   end
 
-  lsp_config.pyls.setup({})
+  lsp_config.pyright.setup({})
   lsp_config.vuels.setup({})
   lsp_config.kotlin_language_server.setup({})
   lsp_config.r_language_server.setup({})
