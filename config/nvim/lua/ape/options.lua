@@ -67,3 +67,6 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Change leader key to <Space>
 vim.g.mapleader = " "
+
+-- Enable termguicolors (needs to be set before packer loads any plugins)
+o.termguicolors = true

@@ -1,8 +1,6 @@
 local pinnacle = require("wincent.pinnacle")
 
 vim.g.onedark_terminal_italics = 1
-vim.o.termguicolors = true
--- vim.opt.temguicolors = true
 vim.cmd("colorscheme onedark")
 
 -- Make current line nr stand out
