@@ -555,7 +555,4 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- Programs to autorun
-awful.spawn.with_shell("$XDG_CONFIG_HOME/awesome/autorun.sh")
-
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
