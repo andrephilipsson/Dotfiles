@@ -23,7 +23,7 @@ require("ape.lsp").setup()
 require("ape.dap")
 
 -- Treesitter
---require("ape.treesitter")
+require("ape.treesitter")
 
 -- Load snippets
 require("ape.snips")
