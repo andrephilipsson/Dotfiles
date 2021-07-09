@@ -1,26 +1,29 @@
 [user]
-	name = André Philipsson
-	email = 62261582+andrephilipsson@users.noreply.github.com
+  name = André Philipsson
+  email = 62261582+andrephilipsson@users.noreply.github.com
+
 [alias]
-	co = checkout
-	br = branch
-	st = status
-	ci = commit
-	last = log -1 HEAD
+  co = checkout
+  br = branch
+  st = status
+  ci = commit
+  last = log -1 HEAD
+  delta = "!f() { git diff \"$@\" | delta; }; f"
+
 [init]
-	defaultBranch = main
+  defaultBranch = main
+
 [pull]
-	rebase = false
+  rebase = false
+
 [pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
-    status = true
+  status = true
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [log]
-	decorate = short
+  decorate = short
 
+[delta]
+  line-numbers = true
