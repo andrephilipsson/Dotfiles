@@ -26,6 +26,7 @@ o.textwidth      = 80            -- Wrap lines at 80 columns
 o.virtualedit    = "block"       -- Allow cursor to move freely in visual mode
 o.signcolumn     = "yes:1"       -- Always display signcolumn (max 1 sign)
 o.updatetime     = 500           -- Update signs etc. on cursor hold. Default 4000
+o.emoji          = false         -- Don't assume double width emojis
 
 o.undofile = true        -- Save undofiles
 o.backup   = true        -- Save backup files
@@ -63,7 +64,7 @@ o.shortmess = o.shortmess
 vim.g.loaded_python_provider = 0
 
 -- Disable netrw
-vim.g.loaded_netrwPlugin = 1
+--vim.g.loaded_netrwPlugin = 1
 
 -- Change leader key to <Space>
 vim.g.mapleader = " "

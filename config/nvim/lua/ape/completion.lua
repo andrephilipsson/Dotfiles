@@ -49,6 +49,7 @@ require"compe".setup {
     nvim_lua = true,
     vsnip = false,
     snippets_nvim = true,
+    emoji = true,
     nvim_lsp = {
       priority = 1000
     },
