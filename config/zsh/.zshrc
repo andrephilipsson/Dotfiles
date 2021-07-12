@@ -1,9 +1,9 @@
 #!/bin/zsh
 
 # Source other files
-source $XDG_CONFIG_HOME/zsh/aliases
-source $XDG_CONFIG_HOME/zsh/functions
-source $XDG_CONFIG_HOME/zsh/hash
+source $XDG_CONFIG_HOME/zsh/aliases.zsh
+source $XDG_CONFIG_HOME/zsh/functions.zsh
+source $XDG_CONFIG_HOME/zsh/hash.zsh
 
 export HISTSIZE=100000
 export HISTFILE=$XDG_DATA_HOME/zsh/history
@@ -27,7 +27,11 @@ setopt SHARE_HISTORY           # share history across shells
 autoload -U colors
 colors
 
-# Syntax highlighting should be last
-# source $XDG_CONFIG_HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 eval "$(starship init zsh)"
+
+# Ctrl + t accepts autosuggestion
+bindkey "^t" autosuggest-accept
+
+# Plugins. Should be last
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
