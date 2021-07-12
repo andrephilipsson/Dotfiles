@@ -2,14 +2,6 @@
   name = André Philipsson
   email = 62261582+andrephilipsson@users.noreply.github.com
 
-[alias]
-  co = checkout
-  br = branch
-  st = status
-  ci = commit
-  last = log -1 HEAD
-  delta = "!f() { git diff \"$@\" | delta; }; f"
-
 [init]
   defaultBranch = main
 
@@ -27,3 +19,12 @@
 
 [delta]
   line-numbers = true
+
+[alias]
+  br = branch
+  ci = commit
+  co = checkout
+  delta = "!f() { git diff \"$@\" | delta; }; f"
+  last = log -1 HEAD
+  st = status
+  update = pull --rebase origin
