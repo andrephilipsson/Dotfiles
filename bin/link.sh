@@ -1,2 +1,2 @@
-stow -v -t ${HOME} home
-stow -v -t ${XDG_CONFIG_HOME} config
+stow -v -d .. -t ${HOME} home
+stow -v -d .. -t ${XDG_CONFIG_HOME} config
