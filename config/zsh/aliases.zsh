@@ -3,9 +3,9 @@
 alias v="nvim"
 alias j="jump"
 alias g="git"
-alias ls="ls -hF --color=auto"
-alias l="ls -hF --color=auto"
-alias ll="ls -lAhF --color=auto"
+alias ls="ls -hFG"
+alias l="ls -hFG"
+alias ll="ls -lAhFG"
 alias week="date +%V"
 alias R="R --quiet"
 alias e="exit"
@@ -13,6 +13,7 @@ alias f="find -name"
 alias t="tmux"
 alias path="echo -e ${PATH//:/\\n}" # Pretty print path
 alias tree="tree -I node_modules"
+alias scala3="scala3-repl"
 
 # Suffix aliases
 # (eg. "foo.md" to open Markdown files in glow)
