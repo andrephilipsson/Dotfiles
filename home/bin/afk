@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Since we want to be able to call this from dmenu, we use simple script instead
-# of an alias.
-systemctl suspend
