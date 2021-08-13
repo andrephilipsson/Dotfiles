@@ -27,11 +27,7 @@ o.virtualedit    = "block"       -- Allow cursor to move freely in visual mode
 o.signcolumn     = "yes:1"       -- Always display signcolumn (max 1 sign)
 o.updatetime     = 500           -- Update signs etc. on cursor hold. Default 4000
 o.emoji          = false         -- Don't assume double width emojis
-
-o.undofile = true        -- Save undofiles
-o.backup   = true        -- Save backup files
-o.backupdir:remove(".")  -- Don't save backup files in the current directory
--- TODO: create backup, swap, and undo dirs if they don't exist
+o.undofile       = true          -- Save undofiles
 
 -- For a better completion experience
 o.completeopt = "menuone,noinsert,noselect"
