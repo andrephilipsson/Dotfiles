@@ -14,7 +14,15 @@ font:
   bold_italic:
     family: SauceCodePro Nerd Font
     style: Bold Italic
-  size: 13
+  size: 14
+
+# Needed for macOS keyboards where for example backslash '\' is <Alt> + <Shift> + 7
+alt_send_esc: false
+
+window:
+  padding:
+    x: 2
+    y: 0
 
 # Needed for macos keyboards
 alt_send_esc: false
