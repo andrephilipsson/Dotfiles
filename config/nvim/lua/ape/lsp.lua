@@ -20,12 +20,12 @@ lsp.setup = function ()
   local shared_diagnostic_settings = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false }
   )
-  local lsp_config = require("lspconfig")
+  local lspconfig = require("lspconfig")
   local capabilities = vim.lsp.protocol.make_client_capabilities()
 
   capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-  lsp_config.util.default_config = vim.tbl_extend("force", lsp_config.util.default_config, {
+  lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
     handlers = {
       ["textDocument/publishDiagnostics"] = shared_diagnostic_settings,
     },
@@ -53,20 +53,20 @@ lsp.setup = function ()
     return metals_config
   end
 
-  lsp_config.pyright.setup({})
-  lsp_config.vuels.setup({})
-  lsp_config.kotlin_language_server.setup({})
-  lsp_config.r_language_server.setup({})
-  lsp_config.tsserver.setup({})
-  lsp_config.clojure_lsp.setup({})
-  lsp_config.clangd.setup({})
-  lsp_config.tailwindcss.setup{}
+  lspconfig.pyright.setup({})
+  lspconfig.vuels.setup({})
+  lspconfig.kotlin_language_server.setup({})
+  lspconfig.r_language_server.setup({})
+  lspconfig.tsserver.setup({})
+  lspconfig.clojure_lsp.setup({})
+  lspconfig.clangd.setup({})
+  lspconfig.tailwindcss.setup{}
 
-  lsp_config.jdtls.setup{
+  lspconfig.jdtls.setup{
     root_dir = require("lspconfig").util.root_pattern("settings.gradle", ".git")
   }
 
-  lsp_config.texlab.setup{
+  lspconfig.texlab.setup{
     settings = {
       latex = {
         build = {
@@ -78,20 +78,12 @@ lsp.setup = function ()
     }
   }
 
-  local cmd = vim.fn.expand(
-    "lua-language-server"
-  )
-  lsp_config.sumneko_lua.setup{
-    cmd = { cmd },
-    settings = {
-      Lua = {
-        diagnostics = {
-          enable = true,
-          globals = {"vim"}
-        }
-      }
-    }
-  }
+  local luadev = require("lua-dev").setup({
+    lspconfig = {
+      cmd = {"lua-language-server"}
+    },
+  })
+  lspconfig.sumneko_lua.setup(luadev)
 end
 
 return lsp
