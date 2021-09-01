@@ -32,6 +32,8 @@ eval "$(starship init zsh)"
 # Ctrl + t accepts autosuggestion
 bindkey "^t" autosuggest-accept
 
+source /usr/share/nvm/init-nvm.sh
+
 # Plugins. Should be last
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
