@@ -62,10 +62,6 @@ lsp.setup = function ()
   lspconfig.clangd.setup({})
   lspconfig.tailwindcss.setup{}
 
-  lspconfig.jdtls.setup{
-    root_dir = require("lspconfig").util.root_pattern("settings.gradle", ".git")
-  }
-
   lspconfig.texlab.setup{
     settings = {
       latex = {

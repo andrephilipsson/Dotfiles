@@ -46,7 +46,9 @@ map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 -- Rename the symbol under the cursor
 map("n", "<Leader>rn", "<cmd>lua require('lspsaga.rename').rename()<CR>")
 -- Show avaiable code actions
-map("n", "<Leader>a", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>")
+-- map("n", "<Leader>a", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>")
+-- TODO: Make this work with lspsaga
+map("n", "<Leader>a", "<cmd>lua require('jdtls').code_action()<CR>")
 
 -- Dap
 map("n", "<Leader>dc", ":lua require'dap'.continue()<CR>")

@@ -68,11 +68,12 @@ return require("packer").startup {
     use { "p00f/nvim-ts-rainbow", ft =  "clojure" }
 
     -- Lsp
+    use "folke/lua-dev.nvim"
     use "glepnir/lspsaga.nvim"
+    use "hrsh7th/nvim-compe"
+    use "mfussenegger/nvim-jdtls"
     use "neovim/nvim-lspconfig"
     use "scalameta/nvim-metals"
-    use "hrsh7th/nvim-compe"
-    use "folke/lua-dev.nvim"
 
     -- Dap
     use "mfussenegger/nvim-dap"

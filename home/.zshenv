@@ -22,6 +22,8 @@ export PATH="$PATH:$HOME/.yarn/bin"
 export PATH="$PATH:$XDG_DATA_HOME/coursier/bin"
 export PATH="$PATH:$HOME/bin"
 
+export JDTLS=$HOME/Documents/Code/dotfiles/contrib/eclipse.jdt.ls
+
 # Default programs
 export EDITOR=nvim
 export BROWSER=firefox

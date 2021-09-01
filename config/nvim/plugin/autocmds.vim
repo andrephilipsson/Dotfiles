@@ -14,6 +14,11 @@ augroup MetalsLsp
   au FileType scala,sbt lua require("metals").initialize_or_attach(Metals_config())
 augroup end
 
+augroup lsp
+  au!
+  au FileType java lua require("jdtls").start_or_attach({cmd = {"java-lsp.sh"}})
+augroup end
+
 au FileType dap-repl lua require("dap.ext.autocompl").attach()
 
 autocmd FileType * setlocal formatoptions-=o
