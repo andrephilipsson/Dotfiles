@@ -13,7 +13,5 @@ alias f="find -name"
 alias t="tmux"
 alias path="echo -e ${PATH//:/\\n}" # Pretty print path
 alias tree="tree -I node_modules"
-
-# Suffix aliases
-# (eg. "foo.md" to open Markdown files in glow)
-alias -s md=glow
+alias scala3="scala3-repl"
+alias scala3c="scala3-compiler"
