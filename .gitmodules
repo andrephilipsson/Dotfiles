@@ -1,0 +1,3 @@
+[submodule "eclipse.jdt.ls"]
+	path = contrib/eclipse.jdt.ls
+	url = git@github.com:eclipse/eclipse.jdt.ls.git
