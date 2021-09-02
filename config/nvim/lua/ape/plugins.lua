@@ -28,7 +28,7 @@ return require("packer").startup {
     use "joshdick/onedark.vim"
     use "justinmk/vim-dirvish"
     use "kyazdani42/nvim-web-devicons"
-    use "norcalli/snippets.nvim"
+    use "L3MON4D3/LuaSnip"
     use "tpope/vim-commentary"
     use "tpope/vim-eunuch"
     use "tpope/vim-repeat"

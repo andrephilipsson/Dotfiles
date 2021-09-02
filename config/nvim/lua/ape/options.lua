@@ -64,7 +64,7 @@ o.shortmess = o.shortmess
 vim.g.loaded_python_provider = 0
 
 -- Disable netrw
---vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 -- Change leader key to <Space>
 vim.g.mapleader = " "

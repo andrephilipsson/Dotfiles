@@ -27,12 +27,15 @@ map("n", "<C-k>", ":cprev<CR>")
 -- Leave terminal mode with <ESC>
 map("t", "<ESC>", "<C-\\><C-n>")
 
--- Accept suggestion
 map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
 map("i", "<Tab>", "v:lua.tab_complete()", { expr = true })
 map("s", "<Tab>", "v:lua.tab_complete()", { expr = true })
 map("i", "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
 map("s", "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
+-- TODO: Fix this so that we don't get error when we don't have any selections
+-- active. Use require'luasnip'.choice_active()
+map("i", "<C-E>", "<cmd>lua require'luasnip'.change_choice(1)<CR>", {})
+map("s", "<C-E>", "<cmd>lua require'luasnip'.change_choice(-1)<CR>", {})
 
 -- Show line diagnostics in a floating window
 map("n", "<Leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>")

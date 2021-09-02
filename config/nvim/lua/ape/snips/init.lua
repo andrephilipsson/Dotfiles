@@ -1,20 +1,42 @@
-local snippets = require("snippets")
-local U = require("snippets.utils")
+local function prequire(...)
+  local status, lib = pcall(require, ...)
+  if (status) then return lib end
+  return nil
+end
 
-local snips = {}
+local luasnip = prequire('luasnip')
 
-snips._global = {
-  date = "${=os.date('%Y-%m-%d')}",
-  todo = U.force_comment("TODO: "),
-  fixme = U.force_comment("FIXME: "),
-};
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
 
-snips.python = require"ape.snips.python"
-snips.html = require"ape.snips.html"
-snips.vue = require"ape.snips.vue"
-snips.java = require"ape.snips.java"
-snips.markdown = require"ape.snips.markdown"
-snips.typescriptreact = require"ape.snips.typescriptreact"
-snips.anki_deck = require"ape.snips.anki_deck"
+local check_back_space = function()
+  local col = vim.fn.col('.') - 1
+  if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+    return true
+  else
+    return false
+  end
+end
 
-snippets.snippets = snips
+_G.tab_complete = function()
+  if require("luasnip").expand_or_jumpable() then
+    return t "<cmd>lua require'luasnip'.jump(1)<Cr>"
+  elseif vim.fn.pumvisible() == 1 then
+    return t "<C-n>"
+  elseif check_back_space() then
+    return t "<Tab>"
+  else
+    return vim.fn['compe#complete']()
+  end
+end
+
+_G.s_tab_complete = function()
+  if require("luasnip").jumpable(-1) then
+    return t "<cmd>lua require'luasnip'.jump(-1)<CR>"
+  elseif vim.fn.pumvisible() == 1 then
+    return t "<C-p>"
+  else
+    return t "<S-Tab>"
+  end
+end
