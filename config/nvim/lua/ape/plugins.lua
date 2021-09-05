@@ -37,6 +37,7 @@ return require("packer").startup {
     use "wincent/corpus"
     use "wincent/loupe"
     use "wincent/pinnacle"
+    use "lewis6991/impatient.nvim"
 
     use {
       "windwp/nvim-autopairs",

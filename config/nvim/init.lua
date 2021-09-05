@@ -4,6 +4,9 @@ require("ape.options")
 -- Load utils
 require("ape.utils")
 
+-- Speed up startup. Must be before plugins are loaded
+require("impatient")
+
 -- Return early if packer.nvim doesn't exist.
 if require("ape.packer_exists") then return end
 
