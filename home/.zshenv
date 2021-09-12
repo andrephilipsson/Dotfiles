@@ -6,6 +6,7 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+export DOTFILES_DIR="$HOME/Documents/Code/dotfiles"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export GOPATH="$XDG_DATA_HOME"/go
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
@@ -21,8 +22,10 @@ export R_ENVIRON_USER="$XDG_CONFIG_HOME/R/Renviron"
 export PATH="$PATH:$HOME/.yarn/bin"
 export PATH="$PATH:$XDG_DATA_HOME/coursier/bin"
 export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$XDG_DATA_HOME/gem/ruby/3.0.0/bin"
+export PATH="$PATH:$DOTFILES_DIR/contrib/git-cipher/bin"
 
-export JDTLS=$HOME/Documents/Code/dotfiles/contrib/eclipse.jdt.ls
+export JDTLS="$DOTFILES_DIR/contrib/eclipse.jdt.ls"
 
 # Default programs
 export EDITOR=nvim

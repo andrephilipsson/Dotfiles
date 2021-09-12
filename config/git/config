@@ -1,30 +1,32 @@
 [user]
-  name = André Philipsson
-  email = 62261582+andrephilipsson@users.noreply.github.com
+	name = André Philipsson
+	email = andre@andrephilipsson.com
 
 [init]
-  defaultBranch = main
+	defaultBranch = main
 
 [pull]
-  rebase = false
+	rebase = false
 
 [pager]
-  status = true
+	status = true
 
 [interactive]
-  diffFilter = delta --color-only
+	diffFilter = delta --color-only
 
 [log]
-  decorate = short
+	decorate = short
 
 [delta]
-  line-numbers = true
+	line-numbers = true
 
 [alias]
-  br = branch
-  ci = commit
-  co = checkout
-  delta = "!f() { git diff \"$@\" | delta; }; f"
-  last = log -1 HEAD
-  st = status
-  update = pull --rebase origin
+	ci = commit
+	co = checkout
+	delta = "!f() { git diff \"$@\" | delta; }; f"
+	last = log -1 HEAD
+	st = status
+	update = pull --rebase origin
+
+[cipher]
+	gpguser = andre@andrephilipsson.com
