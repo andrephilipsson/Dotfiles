@@ -70,7 +70,19 @@ return require("packer").startup {
     -- Lsp
     use "folke/lua-dev.nvim"
     use "glepnir/lspsaga.nvim"
-    use "hrsh7th/nvim-compe"
+    use {
+      "hrsh7th/nvim-cmp",
+      requires = {
+        "f3fora/cmp-spell",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-emoji",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-nvim-lua",
+        "hrsh7th/cmp-path",
+        "kdheepak/cmp-latex-symbols",
+        "saadparwaiz1/cmp_luasnip",
+      }
+    }
     use "mfussenegger/nvim-jdtls"
     use "neovim/nvim-lspconfig"
     use "scalameta/nvim-metals"

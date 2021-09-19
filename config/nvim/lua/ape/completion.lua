@@ -1,64 +1,60 @@
-local luasnip = require('luasnip')
-
-local t = function(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
+local has_words_before = function()
+  if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
+    return false
+  end
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-local check_back_space = function()
-    local col = vim.fn.col('.') - 1
-    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        return true
-    else
-        return false
+local feedkey = function(key)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), "n", true)
+end
+
+local luasnip = require("luasnip")
+local cmp = require("cmp")
+
+cmp.setup {
+  completion = {
+    completeopt = "menu,menuone,noselect",
+  },
+  mapping = {
+    ["<CR>"] = cmp.mapping.confirm(),
+
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      elseif vim.fn.pumvisible() == 1 then
+        feedkey("<C-n>")
+      elseif has_words_before() then
+        cmp.complete()
+      else
+        fallback() -- The fallback function sends an already mapped key. In this case, it's probably `<Tab>`.
+      end
+    end, { "i", "s" }),
+
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      elseif vim.fn.pumvisible() == 1 then
+        feedkey("<C-p>")
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+  },
+
+  snippet = {
+    expand = function(args)
+      require"luasnip".lsp_expand(args.body)
     end
-end
-
--- Use <Tab> and <S-Tab> to:
--- - Move to prev/next completion item
--- - Jump to prev/next snippet's placeholder
--- - Trigger completion
-_G.tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-n>"
-  elseif luasnip and luasnip.expand_or_jumpable() then
-    return t "<Plug>luasnip-expand-or-jump"
-  elseif check_back_space() then
-    return t "<Tab>"
-  else
-    return vim.fn['compe#complete']()
-  end
-end
-
-_G.s_tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-p>"
-  elseif luasnip and luasnip.jumpable(-1) then
-    return t "<Plug>luasnip-jump-prev"
-  else
-    return t "<S-Tab>"
-  end
-end
-
-
-require"compe".setup {
-  enabled = true,
-  min_length = 1,
-  preselect = "always",
-
-  source = {
-    path = true,
-    buffer = true,
-    calc = false,
-    nvim_lua = true,
-    vsnip = false,
-    snippets_nvim = false,
-    -- luasnip = true,
-    emoji = true,
-    nvim_lsp = {
-      priority = 1000
-    },
-    luasnip = {
-      priority = 2000
-    },
+  },
+  sources = {
+    { name = "nvim_lsp" },
+    { name = "luasnip" },
+    { name = "path" },
+    { name = "nvim_lua" },
+    { name = "latex_symbols" },
+    { name = "spell" },
+    { name = "emoji" },
   }
 }

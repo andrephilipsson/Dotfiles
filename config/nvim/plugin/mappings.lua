@@ -27,11 +27,6 @@ map("n", "<C-k>", ":cprev<CR>")
 -- Leave terminal mode with <ESC>
 map("t", "<ESC>", "<C-\\><C-n>")
 
-map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
-map("i", "<Tab>", "v:lua.tab_complete()", { expr = true })
-map("s", "<Tab>", "v:lua.tab_complete()", { expr = true })
-map("i", "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
-map("s", "<S-Tab>", "v:lua.s_tab_complete()", { expr = true })
 -- TODO: Fix this so that we don't get error when we don't have any selections
 -- active. Use require'luasnip'.choice_active()
 map("i", "<C-E>", "<cmd>lua require'luasnip'.change_choice(1)<CR>", {})
