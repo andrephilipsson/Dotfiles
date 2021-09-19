@@ -58,8 +58,6 @@ return require("packer").startup {
       requires = {"kyazdani42/nvim-web-devicons"}
     }
 
-    use "kyazdani42/nvim-tree.lua"
-
     -- Treesitter
     use {
       "nvim-treesitter/nvim-treesitter",
