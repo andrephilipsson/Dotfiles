@@ -14,9 +14,6 @@ local luasnip = require("luasnip")
 local cmp = require("cmp")
 
 cmp.setup {
-  completion = {
-    completeopt = "menu,menuone,noselect",
-  },
   mapping = {
     ["<CR>"] = cmp.mapping.confirm(),
 

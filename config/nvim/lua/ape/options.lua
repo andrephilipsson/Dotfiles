@@ -5,8 +5,10 @@ o.breakindentopt = "shift:2"     -- Emphasize broken lines by indenting them
 o.clipboard      = "unnamedplus" -- Use system clipboard
 o.colorcolumn    = "80"          -- Display vertical gray line at 80 columns
 o.cursorline     = true          -- Enable cursorline
+o.emoji          = false         -- Don't assume double width emojis
 o.equalalways    = false         -- Don't resize my splits
 o.expandtab      = true          -- Convert tabs to spaces
+o.foldlevel      = 99            -- Start with all folds open
 o.hidden         = true          -- Allow hiding buffers with unsaved changes
 o.inccommand     = "nosplit"     -- Show the effects of a command as you type
 o.joinspaces     = false         -- Don't insert two spaces after joining lines
@@ -18,26 +20,28 @@ o.relativenumber = true          -- Use relative line numbers
 o.scrolloff      = 10            -- Always show 10 lines under the current line
 o.shiftwidth     = 2             -- Spaces per tab when indenting
 o.showmode       = false         -- Don't show current mode. Statusline does that
+o.signcolumn     = "yes:1"       -- Always display signcolumn (max 1 sign)
 o.softtabstop    = -1            -- Use the value of "shiftwidth"
 o.splitbelow     = true          -- Open horizontal splits below
 o.splitright     = true          -- Open vertical splits to the right
 o.tabstop        = 2             -- Spaces per tab
 o.textwidth      = 80            -- Wrap lines at 80 columns
-o.virtualedit    = "block"       -- Allow cursor to move freely in visual mode
-o.signcolumn     = "yes:1"       -- Always display signcolumn (max 1 sign)
+o.undofile       = true          -- Save undofiles
 o.updatetime     = 500           -- Update signs etc. on cursor hold. Default 4000
-o.emoji          = false         -- Don't assume double width emojis
-
-o.undofile = true        -- Save undofiles
-o.backup   = true        -- Save backup files
-o.backupdir:remove(".")  -- Don't save backup files in the current directory
--- TODO: create backup, swap, and undo dirs if they don't exist
+o.virtualedit    = "block"       -- Allow cursor to move freely in visual mode
 
 -- For a better completion experience
 o.completeopt = "menuone,noinsert,noselect"
 
--- Ignore these files
-o.wildignore  = {"*/.git/*", "*.class", "*~"}
+-- Ignore these files and folders
+o.wildignore  = {
+  "*/.git/*",
+  "*.class",
+  "*~",
+  "*.o",
+  "*/node_modules/*",
+  ".DS_Store"
+}
 
 o.wildmode = {
   "longest", -- Complete till longest common string...
@@ -45,10 +49,16 @@ o.wildmode = {
 }
 
 -- Show whitespace with these symbols
-o.listchars = {nbsp = "⦸", tab = "▷┅", extends = "»", precedes = "«", trail = "•"}
+o.listchars = {
+  nbsp = "⦸",
+  tab = "▷┅",
+  extends = "»",
+  precedes = "«",
+  trail = "•"
+}
 
 o.formatoptions = o.formatoptions
-                    + "j" -- Remove commend leader when joining comments
+                    + "j" -- Remove comment leader when joining comments
                     + "n" -- Smart auto indent in lists
                     - "o" -- Don't insert comment leader when pressing "o" or "O"
 
