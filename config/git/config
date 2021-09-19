@@ -30,3 +30,5 @@
 
 [cipher]
 	gpguser = andre@andrephilipsson.com
+[commit]
+	template = ~/.config/git/gitcommit
