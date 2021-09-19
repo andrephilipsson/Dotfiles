@@ -23,7 +23,7 @@ return require("packer").startup {
       "lewis6991/gitsigns.nvim",
       requires = {"nvim-lua/plenary.nvim"}
     }
-    use "rhysd/committia.vim"
+    -- use "rhysd/committia.vim"
 
     use "joshdick/onedark.vim"
     use "wincent/base16-nvim"
