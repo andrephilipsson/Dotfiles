@@ -1,12 +1,13 @@
 local pinnacle = require("wincent.pinnacle")
 
-vim.g.onedark_terminal_italics = 1
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme base16-bright")
 
 -- Make current line nr stand out
 vim.cmd("highlight clear CursorLineNr")
-vim.cmd("highlight link CursorLineNr Function")
+vim.cmd("highlight CursorLineNr " .. pinnacle.extract_highlight("DiffText"))
 
+-- Hide end of buffer region
+vim.cmd("highlight! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg")
 
 require("gitsigns").setup {
   signs = {
@@ -18,42 +19,35 @@ require("gitsigns").setup {
   }
 }
 
-
 -- LSP highlights
 vim.fn.sign_define("LspDiagnosticsSignError", { text = "✖" })
 vim.fn.sign_define("LspDiagnosticsSignWarning", { text = "⚠" })
 vim.fn.sign_define("LspDiagnosticsSignInformation", { text = "ℹ" })
 vim.fn.sign_define("LspDiagnosticsSignHint", { text = "➤" })
 
--- vim.cmd("highlight LspDiagnosticsSignError " .. pinnacle.highlight({
---     bg = pinnacle.extract_bg("ColorColumn"),
---     fg = pinnacle.extract_fg("ErrorMsg"),
--- }))
+vim.cmd("highlight LspDiagnosticsSignError " .. pinnacle.highlight({
+    bg = pinnacle.extract_bg("ColorColumn"),
+    fg = pinnacle.extract_fg("ErrorMsg"),
+}))
 
--- vim.cmd("highlight LspDiagnosticsSignWarning " .. pinnacle.highlight({
---     bg = pinnacle.extract_bg("ColorColumn"),
---     fg = pinnacle.extract_fg("Type"),
--- }))
+vim.cmd("highlight LspDiagnosticsSignWarning " .. pinnacle.highlight({
+    bg = pinnacle.extract_bg("ColorColumn"),
+    fg = pinnacle.extract_fg("Type"),
+}))
 
--- vim.cmd("highlight LspDiagnosticsSignInformation " .. pinnacle.highlight({
---     bg = pinnacle.extract_bg("ColorColumn"),
---     fg = pinnacle.extract_fg("Function"),
--- }))
+vim.cmd("highlight LspDiagnosticsSignInformation " .. pinnacle.highlight({
+    bg = pinnacle.extract_bg("ColorColumn"),
+    fg = pinnacle.extract_fg("Function"),
+}))
 
--- vim.cmd("highlight LspDiagnosticsSignHint " .. pinnacle.highlight({
---     bg = pinnacle.extract_bg("ColorColumn"),
---     -- fg = pinnacle.extract_fg("ErrorMsg"),
--- }))
+vim.cmd("highlight LspDiagnosticsSignHint " .. pinnacle.highlight({
+    bg = pinnacle.extract_bg("ColorColumn"),
+}))
 
--- vim.cmd("highlight LspSagaLightBulbSign " .. pinnacle.highlight({
---     bg = pinnacle.extract_bg("ColorColumn"),
---     -- fg = pinnacle.extract_fg("ErrorMsg"),
--- }))
-
--- vim.cmd("highlight LspDiagnosticsError " .. pinnacle.decorate("italic,underline", "ModeMsg"))
--- vim.cmd("highlight LspDiagnosticsWarning " .. pinnacle.decorate("italic,underline", "Type"))
--- vim.cmd("highlight LspDiagnosticsInformation " .. pinnacle.decorate("italic,underline", "Function"))
--- vim.cmd("highlight LspDiagnosticsHint " .. pinnacle.decorate("italic,underline", "ModeMsg"))
+vim.cmd("highlight LspSagaLightBulbSign " .. pinnacle.highlight({
+    bg = pinnacle.extract_bg("ColorColumn"),
+    fg = pinnacle.extract_fg("Type"),
+}))
 
 -- Dap
 vim.fn.sign_define("DapBreakpoint", { text="🔴", texthl = "ColorColumn" })

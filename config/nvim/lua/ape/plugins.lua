@@ -26,6 +26,7 @@ return require("packer").startup {
     use "rhysd/committia.vim"
 
     use "joshdick/onedark.vim"
+    use "wincent/base16-nvim"
     use "justinmk/vim-dirvish"
     use "kyazdani42/nvim-web-devicons"
     use "L3MON4D3/LuaSnip"
