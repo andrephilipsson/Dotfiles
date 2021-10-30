@@ -4,7 +4,13 @@ require("telescope").setup{
   defaults = {
     prompt_prefix = "❯ ",
     selection_caret = "❯ ",
-    file_ignore_patterns = { "node_modules/" },
+    file_ignore_patterns = {
+      "^node_modules/",
+      "^.git/",
+      "%.class",
+      "%.pdf",
+      "%.png",
+    },
     mappings = {
       i = {
         ["<esc>"] = actions.close,

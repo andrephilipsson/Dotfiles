@@ -7,5 +7,3 @@ CorpusDirectories = {
     transform = "local",
   }
 }
-
-vim.g.CorpusPreviewWinhighlight="Normal:NonText"

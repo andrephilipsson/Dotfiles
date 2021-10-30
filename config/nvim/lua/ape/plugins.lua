@@ -5,7 +5,7 @@ return require("packer").startup {
     -- Telescope.nvim
     use {
       "nvim-telescope/telescope.nvim",
-      requires = {"nvim-lua/popup.nvim", "nvim-lua/plenary.nvim"}
+      requires = {"nvim-lua/plenary.nvim"}
     }
     use "nvim-telescope/telescope-fzy-native.nvim"
 
@@ -23,9 +23,7 @@ return require("packer").startup {
       "lewis6991/gitsigns.nvim",
       requires = {"nvim-lua/plenary.nvim"}
     }
-    -- use "rhysd/committia.vim"
 
-    use "joshdick/onedark.vim"
     use "wincent/base16-nvim"
     use "justinmk/vim-dirvish"
     use "kyazdani42/nvim-web-devicons"
@@ -49,13 +47,6 @@ return require("packer").startup {
     }
 
     use {
-      "norcalli/nvim-colorizer.lua",
-      config = function()
-        require("colorizer").setup(nil, { css = true })
-      end
-    }
-
-    use {
       "hoob3rt/lualine.nvim",
       requires = {"kyazdani42/nvim-web-devicons"}
     }
@@ -70,7 +61,6 @@ return require("packer").startup {
 
     -- Lsp
     use "folke/lua-dev.nvim"
-    use "glepnir/lspsaga.nvim"
     use {
       "hrsh7th/nvim-cmp",
       requires = {

@@ -22,6 +22,7 @@ nnoremap { "<Leader>fb", R("ape.telescope").file_browser }
 nnoremap { "<Leader>fh", R("telescope.builtin").help_tags }
 nnoremap { "<Leader>fg", R("telescope.builtin").live_grep }
 nnoremap { "<Leader>fl", R("telescope.builtin").current_buffer_fuzzy_find }
+nnoremap { "<Leader>fm", require("telescope").extensions.metals.commands }
 
 -- Navigate the quickfix listing with <C-j> and <C-k>
 nnoremap { "<C-j>", ":cnext<CR>" }
@@ -43,10 +44,8 @@ nnoremap { "K", vim.lsp.buf.hover }
 -- Opens a quickfix listing with all references to the symbol under the cursor
 nnoremap { "gr", vim.lsp.buf.references }
 -- Rename the symbol under the cursor
-nnoremap { "<Leader>rn", require("lspsaga.rename").rename }
+nnoremap { "<Leader>rn", vim.lsp.buf.rename }
 -- Show avaiable code actions
--- map("n", "<Leader>a", "<cmd>lua require('lspsaga.codeaction').code_action()<CR>")
--- TODO: Make this work with lspsaga
 nnoremap { "<Leader>a", require("jdtls").code_action }
 
 -- Dap

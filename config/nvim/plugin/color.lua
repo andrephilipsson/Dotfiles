@@ -44,11 +44,6 @@ vim.cmd("highlight LspDiagnosticsSignHint " .. pinnacle.highlight({
     bg = pinnacle.extract_bg("ColorColumn"),
 }))
 
-vim.cmd("highlight LspSagaLightBulbSign " .. pinnacle.highlight({
-    bg = pinnacle.extract_bg("ColorColumn"),
-    fg = pinnacle.extract_fg("Type"),
-}))
-
 -- Dap
 vim.fn.sign_define("DapBreakpoint", { text="🔴", texthl = "ColorColumn" })
 vim.fn.sign_define("DapStopped", { text="🟢", texthl = "ColorColumn" })
