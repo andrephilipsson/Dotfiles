@@ -4,6 +4,7 @@
 source $XDG_CONFIG_HOME/zsh/aliases.zsh
 source $XDG_CONFIG_HOME/zsh/functions.zsh
 source $XDG_CONFIG_HOME/zsh/hash.zsh
+source $XDG_CONFIG_HOME/zsh/path.zsh
 
 export HISTSIZE=100000
 export HISTFILE=$XDG_DATA_HOME/zsh/history

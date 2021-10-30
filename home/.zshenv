@@ -6,34 +6,16 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-export DOTFILES_DIR="$HOME/Documents/Code/dotfiles"
+export DOTFILES_DIR="$HOME/Code/personal/dotfiles"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export GOPATH="$XDG_DATA_HOME"/go
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 export R_ENVIRON_USER="$XDG_CONFIG_HOME/R/Renviron"
-
-# Variables for Java language server
-# export JAR="/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_1.6.100.v20201223-0822.jar"
-# export GRADLE_HOME="/usr/share/java/gradle/"
-# export JAVA_HOME="/usr/"
-# export JDTLS_CONFIG="$XDG_DATA_HOME/jdtls/config_linux"
-# export WORKSPACE="$XDG_CACHE_HOME/workspace"
-
-export PATH="$PATH:$HOME/.yarn/bin"
-export PATH="$PATH:$XDG_DATA_HOME/coursier/bin"
-export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:$XDG_DATA_HOME/gem/ruby/3.0.0/bin"
-export PATH="$PATH:$DOTFILES_DIR/contrib/git-cipher/bin"
-
+export ANDROID_HOME=$HOME/Android/Sdk
 export JDTLS="$DOTFILES_DIR/contrib/eclipse.jdt.ls"
+
 
 # Default programs
 export EDITOR=nvim
 export BROWSER=firefox
 export TERMINAL=alacritty
-
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
