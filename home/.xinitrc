@@ -19,4 +19,4 @@ xset s 300 5 &
 xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
 
 # start window manager
-exec awesome
+exec i3
