@@ -12,13 +12,14 @@
 	status = true
 
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = delta --color-only --features=interactive
 
 [log]
 	decorate = short
 
 [delta]
 	line-numbers = true
+	side-by-side = true
 
 [alias]
 	ci = commit
@@ -32,3 +33,5 @@
 	gpguser = andre@andrephilipsson.com
 [commit]
 	template = ~/.config/git/gitcommit
+
+# vim: noexpandtab
