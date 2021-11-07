@@ -22,3 +22,18 @@ augroup end
 au FileType dap-repl lua require("dap.ext.autocompl").attach()
 
 autocmd FileType * setlocal formatoptions-=o
+
+autocmd CursorHold,CursorHoldI * lua require("nvim-lightbulb").update_lightbulb()
+
+autocmd FileType tex lua require("cmp").setup.buffer {
+\   sources = {
+\     { name = 'latex_symbols' }
+\   }
+\ }
+
+autocmd FileType tex,markdown,text lua require("cmp").setup.buffer {
+\   sources = {
+\     { name = 'spell', keyword_length = 5 },
+\     { name = 'emoji' }
+\   }
+\ }
