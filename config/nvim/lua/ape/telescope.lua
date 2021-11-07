@@ -1,6 +1,6 @@
 local actions = require("telescope.actions")
 
-require("telescope").setup{
+require("telescope").setup {
   defaults = {
     prompt_prefix = "❯ ",
     selection_caret = "❯ ",
@@ -10,6 +10,9 @@ require("telescope").setup{
       "%.class",
       "%.pdf",
       "%.png",
+      "target/",
+      ".bloop/",
+      "eclipse.jdt.ls/",
     },
     mappings = {
       i = {
