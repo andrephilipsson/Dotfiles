@@ -9,6 +9,10 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# - Mod1 (default) is "Alt" ("Command").
+# - Mod4 is "Super" ("Option").
+set $alt Mod1
+set $super Mod4
 set $mod Mod4
 
 # Remove tiltebars
@@ -57,6 +61,9 @@ bindsym $mod+p exec --no-startup-id dmenu_run -fn SourceCodePro:pixelsize=15
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
+bindsym --release $alt+V exec --no-startup-id mac-paste.sh
+bindsym --release $alt+C exec --no-startup-id mac-copy.sh
 
 # change focus
 bindsym $mod+j focus left
