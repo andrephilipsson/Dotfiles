@@ -18,12 +18,10 @@ return require("packer").startup {
 
     -- Git
     use "tpope/vim-fugitive"
-    use "rhysd/git-messenger.vim"
     use {
       "lewis6991/gitsigns.nvim",
       requires = {"nvim-lua/plenary.nvim"}
     }
-
     use "wincent/base16-nvim"
     use "justinmk/vim-dirvish"
     use "kyazdani42/nvim-web-devicons"
@@ -57,7 +55,7 @@ return require("packer").startup {
       run = ":TSUpdate"
     }
     use "JoosepAlviste/nvim-ts-context-commentstring"
-    use { "p00f/nvim-ts-rainbow", ft =  "clojure" }
+    use "nvim-treesitter/nvim-treesitter-textobjects"
 
     -- Lsp
     use "folke/lua-dev.nvim"
@@ -74,9 +72,11 @@ return require("packer").startup {
         "saadparwaiz1/cmp_luasnip",
       }
     }
+    use "onsails/lspkind-nvim"
     use "mfussenegger/nvim-jdtls"
     use "neovim/nvim-lspconfig"
     use "scalameta/nvim-metals"
+    use "kosayoda/nvim-lightbulb"
 
     -- Dap
     use "mfussenegger/nvim-dap"
