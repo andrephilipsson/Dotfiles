@@ -35,13 +35,13 @@ lsp.setup = function ()
 
 
   Metals_config = function()
-    local metals_config = require("metals").bare_config
+    local metals_config = require("metals").bare_config()
 
     metals_config.settings = {
        showImplicitArguments = true
     }
 
-    -- metals_config.init_options.statusBarProvider = "on"
+    metals_config.init_options.statusBarProvider = "on"
 
     metals_config.handlers["textDocument/publishDiagnostics"] = shared_diagnostic_settings
 
