@@ -21,4 +21,10 @@ function! ape#functions#plaintext() abort
 
   nnoremap <buffer> j gj
   nnoremap <buffer> k gk
+
+  " Some undo breakpoints
+  inoremap <buffer> , ,<C-g>u
+  inoremap <buffer> . .<C-g>u
+  inoremap <buffer> ? ?<C-g>u
+  inoremap <buffer> ! !<C-g>u
 endfunction
