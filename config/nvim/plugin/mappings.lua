@@ -1,20 +1,16 @@
-local feedkey = require("ape.utils").feedkey
-
 local nnoremap = require("astronauta.keymap").nnoremap
-local inoremap = require("astronauta.keymap").inoremap
-local snoremap = require("astronauta.keymap").snoremap
 local tnoremap = require("astronauta.keymap").tnoremap
-
-local choice = function(dir)
-  if require"luasnip".choice_active() then
-    require"luasnip".change_choice(dir)
-  else
-   feedkey("<C-E>")
-  end
-end
 
 -- Open and close folds with Tab
 nnoremap { "<Tab>", "za" }
+
+nnoremap { "<F6>", "<C-i>" }
+
+-- I never use Ex mode
+nnoremap { "Q", "<Nop>"}
+
+-- Quick save
+nnoremap { "<Leader>w", ":w<CR>" }
 
 -- Telescope mappings
 nnoremap { "<Leader>ff", R("ape.telescope").find_files }
@@ -25,14 +21,12 @@ nnoremap { "<Leader>fl", R("telescope.builtin").current_buffer_fuzzy_find }
 nnoremap { "<Leader>fm", require("telescope").extensions.metals.commands }
 
 -- Navigate the quickfix listing with <C-j> and <C-k>
-nnoremap { "<C-j>", ":cnext<CR>" }
-nnoremap { "<C-k>", ":cprev<CR>" }
+-- while keeping the cursor centered and opening potential folds
+nnoremap { "<C-j>", ":cnext<CR>zzzv" }
+nnoremap { "<C-k>", ":cprev<CR>zzzv" }
 
 -- Leave terminal mode with <ESC>
 tnoremap { "<ESC>", "<C-\\><C-n>" }
-
-inoremap { "<C-E>", function() choice(1) end }
-snoremap { "<C-E>", function() choice(-1) end }
 
 -- Show line diagnostics in a floating window
 nnoremap { "<Leader>e", vim.lsp.diagnostic.show_line_diagnostics }

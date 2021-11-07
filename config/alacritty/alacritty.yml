@@ -14,7 +14,7 @@ font:
   bold_italic:
     family: Source Code Pro
     style: Bold Italic
-  size: 10
+  size: 11
 
 # Base16 Bright 256 - alacritty color config
 # Chris Kempson (http://chriskempson.com)
@@ -58,3 +58,8 @@ colors:
     - { index: 19, color: '0x505050' }
     - { index: 20, color: '0xd0d0d0' }
     - { index: 21, color: '0xf5f5f5' }
+
+# Remap Ctrl-i to send F6, so that we can use Ctrl-i for going into the
+# jumplist in vim
+key_bindings:
+  - { key: I, mods: Control, chars: "\x1b[17~" }
