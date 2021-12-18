@@ -1,6 +1,0 @@
-[submodule "eclipse.jdt.ls"]
-	path = contrib/eclipse.jdt.ls
-	url = git@github.com:eclipse/eclipse.jdt.ls.git
-[submodule "contrib/git-cipher"]
-	path = contrib/git-cipher
-	url = git@github.com:wincent/git-cipher.git

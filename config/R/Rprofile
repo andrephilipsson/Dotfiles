@@ -1,5 +1,0 @@
-.First <- function() {
-  # Print a welcome message
-  message("Welcome back ", Sys.getenv("USER"),"!\n","working directory is:", getwd())
-}
-options(menu.graphics=FALSE)
