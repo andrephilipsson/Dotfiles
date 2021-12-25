@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+
+red="\033[91m"
+blue="\033[94m"
+cyan="\033[96m"
+bold="\033[1m"
+reset="\033[0m"
+
+function log {
+  local LINE="$bold$blue[dotfiles install]$reset $*"
+  local JUST_TEXT="[dotfiles install] $*"
+  echo -e "$LINE"
+  echo "${JUST_TEXT//?/-}"
+}
+
+function link_aspect_to_target {
+  if [ -d ./aspects/$1 ] && [ -d $2 ]; then
+    log "Linking /aspects/$1 to $2"
+    stow -d aspects -t $2 $1
+  else
+    echo "Both aspects/$1 and $2 must be valid directories"
+    exit 1
+  fi
+}
+
+function install_homebrew {
+  if [ -x "$(command -v brew)" ]; then
+    log "Brew is already installed. Skipping this step"
+  else
+    log "Installing homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+}
+
+function install_homebrew_packages {
+  if [ -x "$(command -v brew)" ]; then
+    log "Installing packages from Brewfile"
+    brew bundle install --file ./aspects/homebrew/Brewfile
+  else
+    log "Brew is not installed. Skipping this step"
+  fi
+}
+
+function build_submodules {
+  log "Building Java language server"
+  (cd ./vendor/eclipse.jdt.ls && ./mvnw clean verify -DskipTests=true)
+
+  log "Building Java debug"
+  (cd ./vendor/java-debug && ./mvnw clean install)
+
+  log "Building VSCode Java test"
+  (cd ./vendor/vscode-java-test && npm install && npm run build-plugin)
+}
+
+function install_global_node_packages {
+  log "Installing global node packages"
+  volta install \
+    node@16 \
+    yarn \
+    pnpm \
+    typescript \
+    @volar/server \
+    @tailwindcss/language-server \
+    typescript-language-server \
+    firebase-tools
+}
+
+function system_install {
+  if [ $(uname -s) == "Darwin" ]; then
+    log "Starting a full system install. Platform: Darwin"
+
+    link_aspect_to_target "gh" $XDG_CONFIG_HOME
+    link_aspect_to_target "nvim" $XDG_CONFIG_HOME
+    link_aspect_to_target "git" $XDG_CONFIG_HOME
+    link_aspect_to_target ".ssh" $HOME
+    link_aspect_to_target "zsh" $XDG_CONFIG_HOME
+    link_aspect_to_target "tmux" $XDG_CONFIG_HOME
+    link_aspect_to_target "alacritty" $XDG_CONFIG_HOME
+
+    install_homebrew
+    install_homebrew_packages
+
+    build_submodules
+    install_global_node_packages
+
+    log "SUCCESS! Happy hacking!"
+  fi
+}
+
+
+case $1 in
+  setup)
+    system_install ;;
+  *)
+    echo -e "$bold${red}Error:$reset $1 is not a valid command\n"
+    echo "Possible commands:"
+    echo -e "  * ${cyan}setup$reset - Do a full system install"
+    ;;
+esac
