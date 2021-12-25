@@ -13,12 +13,12 @@ function log {
   echo "${JUST_TEXT//?/-}"
 }
 
-function link_aspect_to_target {
-  if [ -d ./aspects/$1 ] && [ -d $2 ]; then
-    log "Linking /aspects/$1 to $2"
-    stow -d aspects -t $2 $1
+function link_aspect {
+  if [ -d ./aspects/$1 ]; then
+    log "Linking /aspects/$1"
+    stow -d aspects -t ~ $1
   else
-    echo "Both aspects/$1 and $2 must be valid directories"
+    echo "aspects/$1 must be a valid directory"
     exit 1
   fi
 }
@@ -65,30 +65,20 @@ function install_global_node_packages {
     firebase-tools
 }
 
-function create_directories {
-  log "Creating directories"
-  log "Creating ~/.config"
-  mkdir -p ~/.config
-  log "Creating ~/.local/share"
-  mkdir -p ~/.local/share
-}
-
 function system_install {
   if [ $(uname -s) == "Darwin" ]; then
     log "Starting a full system install. Platform: Darwin"
 
-    create_directories
-
     install_homebrew
     install_homebrew_packages
 
-    link_aspect_to_target "gh" $XDG_CONFIG_HOME
-    link_aspect_to_target "nvim" $XDG_CONFIG_HOME
-    link_aspect_to_target "git" $XDG_CONFIG_HOME
-    link_aspect_to_target ".ssh" $HOME
-    link_aspect_to_target "zsh" $XDG_CONFIG_HOME
-    link_aspect_to_target "tmux" $XDG_CONFIG_HOME
-    link_aspect_to_target "alacritty" $XDG_CONFIG_HOME
+    link_aspect "gh"
+    link_aspect "nvim"
+    link_aspect "git"
+    link_aspect "ssh"
+    link_aspect "zsh"
+    link_aspect "tmux"
+    link_aspect "kitty"
 
     build_submodules
     install_global_node_packages
