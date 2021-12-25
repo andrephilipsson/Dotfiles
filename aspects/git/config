@@ -1,0 +1,38 @@
+[user]
+	name = André Philipsson
+	email = andre@andrephilipsson.com
+
+[init]
+	defaultBranch = main
+
+[pull]
+	ff = only
+
+[pager]
+	status = true
+
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+
+[log]
+	decorate = short
+
+[delta]
+	line-numbers = true
+	side-by-side = true
+
+[alias]
+	ci = commit
+	co = checkout
+	delta = "!f() { git diff \"$@\" | delta; }; f"
+	last = log -1 HEAD
+	st = status
+	update = pull --rebase origin
+
+[cipher]
+	gpguser = andre@andrephilipsson.com
+
+[commit]
+	template = ~/.config/git/gitcommit
+
+# vim: noexpandtab
