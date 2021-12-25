@@ -28,8 +28,6 @@ setopt SHARE_HISTORY           # share history across shells
 autoload -U colors
 colors
 
-eval "$(starship init zsh)"
-
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
