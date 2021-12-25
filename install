@@ -65,9 +65,19 @@ function install_global_node_packages {
     firebase-tools
 }
 
+function create_directories {
+  log "Creating directories"
+  log "Creating ~/.config"
+  mkdir -p ~/.config
+  log "Creating ~/.local/share"
+  mkdir -p ~/.local/share
+}
+
 function system_install {
   if [ $(uname -s) == "Darwin" ]; then
     log "Starting a full system install. Platform: Darwin"
+
+    create_directories
 
     install_homebrew
     install_homebrew_packages
