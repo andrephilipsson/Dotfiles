@@ -109,9 +109,3 @@ function _jump_complete() {
 
 # Complete filenames and `hash -d` entries.
 compctl -f -K _jump_complete jump
-
-function add_to_path() {
-  if [[ $# -ne 0 ]]; then
-    export PATH=$PATH:$1
-  fi
-}

@@ -1,12 +1,17 @@
-export PATH=$VOLTA_HOME/bin:$PATH
-add_to_path $HOME/.yarn/bin
-add_to_path $HOME/bin
-add_to_path $XDG_DATA_HOME/gem/ruby/3.0.0/bin
-add_to_path $DOTFILES_DIR/contrib/git-cipher/bin
-add_to_path /usr/local/sbin
+# Save old default PATH
+local OLD_PATH=$PATH
 
-add_to_path $ANDROID_HOME/emulator
-add_to_path $ANDROID_HOME/tools
-add_to_path $ANDROID_HOME/tools/bin
-add_to_path $ANDROID_HOME/platform-tools
-add_to_path "$HOME/Library/Application Support/Coursier/bin"
+# Reset PATH
+unset PATH
+
+# Add our own directories to PATH
+PATH=$VOLTA_HOME/bin:$PATH
+PATH=$DOT/vendor/git-cipher/bin:$PATH
+PATH="$HOME/Library/Application Support/Coursier/bin:$PATH"
+
+PATH=$PATH:$OLD_PATH
+
+export PATH
+
+# Let homebrew add itself to PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"

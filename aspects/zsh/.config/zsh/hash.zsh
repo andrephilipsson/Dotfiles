@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-local DOT=~/Code/personal/dotfiles
-local CODE=~/Code
+local DOTFILES=$DOT
+local CODE=~/code
 
-test -d "$CODE" && hash -d code="$CODE"
-test -d "$DOT" && hash -d dot="$DOT"
+test -d $CODE && hash -d code=$CODE
+test -d $DOTFILES && hash -d dot=$DOTFILES
