@@ -70,6 +70,11 @@ function macos_defaults {
   ./aspects/macos/defaults.sh
 }
 
+function setup_terminfo {
+  log "Updating terminfo database"
+  tic -x ./aspects/terminfo/tmux-256color.terminfo
+}
+
 function system_install {
   if [ $(uname -s) == "Darwin" ]; then
     log "Starting a full system install. Platform: Darwin"
@@ -87,6 +92,8 @@ function system_install {
 
     build_submodules
     install_global_node_packages
+
+    setup_terminfo
 
     macos_defaults
 
