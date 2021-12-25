@@ -65,6 +65,11 @@ function install_global_node_packages {
     firebase-tools
 }
 
+function macos_defaults {
+  log "Setting up macos default. Restart is required"
+  ./aspects/macos/defaults.sh
+}
+
 function system_install {
   if [ $(uname -s) == "Darwin" ]; then
     log "Starting a full system install. Platform: Darwin"
@@ -82,6 +87,8 @@ function system_install {
 
     build_submodules
     install_global_node_packages
+
+    macos_defaults
 
     log "SUCCESS! Happy hacking!"
   fi
