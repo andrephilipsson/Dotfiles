@@ -1,0 +1,1 @@
+call ape#functions#plaintext()
