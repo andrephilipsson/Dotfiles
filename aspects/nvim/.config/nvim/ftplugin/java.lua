@@ -3,7 +3,8 @@ local lsp = require("ape.lsp")
 local root_markers = {"gradlew", ".git"}
 local root_dir = require("jdtls.setup").find_root(root_markers)
 local home = os.getenv("HOME")
-local jdtls_path = home .. "/Code/dot/vendor/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/"
+local dot = os.getenv("DOT")
+local jdtls_path = dot .. "/vendor/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/"
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 
 local config_folder = function ()
@@ -68,9 +69,9 @@ config.handlers = lsp.handlers()
 config.on_attach = jdtls_on_attach
 
 local bundles = {
-  vim.fn.glob(home .. "/Code/dot/vendor/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"),
+  vim.fn.glob(dot .. "/vendor/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"),
 };
-vim.list_extend(bundles, vim.split(vim.fn.glob(home .. "/Code/dot/vendor/vscode-java-test/server/*.jar"), "\n"))
+vim.list_extend(bundles, vim.split(vim.fn.glob(dot .. "/vendor/vscode-java-test/server/*.jar"), "\n"))
 config["init_options"] = {
   bundles = bundles
 }
