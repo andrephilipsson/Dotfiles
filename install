@@ -89,6 +89,7 @@ function system_install {
     link_aspect "zsh"
     link_aspect "tmux"
     link_aspect "kitty"
+    link_aspect "karabiner"
 
     build_submodules
     install_global_node_packages
