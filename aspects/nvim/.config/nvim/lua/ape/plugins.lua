@@ -61,6 +61,8 @@ return require("packer").startup {
     use "wincent/pinnacle"
     use "kyazdani42/nvim-web-devicons"
 
+    use "delphinus/vim-firestore"
+
     -- general utils
     use "tpope/vim-eunuch"
     use "tpope/vim-repeat"
