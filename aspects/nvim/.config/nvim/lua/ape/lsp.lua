@@ -85,7 +85,8 @@ lsp.setup = function ()
   lspconfig.volar.setup({})
   lspconfig.kotlin_language_server.setup({})
   lspconfig.tsserver.setup({})
-  lspconfig.tailwindcss.setup{}
+  lspconfig.tailwindcss.setup({})
+  lspconfig.dartls.setup({})
 
   lspconfig.texlab.setup{
     settings = {
