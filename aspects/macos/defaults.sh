@@ -21,7 +21,7 @@ defaults write NSGlobalDomain "InitialKeyRepeat" -int 10
 defaults write com.apple.dock "orientation" -string left
 
 # Make icons in dock smaller (default: 48)
-defaults write com.apple.dock "tilesize" -int 30
+defaults write com.apple.dock "tilesize" -int 36
 
 # Autohide the dock (default: false)
 defaults write com.apple.dock "autohide" -bool true
