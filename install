@@ -83,13 +83,14 @@ function system_install {
     install_homebrew_packages
 
     link_aspect "gh"
-    link_aspect "nvim"
     link_aspect "git"
-    link_aspect "ssh"
-    link_aspect "zsh"
-    link_aspect "tmux"
-    link_aspect "kitty"
+    link_aspect "mail"
     link_aspect "karabiner"
+    link_aspect "kitty"
+    link_aspect "nvim"
+    link_aspect "ssh"
+    link_aspect "tmux"
+    link_aspect "zsh"
 
     build_submodules
     install_global_node_packages
