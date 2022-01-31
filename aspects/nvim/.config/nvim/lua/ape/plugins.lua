@@ -93,8 +93,5 @@ return require("packer").startup {
     }
     use "JoosepAlviste/nvim-ts-context-commentstring"
     use "nvim-treesitter/nvim-treesitter-textobjects"
-
-    -- things that might be a part of nvim at some point
-    use "tjdevries/astronauta.nvim"
   end
 }

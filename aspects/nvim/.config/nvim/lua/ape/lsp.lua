@@ -1,5 +1,3 @@
-local nnoremap = require("astronauta.keymap").nnoremap
-
 local lsp = {}
 
 local shared_diagnostic_settings = vim.lsp.with(
@@ -13,14 +11,14 @@ local shared_diagnostic_settings = vim.lsp.with(
 )
 
 lsp.on_attach = function ()
-  nnoremap { "<Leader>e", vim.diagnostic.open_float }
-  nnoremap { "gd", vim.lsp.buf.definition }
-  nnoremap { "gD", vim.lsp.buf.declaration }
-  nnoremap { "gi", vim.lsp.buf.implementation }
-  nnoremap { "K", vim.lsp.buf.hover }
-  nnoremap { "gr", vim.lsp.buf.references }
-  nnoremap { "<Leader>rn", vim.lsp.buf.rename }
-  nnoremap { "<Leader>a", vim.lsp.buf.code_action }
+  vim.keymap.set("n", "<Leader>e", vim.diagnostic.open_float)
+  vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+  vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+  vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
+  vim.keymap.set("n", "K", vim.lsp.buf.hover)
+  vim.keymap.set("n", "gr", vim.lsp.buf.references)
+  vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename)
+  vim.keymap.set("n", "<Leader>a", vim.lsp.buf.code_action)
 
   vim.wo.signcolumn = "yes:1"
 end
@@ -87,6 +85,8 @@ lsp.setup = function ()
   lspconfig.tsserver.setup({})
   lspconfig.tailwindcss.setup({})
   lspconfig.dartls.setup({})
+  lspconfig.solargraph.setup({})
+  -- lspconfig.sorbet.setup({})
 
   lspconfig.texlab.setup{
     settings = {
