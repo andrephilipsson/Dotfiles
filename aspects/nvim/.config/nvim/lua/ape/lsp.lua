@@ -79,6 +79,7 @@ lsp.setup = function ()
     return metals_config
   end
 
+  lspconfig.clangd.setup({})
   lspconfig.pyright.setup({})
   lspconfig.volar.setup({})
   lspconfig.kotlin_language_server.setup({})
