@@ -1,13 +1,13 @@
-local M = {}
-
-R = function(module)
-  package.loaded[module] = nil
-  return require(module)
-end
-
 P = function(v)
   print(vim.inspect(v))
   return v
 end
 
-return M
+RELOAD = function(...)
+  return require("plenary.reload").reload_module(...)
+end
+
+R = function(name)
+  RELOAD(name)
+  return require(name)
+end

@@ -1,7 +1,9 @@
 -- telescope mappings
-vim.keymap.set("n", "<Leader>ff", require("ape.telescope").find_files )
-vim.keymap.set("n", "<Leader>fh", require("ape.telescope").help_tags )
-vim.keymap.set("n", "<Leader>fg", function() require("ape.telescope").live_grep() end)
+vim.keymap.set("n", "<Leader>ff", function() R("ape.telescope").find_files() end)
+vim.keymap.set("n", "<Leader>fh", function() R("ape.telescope").help_tags() end)
+vim.keymap.set("n", "<Leader>fg", function() R("ape.telescope").live_grep() end)
+vim.keymap.set("n", "<Leader>fm", function() R("ape.telescope").man_pages() end)
+vim.keymap.set("n", "<Leader>fl", function() R("ape.telescope").current_buffer_fuzzy_find() end)
 
 
 -- open and close folds with Tab

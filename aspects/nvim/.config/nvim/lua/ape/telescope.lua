@@ -40,12 +40,20 @@ local M = {}
 
 M.find_files = function()
   require("telescope.builtin").find_files(require("telescope.themes").get_ivy({
-    hidden = true
+    hidden = true,
   }))
 end
 
 M.help_tags = function()
   require("telescope.builtin").help_tags(require("telescope.themes").get_ivy())
+end
+
+M.man_pages = function()
+  require("telescope.builtin").man_pages(require("telescope.themes").get_ivy())
+end
+
+M.current_buffer_fuzzy_find = function()
+  require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_ivy())
 end
 
 M.live_grep = function()
