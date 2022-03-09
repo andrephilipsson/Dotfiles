@@ -1,1 +1,3 @@
 hash.zsh
+.zcompcache/
+.zsh_sessions/
