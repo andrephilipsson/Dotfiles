@@ -43,4 +43,4 @@ bindkey "^t" autosuggest-accept
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-fpath=("/Users/ape/Library/Application Support/ScalaCli/completions/zsh" $fpath)
+eval "$(frum init)"
