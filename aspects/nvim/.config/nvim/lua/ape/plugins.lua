@@ -93,5 +93,7 @@ return require("packer").startup {
     }
     use "JoosepAlviste/nvim-ts-context-commentstring"
     use "nvim-treesitter/nvim-treesitter-textobjects"
+
+    use "milisims/nvim-luaref"
   end
 }

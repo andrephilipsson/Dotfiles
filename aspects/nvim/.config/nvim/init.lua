@@ -13,7 +13,7 @@ if require("ape.first_load")() then
 end
 
 -- speed up starup, must be loaded before any plugins are loaded
---require("impatient")
+require("impatient")
 
 -- setup colors
 require("ape.colors")
