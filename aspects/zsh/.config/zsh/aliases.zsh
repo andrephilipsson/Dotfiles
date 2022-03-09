@@ -13,3 +13,7 @@ alias f="find -name"
 alias t="tmux"
 alias path="echo -e ${PATH//:/\n}" # Pretty print path
 alias tree="tree -I node_modules"
+alias ssh="kitty +kitten ssh"
+alias update="brew update && brew upgrade && mas upgrade"
+alias scala="cs launch scala3-compiler:3+ -M dotty.tools.MainGenericRunner -- "
+alias scalac="cs launch scala3-compiler:3+ -- "
