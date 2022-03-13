@@ -17,13 +17,13 @@ vim.cmd("highlight! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg")
 
 -- remove background color from gutter
 vim.cmd("highlight SignColumn " .. pinnacle.highlight({
-    bg = pinnacle.extract_bg("Normal")
+  bg = pinnacle.extract_bg("Normal"),
 }))
 
 vim.cmd("highlight CursorLineNr " .. pinnacle.highlight({
-    bg = pinnacle.extract_bg("Normal")
+  bg = pinnacle.extract_bg("Normal"),
 }))
 
 vim.cmd("highlight LineNr " .. pinnacle.highlight({
-    bg = pinnacle.extract_bg("Normal")
+  bg = pinnacle.extract_bg("Normal"),
 }))

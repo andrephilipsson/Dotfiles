@@ -1,16 +1,14 @@
 local lsp = {}
 
-local shared_diagnostic_settings = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    virtual_text = {
-      spacing = 4,
-    },
-    underline = true,
-    update_in_insert = false,
-  }
-)
+local shared_diagnostic_settings = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  virtual_text = {
+    spacing = 4,
+  },
+  underline = true,
+  update_in_insert = false,
+})
 
-lsp.on_attach = function ()
+lsp.on_attach = function()
   vim.keymap.set("n", "<Leader>e", vim.diagnostic.open_float)
   vim.keymap.set("n", "gd", vim.lsp.buf.definition)
   vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
@@ -23,26 +21,26 @@ lsp.on_attach = function ()
   vim.wo.signcolumn = "yes:1"
 end
 
-lsp.handlers = function ()
+lsp.handlers = function()
   local border = {
-      {"🭽", "FloatBorder"},
-      {"▔", "FloatBorder"},
-      {"🭾", "FloatBorder"},
-      {"▕", "FloatBorder"},
-      {"🭿", "FloatBorder"},
-      {"▁", "FloatBorder"},
-      {"🭼", "FloatBorder"},
-      {"▏", "FloatBorder"},
+    { "🭽", "FloatBorder" },
+    { "▔", "FloatBorder" },
+    { "🭾", "FloatBorder" },
+    { "▕", "FloatBorder" },
+    { "🭿", "FloatBorder" },
+    { "▁", "FloatBorder" },
+    { "🭼", "FloatBorder" },
+    { "▏", "FloatBorder" },
   }
 
   return {
     ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
-    ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+    ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
     ["textDocument/publishDiagnostics"] = shared_diagnostic_settings,
   }
 end
 
-lsp.capabilities = function ()
+lsp.capabilities = function()
   local capabilities = vim.lsp.protocol.make_client_capabilities()
   capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
   capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -50,7 +48,7 @@ lsp.capabilities = function ()
   return capabilities
 end
 
-lsp.setup = function ()
+lsp.setup = function()
   local lspconfig = require("lspconfig")
 
   lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
@@ -89,21 +87,21 @@ lsp.setup = function ()
   lspconfig.solargraph.setup({})
   -- lspconfig.sorbet.setup({})
 
-  lspconfig.texlab.setup{
+  lspconfig.texlab.setup({
     settings = {
       latex = {
         build = {
           args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
           executable = "latexmk",
-          onSave = true
-        }
-      }
-    }
-  }
+          onSave = true,
+        },
+      },
+    },
+  })
 
   local luadev = require("lua-dev").setup({
     lspconfig = {
-      cmd = {"lua-language-server"}
+      cmd = { "lua-language-server" },
     },
   })
   lspconfig.sumneko_lua.setup(luadev)

@@ -1,13 +1,13 @@
-require"nvim-treesitter.configs".setup {
+require("nvim-treesitter.configs").setup({
   ensure_installed = "maintained",
   highlight = {
-    enable = true
+    enable = true,
   },
   indent = {
-    enable = true
+    enable = true,
   },
   context_commentstring = {
-    enable = true
+    enable = true,
   },
   textobjects = {
     select = {
@@ -21,7 +21,7 @@ require"nvim-treesitter.configs".setup {
       },
     },
   },
-}
+})
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

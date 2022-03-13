@@ -5,5 +5,5 @@ CorpusDirectories = {
     autotitle = 1,
     base = "./",
     transform = "local",
-  }
+  },
 }

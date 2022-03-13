@@ -27,12 +27,12 @@ vim.opt.textwidth = 80 -- wrap lines at 80 columns
 vim.opt.undofile = true -- save undofiles
 vim.opt.updatetime = 500 -- update signs etc. on cursor hold (default: 4000)
 vim.opt.virtualedit = "block" -- allow cursor to move freely in visual mode
-vim.opt.foldlevelstart = 99                                -- start unfolded
-vim.opt.showcmd       = false                   -- don't show extra info at end of command line
-vim.opt.showbreak     = "↳ "                    -- DOWNWARDS ARROW WITH TIP RIGHTWARDS (U+21B3, UTF-8: E2 86 B3)
-vim.opt.spellcapcheck = ""                      -- don't check for capital letters at start of sentence
-vim.opt.synmaxcol     = 200                     -- don't bother syntax highlighting long lines
-vim.opt.wildmode    = 'longest:full,full'                   -- shell-like autocomplete to unambiguous portion
+vim.opt.foldlevelstart = 99 -- start unfolded
+vim.opt.showcmd = false -- don't show extra info at end of command line
+vim.opt.showbreak = "↳ " -- DOWNWARDS ARROW WITH TIP RIGHTWARDS (U+21B3, UTF-8: E2 86 B3)
+vim.opt.spellcapcheck = "" -- don't check for capital letters at start of sentence
+vim.opt.synmaxcol = 200 -- don't bother syntax highlighting long lines
+vim.opt.wildmode = "longest:full,full" -- shell-like autocomplete to unambiguous portion
 
 -- better completion experience
 --   menuone: always display popup menu, even where there's only one completion
@@ -41,34 +41,34 @@ vim.opt.wildmode    = 'longest:full,full'                   -- shell-like autoco
 vim.opt.completeopt = "menuone,noinsert,noselect"
 
 -- ignore these files and folders when completing paths etc.
-vim.opt.wildignore  = {
+vim.opt.wildignore = {
   "*.class",
   "*~",
   "*.o",
-  ".DS_Store"
+  ".DS_Store",
 }
 
 -- show whitespace using these symbols
 vim.opt.listchars = {
   nbsp = "⦸", -- CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
-  tab = "▷┅",  -- WHITE RIGHT-POINTING TRIANGLE (U+25B7, UTF-8: E2 96 B7) + MIDLINE HORIZONTAL ELLIPSIS (U+22EF, UTF-8: E2 8B AF)
+  tab = "▷┅", -- WHITE RIGHT-POINTING TRIANGLE (U+25B7, UTF-8: E2 96 B7) + MIDLINE HORIZONTAL ELLIPSIS (U+22EF, UTF-8: E2 8B AF)
   extends = "»", -- RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
-  precedes = "«",  -- LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
-  trail = "•" -- BULLET (U+2022, UTF-8: E2 80 A2)
+  precedes = "«", -- LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
+  trail = "•", -- BULLET (U+2022, UTF-8: E2 80 A2)
 }
 
 vim.opt.formatoptions = vim.opt.formatoptions
-                    + "j" -- remove comment leader when joining comments
-                    + "n" -- smart auto indent in lists
-                    - "o" -- don't insert comment leader when pressing "o" or "O"
+  + "j" -- remove comment leader when joining comments
+  + "n" -- smart auto indent in lists
+  - "o" -- don't insert comment leader when pressing "o" or "O"
 
 vim.opt.shortmess = vim.opt.shortmess
-                + "c" -- don't show insert completed messages
-                + "I" -- disable intro messages
-                + "W" -- don't show "written" or "[w]" when writing a file
-                + "a" -- use abbreviated messages
-                + "A" -- don't show waring about existing swapfile
-                - "F" -- needed for nvim-metals
+  + "c" -- don't show insert completed messages
+  + "I" -- disable intro messages
+  + "W" -- don't show "written" or "[w]" when writing a file
+  + "a" -- use abbreviated messages
+  + "A" -- don't show waring about existing swapfile
+  - "F" -- needed for nvim-metals
 
 -- enable termguicolors (needs to be set before packer loads any plugins)
 vim.opt.termguicolors = true

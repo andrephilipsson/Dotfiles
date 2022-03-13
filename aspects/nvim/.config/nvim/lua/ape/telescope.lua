@@ -1,6 +1,6 @@
 local actions = require("telescope.actions")
 
-require("telescope").setup {
+require("telescope").setup({
   defaults = {
     prompt_prefix = "❯ ",
     selection_caret = "❯ ",
@@ -11,30 +11,29 @@ require("telescope").setup {
       "%.pdf",
       "%.png",
       "target/",
-      ".bloop/"
+      ".bloop/",
     },
     mappings = {
       i = {
         ["<esc>"] = actions.close,
         ["<c-j>"] = actions.move_selection_next,
-        ["<c-k>"] = actions.move_selection_previous
-      }
-    }
+        ["<c-k>"] = actions.move_selection_previous,
+      },
+    },
   },
   extensions = {
     fzy_native = {
       override_generic_sorter = false,
-      override_file_sorter = true
+      override_file_sorter = true,
     },
     ["ui-select"] = {
-      require("telescope.themes").get_ivy()
-    }
-  }
-}
+      require("telescope.themes").get_ivy(),
+    },
+  },
+})
 
 require("telescope").load_extension("fzy_native")
 require("telescope").load_extension("ui-select")
-
 
 local M = {}
 

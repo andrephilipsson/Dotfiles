@@ -9,9 +9,9 @@ local lspkind = require("lspkind")
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
 -- insert "()" after selecting a function or method
-cmp.event:on( "confirm_done", cmp_autopairs.on_confirm_done({  map_char = { tex = "" } }))
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
 
-cmp.setup {
+cmp.setup({
   mapping = {
     ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
@@ -41,7 +41,7 @@ cmp.setup {
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
-    end
+    end,
   },
   sources = {
     { name = "nvim_lsp" },
@@ -51,11 +51,11 @@ cmp.setup {
     { name = "buffer", keyword_length = 5 },
   },
   formatting = {
-    format = lspkind.cmp_format {
-      with_text = true
-    }
+    format = lspkind.cmp_format({
+      with_text = true,
+    }),
   },
   experimental = {
     ghost_text = true,
   },
-}
+})
