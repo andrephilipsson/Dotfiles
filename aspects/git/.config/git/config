@@ -35,4 +35,7 @@
 [commit]
 	template = ~/.config/git/gitcommit
 
+[merge]
+	conflictStyle = zdiff3
+
 # vim: noexpandtab
