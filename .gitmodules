@@ -1,9 +1,6 @@
 [submodule "vendor/git-cipher"]
 	path = vendor/git-cipher
 	url = git@github.com:wincent/git-cipher.git
-[submodule "vendor/eclipse.jdt.ls"]
-	path = vendor/eclipse.jdt.ls
-	url = git@github.com:eclipse/eclipse.jdt.ls.git
 [submodule "vendor/java-debug"]
 	path = vendor/java-debug
 	url = git@github.com:microsoft/java-debug.git
