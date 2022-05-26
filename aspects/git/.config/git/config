@@ -28,6 +28,7 @@
 	last = log -1 HEAD
 	st = status
 	update = pull --rebase origin
+	today = !git log --since="00:00" --author=$(git config user.email)
 
 [cipher]
 	gpguser = andre@andrephilipsson.com
@@ -37,5 +38,11 @@
 
 [merge]
 	conflictStyle = zdiff3
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 
 # vim: noexpandtab
