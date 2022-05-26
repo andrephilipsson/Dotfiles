@@ -13,4 +13,3 @@ export DOT="$HOME/code/dotfiles"
 
 # Default programs
 export EDITOR=nvim
-export TERMINAL=kitty

@@ -1,56 +1,29 @@
 #!/bin/zsh
 
-# Most of these are stolen from:
-# https://github.com/wincent/wincent/blob/master/aspects/dotfiles/files/.zsh/functions
 
-# function tmux() {
-#   emulate -L zsh
-
-#   # If provided with args, pass them through.
-#   if [[ -n "$@" ]]; then
-#     tmux "$@"
-#     return
-#   fi
-
-#   # Check for .tmux file
-#   if [ -x .tmux ]; then
-#     # Prompt the first time we see a given .tmux file before running it.
-#     local DIGEST="$(openssl sha512 .tmux)"
-#     if ! grep -q "$DIGEST" $XDG_CACHE_HOME/tmux.digests 2> /dev/null; then
-#       cat .tmux
-#       read -k 1 -r \
-#         'REPLY?Trust (and run) this .tmux file? (t = trust, otherwise = skip) '
-#       echo
-#       if [[ $REPLY =~ ^[Tt]$ ]]; then
-#         echo "$DIGEST" >> $XDG_CACHE_HOME/tmux.digests
-#         ./.tmux
-#         return
-#       fi
-#     else
-#       ./.tmux
-#       return
-#     fi
-#   fi
-
-#   # Attach to existing session, or create one, based on current directory.
-#   local SESSION_NAME=$(basename "${$(pwd)//[.:]/_}")
-#   env SSH_AUTH_SOCK=$SOCK_SYMLINK tmux new -A -s "$SESSION_NAME"
-# }
-
+# Most of these are stolen from: https://github.com/wincent/wincent/blob/main/aspects/dotfiles/files/.zsh/functions
 function scratch() {
   local SCRATCH=$(mktemp -d)
-  echo 'Spawing subshell in scratch directory:'
+  echo "Spawing subshell in scratch directory:"
   echo "  $SCRATCH"
   (cd $SCRATCH; zsh)
   echo "Removing scratch directory"
   rm -rf "$SCRATCH"
 }
 
+# find in history
+function fh() {
+  print -z $(fc -l 1 | sk --no-multi --tac -q "$*" | sed 's/ *[0-9]*\*\{0,1\} *//')
+}
+
 function tmux_session() {
   if [[ $# -eq 1 ]]; then
     dir=$1
+  elif [[ $# -eq 0 ]]; then
+    dir=$(pwd)
   else
-    return
+    echo "Usage: tmux_session [dir]"
+    return 1
   fi
 
   dir_name=$(basename "$dir")
@@ -75,9 +48,17 @@ function tmux_session() {
 
 function fd() {
   local DIR
-  DIR=$(bfs ~/Code/work ~/Code/personal ~/Code/school -mindepth 1 -maxdepth 1 -type d 2> /dev/null | sk --no-multi --preview='test -n "{}" && ls {}' -q "$*")
+  DIR=$(bfs -type d 2> /dev/null | sk --no-multi --preview='test -n "{}" && ls {}' -q "$*")
 
-  tmux_session $DIR
+  cd $DIR
+}
+
+# show history
+function history() {
+  emulate -L zsh
+
+  # This is a function because Zsh aliases can't take arguments.
+  fc -l 1
 }
 
 # Convenience function for jumping to hashed directory aliases
@@ -94,7 +75,7 @@ function jump() {
       # Not in `hash -d`: use as initial argument to fd.
       fd "$*"
     else
-      tmux_session ~$DIR
+      cd ~$DIR
     fi
   fi
 }
@@ -109,3 +90,57 @@ function _jump_complete() {
 
 # Complete filenames and `hash -d` entries.
 compctl -f -K _jump_complete jump
+
+# `git` wrapper:
+#
+#     - `git` with no arguments = `git status`; run `git help` to show what
+#       vanilla `git` without arguments would normally show.
+#     - `git root` = `cd` to repo root.
+#     - `ROOT=$(git root)` = no args and stdout is not a tty; prints the root.
+#     - `git root ARG...` = evals `ARG...` from the root (eg. `git root ls`).
+#     - `git ARG...` = behaves just like normal `git` command.
+#
+function git() {
+  if [ $# -eq 0 ]; then
+    command git status
+  elif [ "$1" = root ]; then
+    shift
+    local ROOT
+    if [ "$(command git rev-parse --is-inside-git-dir 2> /dev/null)" = true ]; then
+      if [ "$(command git rev-parse --is-bare-repository)" = true ]; then
+        ROOT="$(command git rev-parse --absolute-git-dir)"
+      else
+        # Note: This is a good-enough, rough heuristic, which ignores
+        # the possibility that GIT_DIR might be outside of the worktree;
+        # see:
+        # https://stackoverflow.com/a/38852055/2103996
+        ROOT="$(command git rev-parse --git-dir)/.."
+      fi
+    else
+      # Git 2.13.0 and above:
+      ROOT="$(command git rev-parse --show-superproject-working-tree 2> /dev/null)"
+      if [ -z "$ROOT" ]; then
+        ROOT="$(command git rev-parse --show-toplevel 2> /dev/null)"
+      fi
+    fi
+    if [ -z "$ROOT" ]; then
+      ROOT="$PWD"
+    fi
+    if [ $# -eq 0 ]; then
+      if [ -t 1 ]; then
+        cd "$ROOT"
+      else
+        echo "$ROOT"
+      fi
+    else
+      (cd "$ROOT" && eval "$@")
+    fi
+  else
+    command git "$@"
+  fi
+}
+
+# Pretty print $PATH
+function path() {
+  echo $PATH | sed "s/\:/\n/g"
+}

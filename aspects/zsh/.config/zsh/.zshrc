@@ -10,7 +10,7 @@ export HISTSIZE=100000
 export HISTFILE=$XDG_DATA_HOME/zsh/history
 export SAVEHIST=$HISTSIZE
 
-bindkey -e # emacs bindings, set to -v for vi bindings
+bindkey -v # vi bindings, set to -e for emacs bindings
 
 bindkey ' ' magic-space # do history expansion on space
 
@@ -24,6 +24,7 @@ setopt LIST_PACKED             # make completion lists more densely packed
 setopt NO_NOMATCH              # [default] unmatched patterns are left unchanged
 setopt PRINT_EXIT_VALUE        # [default] for non-zero exit status
 setopt SHARE_HISTORY           # share history across shells
+setopt inc_append_history      # append to history file, don't overwrite it
 
 autoload -U colors
 colors
@@ -36,11 +37,14 @@ then
   compinit
 fi
 
-# Ctrl + t accepts autosuggestion
-bindkey "^t" autosuggest-accept
+# Ctrl + f accepts autosuggestion
+bindkey "^f" autosuggest-accept
+
+# Ctrl + r to search history
+zle -N fh{,}
+bindkey "^r" fh
 
 # Plugins. Should be last
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-eval "$(frum init)"
+source $(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
