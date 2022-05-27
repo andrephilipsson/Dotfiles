@@ -45,10 +45,6 @@ M.help_tags = function()
   builtin.help_tags(themes.get_ivy())
 end
 
-M.man_pages = function()
-  builtin.man_pages(themes.get_ivy())
-end
-
 M.current_buffer_fuzzy_find = function()
   builtin.current_buffer_fuzzy_find(themes.get_ivy())
 end
@@ -60,7 +56,7 @@ end
 vim.keymap.set("n", "<Leader>ff", M.find_files)
 vim.keymap.set("n", "<Leader>fh", M.help_tags)
 vim.keymap.set("n", "<Leader>fg", M.live_grep)
-vim.keymap.set("n", "<Leader>fm", M.man_pages)
 vim.keymap.set("n", "<Leader>fl", M.current_buffer_fuzzy_find)
+vim.keymap.set("n", "<Leader>fm", telescope.extensions.metals.commands)
 
--- return M
+return M

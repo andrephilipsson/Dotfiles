@@ -28,8 +28,8 @@ lualine.setup({
         },
       },
     },
-    lualine_x = { "filetype" },
-    lualine_y = {},
+    lualine_x = { "vim.g['metals_status']" },
+    lualine_y = { "filetype" },
     lualine_z = { "location" },
   },
   inactive_sections = {

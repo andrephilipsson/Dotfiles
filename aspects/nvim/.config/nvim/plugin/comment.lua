@@ -1,5 +1,5 @@
-local ok, comment = pcall(require, "Comment")
-if not ok then
+local has_comment, comment = pcall(require, "Comment")
+if not has_comment then
   return
 end
 
@@ -11,8 +11,8 @@ comment.setup({
   pre_hook = function(ctx)
     local U = require("Comment.utils")
 
-    local ok, ts_commentstring_utils = pcall(require, "ts_context_commentstring.utils")
-    if not ok then
+    local has_commentstring, ts_commentstring_utils = pcall(require, "ts_context_commentstring.utils")
+    if not has_commentstring then
       return
     end
 

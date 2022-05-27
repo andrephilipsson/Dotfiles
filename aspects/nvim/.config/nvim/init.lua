@@ -7,3 +7,4 @@ end
 require("ape.plugins")
 
 require("ape.lsp")
+require("ape.metals")

@@ -9,5 +9,10 @@ vim.keymap.set("n", "<Leader>q", vim.diagnostic.setloclist)
 vim.keymap.set("n", "<d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", ">d", vim.diagnostic.goto_next)
 
-vim.keymap.set("n", "<C-n>", ":cnext<CR>")
-vim.keymap.set("n", "<C-p>", ":cprev<CR>")
+-- Navigate the quickfix listing with <C-j> and <C-k>
+-- while keeping the cursor centered and opening potential folds
+vim.keymap.set("n", "<C-j>", ":cnext<CR>zzzv")
+vim.keymap.set("n", "<C-k>", ":cprev<CR>zzzv")
+
+-- Leave terminal mode with <ESC>
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")

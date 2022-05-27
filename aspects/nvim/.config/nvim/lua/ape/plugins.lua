@@ -23,6 +23,7 @@ return require("packer").startup({
     use("wincent/replay")
     use("numToStr/Comment.nvim")
     use("windwp/nvim-autopairs")
+    use("justinmk/vim-dirvish")
 
     -- Git
     use("tpope/vim-fugitive")
@@ -73,5 +74,10 @@ return require("packer").startup({
     use("neovim/nvim-lspconfig")
     use("folke/lua-dev.nvim")
     use("kosayoda/nvim-lightbulb")
+    use({
+      "scalameta/nvim-metals",
+      requires = { "nvim-lua/plenary.nvim" },
+    })
+    use("mfussenegger/nvim-jdtls")
   end,
 })

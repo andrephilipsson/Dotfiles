@@ -1,9 +1,11 @@
+local M = {}
+
 local has_lspconfig, lspconfig = pcall(require, "lspconfig")
 if not has_lspconfig then
   return
 end
 
-local on_attach = function(client, bufnr)
+M.on_attach = function(client, bufnr)
   vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = true })
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = true })
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = true })
@@ -60,7 +62,7 @@ local on_attach = function(client, bufnr)
   end
 end
 
-local handlers = function()
+M.handlers = function()
   return {
     ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
     ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
@@ -76,16 +78,16 @@ local handlers = function()
   }
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+M.capabilities = vim.lsp.protocol.make_client_capabilities()
 local has_cmp_lsp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
 if has_cmp_lsp then
-  capabilities = cmp_lsp.update_capabilities(capabilities)
+  M.capabilities = cmp_lsp.update_capabilities(M.capabilities)
 end
 
 lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
-  handlers = handlers(),
-  capabilities = capabilities,
-  on_attach = on_attach,
+  handlers = M.handlers(),
+  capabilities = M.capabilities,
+  on_attach = M.on_attach,
 })
 
 local servers = {
@@ -116,3 +118,5 @@ lspconfig["texlab"].setup({
     },
   },
 })
+
+return M
