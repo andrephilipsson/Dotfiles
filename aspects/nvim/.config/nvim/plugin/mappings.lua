@@ -1,32 +1,13 @@
--- telescope mappings
-vim.keymap.set("n", "<Leader>ff", function()
-  R("ape.telescope").find_files()
-end)
-vim.keymap.set("n", "<Leader>fh", function()
-  R("ape.telescope").help_tags()
-end)
-vim.keymap.set("n", "<Leader>fg", function()
-  R("ape.telescope").live_grep()
-end)
-vim.keymap.set("n", "<Leader>fm", function()
-  R("ape.telescope").man_pages()
-end)
-vim.keymap.set("n", "<Leader>fl", function()
-  R("ape.telescope").current_buffer_fuzzy_find()
-end)
+vim.g.mapleader = " "
+vim.keymap.set("n", "<Space>", "<Nop>")
+vim.keymap.set("n", "<Leader><Leader>", "<C-^>")
 
--- open and close folds with Tab
-vim.keymap.set("n", "<Tab>", "za")
+vim.keymap.set("n", "<Leader>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "<Leader>q", vim.diagnostic.setloclist)
 
-vim.keymap.set("n", "<F6>", "<C-i>")
+-- TODO: Find a better mapping for these
+vim.keymap.set("n", "<d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", ">d", vim.diagnostic.goto_next)
 
--- quick save
-vim.keymap.set("n", "<Leader>w", ":w<CR>")
-
--- navigate the quickfix listing with <C-j> and <C-k>
--- while keeping the cursor centered and opening potential folds
-vim.keymap.set("n", "<C-j>", ":cnext<CR>zzzv")
-vim.keymap.set("n", "<C-k>", ":cprev<CR>zzzv")
-
--- leave terminal mode with <ESC>
-vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
+vim.keymap.set("n", "<C-n>", ":cnext<CR>")
+vim.keymap.set("n", "<C-p>", ":cprev<CR>")

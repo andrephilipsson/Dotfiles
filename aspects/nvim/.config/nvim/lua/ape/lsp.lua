@@ -1,110 +1,118 @@
-local lsp = {}
+local has_lspconfig, lspconfig = pcall(require, "lspconfig")
+if not has_lspconfig then
+  return
+end
 
-local shared_diagnostic_settings = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = {
-    spacing = 4,
-  },
-  underline = true,
-  update_in_insert = false,
-})
-
-lsp.on_attach = function()
-  vim.keymap.set("n", "<Leader>e", vim.diagnostic.open_float)
-  vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-  vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
-  vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
-  vim.keymap.set("n", "K", vim.lsp.buf.hover)
-  vim.keymap.set("n", "gr", vim.lsp.buf.references)
-  vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename)
-  vim.keymap.set("n", "<Leader>a", vim.lsp.buf.code_action)
+local on_attach = function(client, bufnr)
+  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = true })
+  vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = true })
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = true })
+  vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = true })
+  vim.keymap.set({ "n", "i" }, "<C-k>", vim.lsp.buf.signature_help, { buffer = true })
+  vim.keymap.set("n", "<Leader>D", vim.lsp.buf.type_definition, { buffer = true })
+  vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, { buffer = true })
+  vim.keymap.set("n", "<Leader>a", vim.lsp.buf.code_action, { buffer = true })
+  vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = true })
+  vim.api.nvim_create_user_command("Format", function()
+    vim.lsp.buf.format({ async = true })
+  end, {})
 
   vim.wo.signcolumn = "yes:1"
-end
 
-lsp.handlers = function()
-  local border = {
-    { "🭽", "FloatBorder" },
-    { "▔", "FloatBorder" },
-    { "🭾", "FloatBorder" },
-    { "▕", "FloatBorder" },
-    { "🭿", "FloatBorder" },
-    { "▁", "FloatBorder" },
-    { "🭼", "FloatBorder" },
-    { "▏", "FloatBorder" },
-  }
-
-  return {
-    ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
-    ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
-    ["textDocument/publishDiagnostics"] = shared_diagnostic_settings,
-  }
-end
-
-lsp.capabilities = function()
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
-  capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-  return capabilities
-end
-
-lsp.setup = function()
-  local lspconfig = require("lspconfig")
-
-  lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
-    handlers = lsp.handlers(),
-    capabilities = lsp.capabilities(),
-    on_attach = lsp.on_attach,
+  vim.api.nvim_create_autocmd("CursorHold", {
+    buffer = bufnr,
+    callback = function()
+      local opts = {
+        focusable = false,
+        close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+        border = "rounded",
+        source = "if_many",
+        prefix = " ",
+        scope = "cursor",
+      }
+      vim.diagnostic.open_float(nil, opts)
+    end,
   })
 
-  Metals_config = function()
-    local metals_config = require("metals").bare_config()
-
-    metals_config.settings = {
-      showImplicitArguments = true,
-      showInferredType = true,
-      showImplicitConversionsAndClasses = true,
-    }
-
-    metals_config.init_options.statusBarProvider = "on"
-
-    require("metals").setup_dap()
-
-    metals_config.on_attach = lsp.on_attach
-    metals_config.capabilities = lsp.capabilities()
-    metals_config.handlers = lsp.handlers()
-
-    return metals_config
+  if client.server_capabilities.documentHighlightProvider then
+    vim.cmd([[
+      hi! LspReferenceRead cterm=bold ctermbg=red guibg=LightBlue
+      hi! LspReferenceText cterm=bold ctermbg=red guibg=LightBlue
+      hi! LspReferenceWrite cterm=bold ctermbg=red guibg=LightBlue
+    ]])
+    vim.api.nvim_create_augroup("lsp_document_highlight", {
+      clear = false,
+    })
+    vim.api.nvim_clear_autocmds({
+      buffer = bufnr,
+      group = "lsp_document_highlight",
+    })
+    vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+      group = "lsp_document_highlight",
+      buffer = bufnr,
+      callback = vim.lsp.buf.document_highlight,
+    })
+    vim.api.nvim_create_autocmd("CursorMoved", {
+      group = "lsp_document_highlight",
+      buffer = bufnr,
+      callback = vim.lsp.buf.clear_references,
+    })
   end
+end
 
-  lspconfig.clangd.setup({})
-  lspconfig.pyright.setup({})
-  lspconfig.volar.setup({})
-  lspconfig.kotlin_language_server.setup({})
-  lspconfig.tsserver.setup({})
-  lspconfig.tailwindcss.setup({})
-  lspconfig.dartls.setup({})
-  lspconfig.solargraph.setup({})
-  -- lspconfig.sorbet.setup({})
+local handlers = function()
+  return {
+    ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+    ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
+    ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+      -- virtual_text = {
+      --   spacing = 2,
+      --   prefix = "●",
+      -- },
+      virtual_text = false,
+      underline = true,
+      update_in_insert = false,
+    }),
+  }
+end
 
-  lspconfig.texlab.setup({
-    settings = {
-      latex = {
-        build = {
-          args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
-          executable = "latexmk",
-          onSave = true,
-        },
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local has_cmp_lsp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+if has_cmp_lsp then
+  capabilities = cmp_lsp.update_capabilities(capabilities)
+end
+
+lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
+  handlers = handlers(),
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+local servers = {
+  "tsserver",
+  "tailwindcss",
+  "pyright",
+  "hls",
+}
+for _, lsp in pairs(servers) do
+  lspconfig[lsp].setup({})
+end
+
+local has_luadev, luadev = pcall(require, "lua-dev")
+if has_luadev then
+  lspconfig["sumneko_lua"].setup(luadev.setup())
+else
+  lspconfig["sumneko_lua"].setup({})
+end
+
+lspconfig["texlab"].setup({
+  settings = {
+    latex = {
+      build = {
+        args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+        executable = "latexmk",
+        onSave = true,
       },
     },
-  })
-
-  local luadev = require("lua-dev").setup({
-    lspconfig = {
-      cmd = { "lua-language-server" },
-    },
-  })
-  lspconfig.sumneko_lua.setup(luadev)
-end
-
-return lsp
+  },
+})

@@ -1,6 +1,6 @@
-CorpusDirectories = {
+vim.g.CorpusDirectories = {
   ["~/Documents/notes"] = {
-    autocommit = false,
+    autocommit = true,
     autoreference = 1,
     autotitle = 1,
     base = "./",
