@@ -40,7 +40,6 @@ brew "pyright"
 brew "ripgrep"
 brew "rust"
 brew "rust-analyzer"
-brew "rustfmt"
 brew "sk"
 brew "stow"
 brew "stylua"
@@ -58,6 +57,7 @@ brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
+brew "zsh-vi-mode"
 brew "coursier/formulas/coursier"
 brew "dopplerhq/cli/doppler"
 brew "superfly/tap/flyctl"
@@ -107,5 +107,4 @@ mas "Keynote", id: 409183694
 mas "Messenger", id: 1480068668
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Twitter", id: 1482454543
 mas "Xcode", id: 497799835
