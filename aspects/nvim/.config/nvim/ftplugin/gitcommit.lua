@@ -5,5 +5,5 @@ end
 
 functions.plaintext()
 
-vim.bo.colorcolumn = 72
+vim.wo.colorcolumn = "72"
 vim.bo.textwidth = 72

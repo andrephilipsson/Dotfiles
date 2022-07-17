@@ -79,5 +79,10 @@ return require("packer").startup({
       requires = { "nvim-lua/plenary.nvim" },
     })
     use("mfussenegger/nvim-jdtls")
+
+    use({
+      "kyazdani42/nvim-tree.lua",
+      requires = { "kyazdani42/nvim-web-devicons" },
+    })
   end,
 })

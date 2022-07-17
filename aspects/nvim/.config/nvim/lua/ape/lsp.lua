@@ -95,6 +95,7 @@ local servers = {
   "tailwindcss",
   "pyright",
   "hls",
+  "kotlin_language_server",
 }
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup({})

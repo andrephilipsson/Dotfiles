@@ -11,5 +11,7 @@ export VOLTA_HOME="$XDG_DATA_HOME"/volta
 # Custom variables
 export DOT="$HOME/code/dotfiles"
 
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+
 # Default programs
 export EDITOR=nvim

@@ -16,3 +16,5 @@ vim.keymap.set("n", "<C-k>", ":cprev<CR>zzzv")
 
 -- Leave terminal mode with <ESC>
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
+
+vim.keymap.set("n", "<Leader>t", ":NvimTreeToggle<CR>")
