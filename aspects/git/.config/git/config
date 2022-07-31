@@ -1,6 +1,10 @@
 [user]
 	name = André Philipsson
-	email = andre@andrephilipsson.com
+	email = andre@philipsson.me
+	signingkey = 7915EDA0D19FE167
+
+[includeIf "gitdir:~/work/badape/"]
+	path = config-badape
 
 [init]
 	defaultBranch = main
@@ -31,10 +35,11 @@
 	today = !git log --since="00:00" --author=$(git config user.email)
 
 [cipher]
-	gpguser = andre@andrephilipsson.com
+	gpguser = andre@philipsson.me
 
 [commit]
 	template = ~/.config/git/gitcommit
+	gpgsign = true
 
 [merge]
 	conflictStyle = zdiff3
@@ -47,5 +52,8 @@
 
 [push]
 	autoSetupRemote = true
+
+[gpg]
+	program = gpg
 
 # vim: noexpandtab
