@@ -1,11 +1,10 @@
-import task from "~/dsl/task";
-import { symlink } from "~/utils/fs";
+import { task, path, fs } from "~/index";
 
 const cwd = import.meta.dir;
-const home = process.env.HOME;
 
 task("Symlink .hushlogin to ~", () => {
-  symlink(`${cwd}/files/.hushlogin`, `${home}/.hushlogin`);
+  fs.symlink({
+    source: `${cwd}/files/.hushlogin`,
+    destination: `${path.home}/.hushlogin`
+  });
 });
-
-export {};

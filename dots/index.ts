@@ -1,5 +1,4 @@
-const aspects = ["misc"] as const;
+export { default as task } from "~/dsl/task";
 
-for (const aspect of aspects) {
-  import(`./aspects/${aspect}`);
-}
+export * as path from "~/path";
+export * as fs from "~/fs";
