@@ -3,7 +3,7 @@ if not has_nvim_tree then
   return
 end
 
-nvim_tree.setup {
+nvim_tree.setup({
   auto_reload_on_write = true,
   create_in_closed_folder = false,
   disable_netrw = false,
@@ -22,7 +22,6 @@ nvim_tree.setup {
     adaptive_size = false,
     centralize_selection = false,
     width = 45,
-    height = 30,
     hide_root_folder = false,
     side = "left",
     preserve_window_proportions = false,
@@ -120,7 +119,6 @@ nvim_tree.setup {
   },
   filesystem_watchers = {
     enable = false,
-    interval = 100,
   },
   git = {
     enable = true,
@@ -174,4 +172,4 @@ nvim_tree.setup {
       watcher = false,
     },
   },
-}
+})

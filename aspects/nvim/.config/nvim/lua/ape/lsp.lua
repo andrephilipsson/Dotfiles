@@ -1,5 +1,11 @@
 local M = {}
 
+-- Must be done before configuring lspconfig
+local has_neodev, neodev = pcall(require, "neodev")
+if has_neodev then
+  neodev.setup({})
+end
+
 local has_lspconfig, lspconfig = pcall(require, "lspconfig")
 if not has_lspconfig then
   return
@@ -21,45 +27,45 @@ M.on_attach = function(client, bufnr)
 
   vim.wo.signcolumn = "yes:1"
 
-  vim.api.nvim_create_autocmd("CursorHold", {
-    buffer = bufnr,
-    callback = function()
-      local opts = {
-        focusable = false,
-        close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
-        border = "rounded",
-        source = "if_many",
-        prefix = " ",
-        scope = "cursor",
-      }
-      vim.diagnostic.open_float(nil, opts)
-    end,
-  })
+  --[[ vim.api.nvim_create_autocmd("CursorHold", { ]]
+  --[[   buffer = bufnr, ]]
+  --[[   callback = function() ]]
+  --[[     local opts = { ]]
+  --[[       focusable = false, ]]
+  --[[       close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" }, ]]
+  --[[       border = "rounded", ]]
+  --[[       source = "if_many", ]]
+  --[[       prefix = " ", ]]
+  --[[       scope = "cursor", ]]
+  --[[     } ]]
+  --[[     vim.diagnostic.open_float(nil, opts) ]]
+  --[[   end, ]]
+  --[[ }) ]]
 
-  if client.server_capabilities.documentHighlightProvider then
-    vim.cmd([[
-      hi! LspReferenceRead cterm=bold ctermbg=red guibg=LightBlue
-      hi! LspReferenceText cterm=bold ctermbg=red guibg=LightBlue
-      hi! LspReferenceWrite cterm=bold ctermbg=red guibg=LightBlue
-    ]])
-    vim.api.nvim_create_augroup("lsp_document_highlight", {
-      clear = false,
-    })
-    vim.api.nvim_clear_autocmds({
-      buffer = bufnr,
-      group = "lsp_document_highlight",
-    })
-    vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-      group = "lsp_document_highlight",
-      buffer = bufnr,
-      callback = vim.lsp.buf.document_highlight,
-    })
-    vim.api.nvim_create_autocmd("CursorMoved", {
-      group = "lsp_document_highlight",
-      buffer = bufnr,
-      callback = vim.lsp.buf.clear_references,
-    })
-  end
+  --[[ if client.server_capabilities.documentHighlightProvider then ]]
+  --[[   vim.cmd([[ ]]
+  --[[     hi! LspReferenceRead cterm=bold ctermbg=red guibg=LightBlue ]]
+  --[[     hi! LspReferenceText cterm=bold ctermbg=red guibg=LightBlue ]]
+  --[[     hi! LspReferenceWrite cterm=bold ctermbg=red guibg=LightBlue ]]
+  --   ]])
+  --[[   vim.api.nvim_create_augroup("lsp_document_highlight", { ]]
+  --[[     clear = false, ]]
+  --[[   }) ]]
+  --[[   vim.api.nvim_clear_autocmds({ ]]
+  --[[     buffer = bufnr, ]]
+  --[[     group = "lsp_document_highlight", ]]
+  --[[   }) ]]
+  --[[   vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, { ]]
+  --[[     group = "lsp_document_highlight", ]]
+  --[[     buffer = bufnr, ]]
+  --[[     callback = vim.lsp.buf.document_highlight, ]]
+  --[[   }) ]]
+  --[[   vim.api.nvim_create_autocmd("CursorMoved", { ]]
+  --[[     group = "lsp_document_highlight", ]]
+  --[[     buffer = bufnr, ]]
+  --[[     callback = vim.lsp.buf.clear_references, ]]
+  --[[   }) ]]
+  --[[ end ]]
 end
 
 M.handlers = function()
@@ -67,21 +73,19 @@ M.handlers = function()
     ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
     ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
     ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-      -- virtual_text = {
-      --   spacing = 2,
-      --   prefix = "●",
-      -- },
-      virtual_text = false,
+      virtual_text = {
+        spacing = 2,
+        prefix = "●",
+      },
       underline = true,
       update_in_insert = false,
     }),
   }
 end
 
-M.capabilities = vim.lsp.protocol.make_client_capabilities()
 local has_cmp_lsp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
 if has_cmp_lsp then
-  M.capabilities = cmp_lsp.update_capabilities(M.capabilities)
+  M.capabilities = cmp_lsp.default_capabilities()
 end
 
 lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
@@ -91,21 +95,17 @@ lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_c
 })
 
 local servers = {
-  "tsserver",
-  "tailwindcss",
-  "pyright",
+  "clangd",
   "hls",
   "kotlin_language_server",
+  "pyright",
+  "tailwindcss",
+  "tsserver",
+  "rust_analyzer",
+  "sumneko_lua",
 }
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup({})
-end
-
-local has_luadev, luadev = pcall(require, "lua-dev")
-if has_luadev then
-  lspconfig["sumneko_lua"].setup(luadev.setup())
-else
-  lspconfig["sumneko_lua"].setup({})
 end
 
 lspconfig["texlab"].setup({

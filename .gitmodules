@@ -1,3 +1,129 @@
 [submodule "vendor/git-cipher"]
 	path = vendor/git-cipher
 	url = git@github.com:wincent/git-cipher.git
+[submodule "command-t"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/command-t
+	url = git@github.com:wincent/command-t.git
+[submodule "material.nvim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/material.nvim
+	url = git@github.com:marko-cerovac/material.nvim
+[submodule "vim-repeat"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
+[submodule "vim-eunuch"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/vim-eunuch
+	url = git@github.com:tpope/vim-eunuch.git
+[submodule "vim-speeddating"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/vim-speeddating
+	url = git@github.com:tpope/vim-speeddating.git
+[submodule "vim-surround"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "loupe"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/loupe
+	url = git@github.com:wincent/loupe
+[submodule "replay"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/replay
+	url = git@github.com:wincent/replay
+[submodule "Comment.nvim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/Comment.nvim
+	url = git@github.com:numToStr/Comment.nvim
+[submodule "nvim-autopairs"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-autopairs
+	url = git@github.com:windwp/nvim-autopairs
+[submodule "vim-dirvish"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/vim-dirvish
+	url = git@github.com:justinmk/vim-dirvish
+[submodule "vim-fugitive"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive
+[submodule "vim-rhubarb"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/vim-rhubarb
+	url = git@github.com:tpope/vim-rhubarb
+[submodule "gitsigns.nvim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/gitsigns.nvim
+	url = git@github.com:lewis6991/gitsigns.nvim
+[submodule "Shade.nvim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/Shade.nvim
+	url = git@github.com:sunjon/Shade.nvim
+[submodule "nvim-treesitter-textobjects"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-treesitter-textobjects
+	url = git@github.com:nvim-treesitter/nvim-treesitter-textobjects
+[submodule "nvim-ts-context-commentstring"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-ts-context-commentstring
+	url = git@github.com:JoosepAlviste/nvim-ts-context-commentstring
+[submodule "LuaSnip"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/LuaSnip
+	url = git@github.com:L3MON4D3/LuaSnip
+[submodule "cmp-spell"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/cmp-spell
+	url = git@github.com:f3fora/cmp-spell
+[submodule "copilot.vim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/copilot.vim
+	url = git@github.com:github/copilot.vim
+[submodule "cmp-buffer"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/cmp-buffer
+	url = git@github.com:hrsh7th/cmp-buffer
+[submodule "cmp-cmdline"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/cmp-cmdline
+	url = git@github.com:hrsh7th/cmp-cmdline
+[submodule "cmp-emoji"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/cmp-emoji
+	url = git@github.com:hrsh7th/cmp-emoji
+[submodule "cmp-nvim-lsp"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/cmp-nvim-lsp
+	url = git@github.com:hrsh7th/cmp-nvim-lsp
+[submodule "cmp-nvim-lua"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/cmp-nvim-lua
+	url = git@github.com:hrsh7th/cmp-nvim-lua
+[submodule "cmp-path"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/cmp-path
+	url = git@github.com:hrsh7th/cmp-path
+[submodule "nvim-cmp"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-cmp
+	url = git@github.com:hrsh7th/nvim-cmp
+[submodule "nvim-lightbulb"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-lightbulb
+	url = git@github.com:kosayoda/nvim-lightbulb
+[submodule "nvim-lspconfig"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig
+[submodule "cmp_luasnip"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/cmp_luasnip
+	url = git@github.com:saadparwaiz1/cmp_luasnip
+[submodule "nvim-ts-autotag"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-ts-autotag
+	url = git@github.com:windwp/nvim-ts-autotag
+[submodule "nvim-metals"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-metals
+	url = git@github.com:scalameta/nvim-metals
+[submodule "nvim-jdtls"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-jdtls
+	url = git@github.com:mfussenegger/nvim-jdtls
+[submodule "nvim-tree.lua"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-tree.lua
+	url = git@github.com:kyazdani42/nvim-tree.lua
+[submodule "nvim-treesitter"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-treesitter
+	url = git@github.com:nvim-treesitter/nvim-treesitter
+[submodule "nvim-web-devicons"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/nvim-web-devicons
+	url = git@github.com:kyazdani42/nvim-web-devicons
+[submodule "lualine.nvim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/lualine.nvim
+	url = git@github.com:nvim-lualine/lualine.nvim
+[submodule "indent-blankline.nvim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/indent-blankline.nvim
+	url = git@github.com:lukas-reineke/indent-blankline.nvim
+[submodule "markdown-preview.nvim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/markdown-preview.nvim
+	url = git@github.com:iamcco/markdown-preview.nvim
+[submodule "corpus"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/corpus
+	url = git@github.com:wincent/corpus.git
+[submodule "plenary.nvim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/plenary.nvim
+	url = git@github.com:nvim-lua/plenary.nvim
+[submodule "edgedb-vim"]
+	path = aspects/nvim/.config/nvim/pack/plugins/opt/edgedb-vim
+	url = git@github.com:edgedb/edgedb-vim.git

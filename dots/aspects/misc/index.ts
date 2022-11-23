@@ -1,4 +1,4 @@
-import { task, path, fs } from "~/index";
+import { task, path, fs } from "~/dots";
 
 const cwd = import.meta.dir;
 

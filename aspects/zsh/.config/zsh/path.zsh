@@ -25,6 +25,7 @@ function prepend_to() {
 prepend_to "$DOT/bin"
 prepend_to /usr/local/bin
 prepend_to /usr/local/sbin
+prepend_to "$BUN_INSTALL/bin"
 
 append_to "$DOT/vendor/git-cipher/bin"
 append_to "$HOME/Library/Application Support/Coursier/bin"
@@ -35,6 +36,7 @@ test -d /opt/homebrew/sbin && prepend_to /opt/homebrew/sbin
 
 # Make sure that we use volta's node version instead of Homebrew's
 prepend_to "$VOLTA_HOME/bin"
+prepend_to $PNPM_HOME
 
 # If you ever want to see this in easy-to-read form: `echo $PATH | tr : '\n'`
 export PATH

@@ -3,4 +3,8 @@ if not has_functions then
   return
 end
 
+if vim.o.loadplugins then
+  ape.plugin.load("corpus")
+end
+
 functions.plaintext()
