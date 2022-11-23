@@ -1,0 +1,13 @@
+magic = com.wincent.git-cipher
+url = https://github.com/wincent/git-cipher/blob/v2.0.0-pre.2/PROTOCOL.md
+version = 1
+algorithm = aes-256-cbc
+filename = "aspects/ssh/files/config"
+iv = 6cb59e58619dbcb41ce468e142829973
+ciphertext =
+3644dc872f9e7ecc91ac97bd243614ad18a4a8d7173cf90627a1974a305c9df0a0d6baf9
+41e7822673caf2c48aa44aa0884e11b08191855a143c21be198892a7a02a72351930a07f
+5ca24952f2b6c8b4ea400ddb27afc6a3d89714ac66864ab93d0c36cd4fec8da538bf697c
+f4b8488b5265b167dc50cabd77d23812b87afaa61b1b5a80ccc288a13c444b7a103fd591
+ca0483d2a957b306feb49fe242a6ea30
+hmac = 36e16870c445a94d087dd278b1316e2396a88e6495526661307eb7e004286b97
