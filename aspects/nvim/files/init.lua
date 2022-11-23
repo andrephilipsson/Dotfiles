@@ -1,0 +1,7 @@
+require("ape.plugins")
+require("ape.colors")
+require("ape.statusline")
+require("ape.git")
+require("ape.indent")
+require("ape.completion")
+require("ape.lsp")
