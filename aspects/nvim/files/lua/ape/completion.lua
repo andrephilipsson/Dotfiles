@@ -105,9 +105,12 @@ cmp.setup({
         { name = "path" },
         { name = "spell" },
     }, {
-        { name = "buffer", option = {
-            keyword_length = 5,
-        } },
+        {
+            name = "buffer",
+            option = {
+                keyword_length = 5,
+            },
+        },
     }),
 })
 
@@ -116,9 +119,12 @@ cmp.setup.filetype("gitcommit", {
         { name = "git" },
         { name = "emoji" },
     }, {
-        { name = "buffer", option = {
-            keyword_length = 5,
-        } },
+        {
+            name = "buffer",
+            option = {
+                keyword_length = 5,
+            },
+        },
     }),
 })
 

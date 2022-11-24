@@ -12,6 +12,7 @@ if not has_material then
 end
 
 vim.g.material_style = "lighter"
+-- vim.g.material_style = "deep ocean"
 
 material.setup({
     contrast = {},
@@ -40,4 +41,5 @@ material.setup({
 })
 
 -- Should be last
+vim.opt.termguicolors = true
 vim.cmd("colorscheme material")

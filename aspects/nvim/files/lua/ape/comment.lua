@@ -1,6 +1,8 @@
 local has_comment, comment = pcall(require, "Comment")
+local has_commentstring, commentstring =
+    pcall(require, "ts_context_commentstring.integrations.comment_nvim")
 
-if not has_comment then
+if not has_comment or not has_commentstring then
     return
 end
 
@@ -43,7 +45,7 @@ comment.setup({
         extra = true,
     },
     ---Function to call before (un)comment
-    pre_hook = nil,
+    pre_hook = commentstring.create_pre_hook(),
     ---Function to call after (un)comment
     post_hook = nil,
 })

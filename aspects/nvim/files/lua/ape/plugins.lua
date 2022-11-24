@@ -19,7 +19,7 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-return require("packer").startup(function(use)
+require("packer").startup(function(use)
     use({
         "wbthomason/packer.nvim",
         lock = true,
@@ -129,7 +129,28 @@ return require("packer").startup(function(use)
         lock = true,
         requires = { "L3MON4D3/LuaSnip", tag = "v1.1.*" },
     })
+
+    use({
+        "nvim-treesitter/nvim-treesitter",
+        lock = true,
+        run = function()
+            local ts_update =
+                require("nvim-treesitter.install").update({ with_sync = true })
+            ts_update()
+        end,
+    })
+
+    use({
+        "JoosepAlviste/nvim-ts-context-commentstring",
+        lock = true,
+    })
+
     if packer_bootstrap then
         require("packer").sync()
     end
 end)
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = "plugins.lua",
+    command = "PackerCompile",
+})
