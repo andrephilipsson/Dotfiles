@@ -145,6 +145,15 @@ require("packer").startup(function(use)
         lock = true,
     })
 
+    use({
+        "nvim-tree/nvim-tree.lua",
+        requires = {
+            "nvim-tree/nvim-web-devicons",
+            lock = true,
+        },
+        lock = true,
+    })
+
     if packer_bootstrap then
         require("packer").sync()
     end
