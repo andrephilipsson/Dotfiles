@@ -120,11 +120,6 @@ require("packer").startup(function(use)
     })
 
     use({
-        "sunjon/shade.nvim",
-        lock = true,
-    })
-
-    use({
         "saadparwaiz1/cmp_luasnip",
         lock = true,
         requires = { "L3MON4D3/LuaSnip", tag = "v1.1.*" },

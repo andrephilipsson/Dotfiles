@@ -1,18 +1,11 @@
-local has_shade, shade = pcall(require, "shade")
-
-if has_shade then
-    shade.setup({
-        overlay_opacity = 50,
-    })
-end
 local has_material, material = pcall(require, "material")
 
 if not has_material then
     return
 end
 
-vim.g.material_style = "lighter"
--- vim.g.material_style = "deep ocean"
+-- vim.g.material_style = "lighter"
+vim.g.material_style = "deep ocean"
 
 material.setup({
     contrast = {},
