@@ -53,7 +53,7 @@ lspconfig.util.default_config =
         capabilities = capabilities,
     })
 
-local servers = { "clangd", "rust_analyzer", "pyright", "tsserver" }
+local servers = { "clangd", "rust_analyzer", "pyright", "tsserver", "tailwindcss" }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup({})
 end
