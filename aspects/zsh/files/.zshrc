@@ -10,8 +10,6 @@ setopt AUTO_CD                 # [default] .. is shortcut for cd .. (etc)
 setopt AUTO_PARAM_SLASH        # tab completing directory appends a slash
 setopt AUTO_RESUME             # allow simple commands to resume backgrounded jobs
 setopt CLOBBER                 # allow clobbering with >, no need to use >!
-setopt CORRECT                 # [default] command auto-correction
-setopt CORRECT_ALL             # [default] argument auto-correction
 setopt NO_HIST_IGNORE_ALL_DUPS # don't filter non-contiguous duplicates from history
 setopt HIST_FIND_NO_DUPS       # don't show dupes when searching
 setopt HIST_IGNORE_DUPS        # do filter contiguous duplicates from history
