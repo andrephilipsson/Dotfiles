@@ -1,0 +1,6 @@
+[user]
+	name = André Philipsson
+	email = andre@badape.co
+	signingkey = A862538B54B73294
+
+# vim: ft=gitconfig noexpandtab
