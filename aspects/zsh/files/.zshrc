@@ -46,6 +46,7 @@ bindkey "^Z" fg-bg
 source "$HOME/.zsh/path"
 source "$HOME/.zsh/aliases"
 source "$HOME/.zsh/functions"
+source "$HOME/.zsh/hash"
 
 # /etc/motd
 if [ -e /etc/motd ]; then
