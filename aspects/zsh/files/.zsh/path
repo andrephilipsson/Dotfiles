@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# Append to $PATH-like, unless already present.
+# If present, moves it to the end.
+# See also: prepend_to().
+function append_to() {
+  local LOCATION=$1
+  PATH=${PATH//":$LOCATION:"/:} # Delete (potentially multiple) from middle.
+  PATH=${PATH/#"$LOCATION:"/} # Delete from start.
+  PATH=${PATH/%":$LOCATION"/} # Delete from end.
+  PATH="${PATH:+$PATH:}$LOCATION" # Actually append (or if PATH is empty, just set).
+}
+
+# Prepend to $PATH-like, unless already present.
+# If present, moves it to the start.
+# See also: append_to().
+function prepend_to() {
+  local LOCATION=$1
+  PATH=${PATH//":$LOCATION:"/:} # Delete (potentially multiple) from middle.
+  PATH=${PATH/#"$LOCATION:"/} # Delete from start.
+  PATH=${PATH/%":$LOCATION"/} # Delete from end.
+  PATH="$LOCATION${PATH:+:$PATH}" # Actually prepend (or if PATH is empty, just set).
+}
+
+prepend_to /usr/local/bin
+prepend_to /usr/local/sbin
+
+append_to "$HOME/Developer/dotfiles/vendor/git-cipher/bin"
+append_to "$HOME/Library/Application Support/Coursier/bin"
+
+# On ARM Macs, Homebrew will use this instead of /usr/local.
+test -d /opt/homebrew/bin && prepend_to /opt/homebrew/bin
+test -d /opt/homebrew/sbin && prepend_to /opt/homebrew/sbin
+
+# Make sure that we use volta's node version instead of Homebrew's
+test -d $VOLTA_HOME && prepend_to "$VOLTA_HOME/bin"
+
+# If you ever want to see this in easy-to-read form: `echo $PATH | tr : '\n'`
+export PATH

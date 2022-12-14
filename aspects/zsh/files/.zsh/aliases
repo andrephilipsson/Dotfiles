@@ -1,0 +1,15 @@
+#!/bin/sh
+
+alias cat="bat"
+alias e="exit"
+alias d="hash -d"
+alias g="git"
+alias h="history"
+alias j="jump"
+alias l="ls -hF --color=auto"
+alias ll="ls -lAhF --color=auto"
+alias ls="ls -hF --color=auto"
+alias python="python3"
+alias t="tmux"
+alias vim="nvim"
+alias week="date +%V"
