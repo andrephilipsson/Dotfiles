@@ -3,7 +3,7 @@
 	email = andre@philipsson.me
 	signingkey = 7915EDA0D19FE167
 
-[includeIf "gitdir:~/work/badape/"]
+[includeIf "gitdir:~/Developer/badape/"]
 	path = config-badape
 
 [init]
