@@ -1,7 +1,7 @@
 [user]
 	name = André Philipsson
 	email = andre@philipsson.me
-	signingkey = 7915EDA0D19FE167
+	signingkey = 62390537C669397A
 
 [includeIf "gitdir:~/Developer/badape/"]
 	path = config-badape
