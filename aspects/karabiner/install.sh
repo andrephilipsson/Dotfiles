@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[ ! -d "$HOME/.config/karabiner" ] && mkdir -p ~/.config/karabiner
+[ ! -d "$HOME/.config" ] && mkdir -p ~/.config
 
 if ! [ -e $HOME/.config/karabiner ]; then
   ln -sf $(pwd)/files ~/.config/karabiner
