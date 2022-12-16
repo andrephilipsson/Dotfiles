@@ -6,3 +6,6 @@ for ASPECT in aspects/*/; do
         cd ../..
     fi
 done
+
+# Use ssh url instead of https
+git remote set-url origin git@github.com:andrephilipsson/dotfiles.git

@@ -28,7 +28,6 @@ brew "llvm"
 brew "lua-language-server"
 brew "mas"
 brew "neovim"
-brew "op"
 brew "pandoc"
 brew "parallel"
 brew "pinentry-mac"
@@ -79,7 +78,6 @@ cask "zoom"
 cask "font-source-code-pro"
 
 # Apps from the Mac App Store
-mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
 mas "Hand Mirror", id: 1502839586
 mas "iMovie", id: 408981434
@@ -87,4 +85,3 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
-mas "Uno", id: 1584884476

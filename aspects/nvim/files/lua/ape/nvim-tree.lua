@@ -5,7 +5,6 @@ if not has_tree then
 end
 
 tree.setup({
-    create_in_closed_folder = true,
     sort_by = "case_sensitive",
     select_prompts = false,
     filters = {
