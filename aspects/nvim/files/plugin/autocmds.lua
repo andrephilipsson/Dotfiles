@@ -1,16 +1,15 @@
-local highlight_group =
-    vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
-        vim.highlight.on_yank({ timeout = 300 })
-    end,
-    group = highlight_group,
-    pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ timeout = 300 })
+	end,
+	group = highlight_group,
+	pattern = "*",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    callback = function()
-        vim.opt_local.formatoptions:remove("o")
-    end,
+	callback = function()
+		vim.opt_local.formatoptions:remove("o")
+	end,
 })

@@ -1,160 +1,117 @@
 local ensure_packer = function()
-    local fn = vim.fn
-    local install_path = fn.stdpath("data")
-        .. "/site/pack/packer/start/packer.nvim"
-    if fn.empty(fn.glob(install_path)) > 0 then
-        fn.system({
-            "git",
-            "clone",
-            "--depth",
-            "1",
-            "https://github.com/wbthomason/packer.nvim",
-            install_path,
-        })
-        vim.cmd([[packadd packer.nvim]])
-        return true
-    end
-    return false
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({
+			"git",
+			"clone",
+			"--depth",
+			"1",
+			"https://github.com/wbthomason/packer.nvim",
+			install_path,
+		})
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
 end
 
 local packer_bootstrap = ensure_packer()
 
 require("packer").startup(function(use)
-    use({
-        "wbthomason/packer.nvim",
-        lock = true,
-    })
+	-- Package manager
+	use("wbthomason/packer.nvim")
 
-    use({
-        "marko-cerovac/material.nvim",
-        lock = true,
-    })
+	-- Looks
+	use("marko-cerovac/material.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
 
-    use({
-        "nvim-lualine/lualine.nvim",
-        lock = true,
-        requires = { "kyazdani42/nvim-web-devicons", opt = true, lock = true },
-    })
+	-- Git
+	use("lewis6991/gitsigns.nvim")
+	use("tpope/vim-fugitive")
+	use("tpope/vim-rhubarb")
 
-    use({
-        "lewis6991/gitsigns.nvim",
-        lock = true,
-    })
+	-- Completion
+	use({
+		"hrsh7th/nvim-cmp",
+		requires = {
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "L3MON4D3/LuaSnip", tag = "v1.1.*" },
+			{ "hrsh7th/cmp-path" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-nvim-lua" },
+			{ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" },
+			{ "hrsh7th/cmp-emoji" },
+			{ "hrsh7th/cmp-cmdline" },
+			{ "f3fora/cmp-spell" },
+			{ "hrsh7th/cmp-nvim-lsp-signature-help" },
+			{
+				"saadparwaiz1/cmp_luasnip",
+				requires = { "L3MON4D3/LuaSnip", tag = "v1.1.*" },
+			},
+		},
+	})
+	use("github/copilot.vim")
 
-    use({
-        "lukas-reineke/indent-blankline.nvim",
-        lock = true,
-    })
+	-- LSP
+	use({
+		"neovim/nvim-lspconfig",
+		requires = {
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"j-hui/fidget.nvim",
+		},
+	})
+	use("folke/neodev.nvim")
 
-    use({
-        "github/copilot.vim",
-        lock = true,
-    })
+	-- Treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			pcall(require("nvim-treesitter.install").update({ with_sync = true }))
+		end,
+	})
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
-    use({
-        "hrsh7th/nvim-cmp",
-        lock = true,
-    })
+	-- File navigation
+	use({
+		"nvim-tree/nvim-tree.lua",
+		requires = "nvim-tree/nvim-web-devicons",
+	})
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "make",
+		cond = vim.fn.executable("make") == 1,
+	})
 
-    use({
-        "petertriho/cmp-git",
-        lock = true,
-        requires = "nvim-lua/plenary.nvim",
-    })
+	-- Utilities
+	use({
+		"numToStr/Comment.nvim",
+		tag = "v0.7.*",
+	})
+	use({
+		"kylechui/nvim-surround",
+		tag = "v1.0.0",
+	})
 
-    use({
-        "hrsh7th/cmp-path",
-        lock = true,
-    })
-
-    use({
-        "hrsh7th/cmp-buffer",
-        lock = true,
-    })
-
-    use({
-        "hrsh7th/cmp-nvim-lua",
-        lock = true,
-    })
-
-    use({
-        "hrsh7th/cmp-nvim-lsp",
-        lock = true,
-    })
-
-    use({
-        "hrsh7th/cmp-emoji",
-        lock = true,
-    })
-
-    use({
-        "hrsh7th/cmp-cmdline",
-        lock = true,
-    })
-
-    use({
-        "f3fora/cmp-spell",
-        lock = true,
-    })
-
-    use({
-        "hrsh7th/cmp-nvim-lsp-signature-help",
-        lock = true,
-    })
-
-    use({
-        "neovim/nvim-lspconfig",
-        lock = true,
-    })
-
-    use({
-        "folke/neodev.nvim",
-        lock = true,
-    })
-
-    use({ "L3MON4D3/LuaSnip", tag = "v1.1.*" })
-
-    use({
-        "numToStr/Comment.nvim",
-        tag = "v0.7.*",
-    })
-
-    use({
-        "saadparwaiz1/cmp_luasnip",
-        lock = true,
-        requires = { "L3MON4D3/LuaSnip", tag = "v1.1.*" },
-    })
-
-    use({
-        "nvim-treesitter/nvim-treesitter",
-        lock = true,
-        run = function()
-            local ts_update =
-                require("nvim-treesitter.install").update({ with_sync = true })
-            ts_update()
-        end,
-    })
-
-    use({
-        "JoosepAlviste/nvim-ts-context-commentstring",
-        lock = true,
-    })
-
-    use({
-        "nvim-tree/nvim-tree.lua",
-        requires = {
-            "nvim-tree/nvim-web-devicons",
-            lock = true,
-        },
-        lock = true,
-    })
-
-    if packer_bootstrap then
-        require("packer").sync()
-    end
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)
 
+-- Automatically source and re-compile packer whenever this file is saved
+local packer_group = vim.api.nvim_create_augroup("Packer", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePost", {
-    pattern = "plugins.lua",
-    command = "PackerCompile",
+	command = "source <afile> | PackerCompile",
+	group = packer_group,
+	pattern = "plugins.lua",
 })
