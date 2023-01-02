@@ -102,6 +102,7 @@ require("packer").startup(function(use)
 		"kylechui/nvim-surround",
 		tag = "v1.0.0",
 	})
+  use("tpope/vim-eunuch")
 
 	if packer_bootstrap then
 		require("packer").sync()
