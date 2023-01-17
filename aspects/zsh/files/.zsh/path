@@ -32,6 +32,9 @@ append_to "$HOME/Library/Application Support/Coursier/bin"
 test -d /opt/homebrew/bin && prepend_to /opt/homebrew/bin
 test -d /opt/homebrew/sbin && prepend_to /opt/homebrew/sbin
 
+test -d /opt/homebrew/opt/ruby/bin && prepend_to /opt/homebrew/opt/ruby/bin
+test -d /opt/homebrew/lib/ruby/gems/*/bin/ && prepend_to /opt/homebrew/lib/ruby/gems/*/bin/
+
 # Make sure that we use volta's node version instead of Homebrew's
 test -d $VOLTA_HOME && prepend_to "$VOLTA_HOME/bin"
 
