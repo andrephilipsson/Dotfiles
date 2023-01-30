@@ -103,6 +103,7 @@ require("packer").startup(function(use)
 		tag = "v1.0.0",
 	})
   use("tpope/vim-eunuch")
+  use("wincent/loupe")
 
 	if packer_bootstrap then
 		require("packer").sync()
