@@ -69,7 +69,7 @@ mason.setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { "clangd", "rust_analyzer", "pyright", "tsserver", "sumneko_lua", "tailwindcss", "prismals", "graphql", "ruby_ls" }
+local servers = { "clangd", "rust_analyzer", "pyright", "tsserver", "lua_ls", "tailwindcss", "prismals", "graphql", "ruby_ls" }
 
 -- Ensure the servers above are installed
 mason_lsp.setup({
@@ -87,7 +87,7 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	settings = {
