@@ -1,0 +1,11 @@
+magic = com.wincent.git-cipher
+url = https://github.com/wincent/git-cipher/blob/v2.0.0-pre.2/PROTOCOL.md
+version = 1
+algorithm = aes-256-cbc
+filename = "ssh/ssh.symlink/config"
+iv = 662c4c6028078fc1b3dade90f74b16a9
+ciphertext =
+a6ac57bd09c7e55aa178f4fbbdad66791e77aa30d26e3a583c3e0da7f0886ff09433057c
+923a602f39634ba1e039d372211552ea220e24e7ac964c07e435d02c5da9de0da6dfb73b
+98871ad3187c3e31d746492e932b4b8c9c0337c66c84590a
+hmac = 61d8d76a8f2ee08f3f65e113fdf144dba10199b9095852b5598ea1e0b5f29d9b
