@@ -10,5 +10,9 @@
   "buffer_font_size": 15,
   "theme": "One Light",
   "tab_size": 2,
-  "vim_mode": true
+  "vim_mode": true,
+  "journal": {
+    "hour_format": "hour24",
+    "path": "~/Documents"
+  }
 }
