@@ -5,10 +5,10 @@
         "revision": "c02dfff991181c3ad1721138e2ac8bdce3c6ee5d"
       },
       "homebrew/cask-fonts": {
-        "revision": "3b89630fd81b2b6b4b0a9048d58c152d093adf8f"
+        "revision": "cdbf6ebbbd29e7a4265ac19a9ac7c50f4c465709"
       },
       "homebrew/services": {
-        "revision": "4206f0012d166d86402d69867eca70fb36616c9a"
+        "revision": "d39f864ddffda7a8c47dc95cd284b50683db9653"
       },
       "tavianator/tap": {
         "revision": "ab260426162e69c0ba95e7c323e5efc1d6a63217"
@@ -17,7 +17,7 @@
         "revision": "c99e4b42c114cfb84984627bd7ffc810e026cacb"
       },
       "homebrew/cask-versions": {
-        "revision": "d114a898766e3cd9b13f62db82163144c7db6eba"
+        "revision": "c4e37292895ff3aa58852596369bdac655f76ab2"
       }
     },
     "brew": {
@@ -1029,45 +1029,45 @@
         "bottle": false
       },
       "firebase-cli": {
-        "version": "12.4.0",
+        "version": "12.4.1",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
             "arm64_ventura": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:e3d9a9271f6223b139cc8045db122b5746a542338efb3d76216831e86d27e962",
-              "sha256": "e3d9a9271f6223b139cc8045db122b5746a542338efb3d76216831e86d27e962"
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:890b092d831b94b8e60812da25621b73211d0b3941a824098835242995a8a1ba",
+              "sha256": "890b092d831b94b8e60812da25621b73211d0b3941a824098835242995a8a1ba"
             },
             "arm64_monterey": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:e3d9a9271f6223b139cc8045db122b5746a542338efb3d76216831e86d27e962",
-              "sha256": "e3d9a9271f6223b139cc8045db122b5746a542338efb3d76216831e86d27e962"
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:d0679521016564f8b74195f8533256051117408c2094989d7ca1785f8ccc7001",
+              "sha256": "d0679521016564f8b74195f8533256051117408c2094989d7ca1785f8ccc7001"
             },
             "arm64_big_sur": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:e3d9a9271f6223b139cc8045db122b5746a542338efb3d76216831e86d27e962",
-              "sha256": "e3d9a9271f6223b139cc8045db122b5746a542338efb3d76216831e86d27e962"
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:acf9660de7ac25a6bdca4acbabdd3390d23d0390d1ee5bf0763820aff3dee010",
+              "sha256": "acf9660de7ac25a6bdca4acbabdd3390d23d0390d1ee5bf0763820aff3dee010"
             },
             "ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:ddb7821cf2ea8cb5af405eac27d90293980d30ac24bdafdcfd5cde58bdde4270",
-              "sha256": "ddb7821cf2ea8cb5af405eac27d90293980d30ac24bdafdcfd5cde58bdde4270"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:4978666c96bc9cc20fea49ab82e5864e1fa7d602429b7c192dc9eff582fb042e",
+              "sha256": "4978666c96bc9cc20fea49ab82e5864e1fa7d602429b7c192dc9eff582fb042e"
             },
             "monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:ddb7821cf2ea8cb5af405eac27d90293980d30ac24bdafdcfd5cde58bdde4270",
-              "sha256": "ddb7821cf2ea8cb5af405eac27d90293980d30ac24bdafdcfd5cde58bdde4270"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:4978666c96bc9cc20fea49ab82e5864e1fa7d602429b7c192dc9eff582fb042e",
+              "sha256": "4978666c96bc9cc20fea49ab82e5864e1fa7d602429b7c192dc9eff582fb042e"
             },
             "big_sur": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:ddb7821cf2ea8cb5af405eac27d90293980d30ac24bdafdcfd5cde58bdde4270",
-              "sha256": "ddb7821cf2ea8cb5af405eac27d90293980d30ac24bdafdcfd5cde58bdde4270"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:4978666c96bc9cc20fea49ab82e5864e1fa7d602429b7c192dc9eff582fb042e",
+              "sha256": "4978666c96bc9cc20fea49ab82e5864e1fa7d602429b7c192dc9eff582fb042e"
             },
             "x86_64_linux": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:503138f10247f9f5e8db767dad5947d207d9d2dff55c018ce0b445923c941a82",
-              "sha256": "503138f10247f9f5e8db767dad5947d207d9d2dff55c018ce0b445923c941a82"
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:11a4f0bcb60222c61840f0442b268790bcf976b0b950b452c88e20fa93085c4d",
+              "sha256": "11a4f0bcb60222c61840f0442b268790bcf976b0b950b452c88e20fa93085c4d"
             }
           }
         }
@@ -1258,7 +1258,7 @@
     },
     "cask": {
       "1password": {
-        "version": "8.10.7",
+        "version": "8.10.8",
         "options": {
           "full_name": "1password"
         }
@@ -1276,7 +1276,7 @@
         }
       },
       "arc": {
-        "version": "0.109.0,39665",
+        "version": "0.109.1,39787",
         "options": {
           "full_name": "arc"
         }
@@ -1294,7 +1294,7 @@
         }
       },
       "figma": {
-        "version": "116.10.8",
+        "version": "116.10.9",
         "options": {
           "full_name": "figma"
         }
@@ -1372,13 +1372,13 @@
         }
       },
       "hey": {
-        "version": "1.2.11",
+        "version": "1.2.12",
         "options": {
           "full_name": "hey"
         }
       },
       "google-cloud-sdk": {
-        "version": "436.0.0",
+        "version": "437.0.0",
         "options": {
           "full_name": "google-cloud-sdk"
         }
@@ -1400,12 +1400,12 @@
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "4.0.25",
+        "HOMEBREW_VERSION": "4.0.26",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.1.0.1.1683849156",
         "Xcode": "14.3.1",
-        "macOS": "13.4"
+        "macOS": "13.4.1"
       }
     }
   }
