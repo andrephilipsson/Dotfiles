@@ -90,3 +90,6 @@ killall Music
 defaults write NSGlobalDomain "ApplePressAndHoldEnabled" -bool "false"
 defaults write NSGlobalDomain "KeyRepeat" -int "1"
 defaults write NSGlobalDomain "InitialKeyRepeat" -int "10"
+
+# Fonts
+defaults -currentHost write -g AppleFontSmoothing -int 0

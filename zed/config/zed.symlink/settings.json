@@ -7,6 +7,10 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false
+  },
   "buffer_font_size": 15,
   "theme": "One Light",
   "tab_size": 2,
