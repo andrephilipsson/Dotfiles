@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo gem install cocoapods
+sudo /opt/homebrew/opt/ruby/bin/gem install cocoapods

@@ -1,3 +1,3 @@
-[submodule "vendor/git-cipher"]
+[submodule "git-cipher"]
 	path = vendor/git-cipher
-	url = git@github.com:andrephilipsson/git-cipher.git
+	url = https://github.com/andrephilipsson/git-cipher.git
