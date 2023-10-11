@@ -1,4 +1,4 @@
-export EDITOR="zed"
+export EDITOR="nvim"
 
 # Override insanely low open file limits on macOS.
 ulimit -n 65536
