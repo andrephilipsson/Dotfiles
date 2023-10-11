@@ -8,3 +8,4 @@ alias l="gls -hF --color=auto"
 alias ll="gls -lAhF --color=auto"
 alias ls="gls -hF --color=auto"
 alias week="date +%V"
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
