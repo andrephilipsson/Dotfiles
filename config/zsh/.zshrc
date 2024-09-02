@@ -12,6 +12,7 @@ export GOPATH=$HOME/go
 PATH="$GOPATH/bin:$PATH"
 PATH="/opt/homebrew/bin:$PATH"
 PATH="$HOME/Library/Application Support/Coursier/bin:$PATH"
+PATH="$HOME/Developer/dotfiles/bin:$PATH"
 PATH=".:$PATH"
 export PATH
 
