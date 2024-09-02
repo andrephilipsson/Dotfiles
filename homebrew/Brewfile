@@ -1,0 +1,77 @@
+tap "coursier/formulas"
+tap "grishka/grishka"
+tap "homebrew/bundle"
+tap "homebrew/services"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Fast and simple Node.js version manager
+brew "fnm"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Mac App Store command-line interface
+brew "mas"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
+# Download videos from https://www.svtplay.se/
+brew "svtplay-dl"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Launcher for Coursier
+brew "coursier/formulas/coursier"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
+# Chromium based browser
+cask "arc"
+# Multi-cloud backup application
+cask "arq"
+# Screen capturing tool
+cask "cleanshot"
+# Database version management tool
+cask "dbngin"
+# Voice and text chat software
+cask "discord"
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+cask "font-source-code-pro"
+# Access the HEY email service
+cask "hey"
+# Menu bar manager
+cask "jordanbaird-ice"
+# Keyboard customiser
+cask "karabiner-elements"
+# GPU-based terminal emulator
+cask "kitty"
+# Software for Logitech devices
+cask "logi-options-plus"
+# Tool to create text-based art
+cask "monodraw"
+# Unofficial Google Nearby Share app
+cask "neardrop"
+# Calendar for professionals and teams
+cask "notion-calendar"
+# Replacement for Docker Desktop
+cask "orbstack"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Music streaming service
+cask "spotify"
+# Native GUI tool for relational databases
+cask "tableplus"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin@17"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin@21"
+# Multiplayer code editor
+cask "zed"
+mas "Hand Mirror", id: 1502839586
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
