@@ -52,7 +52,7 @@ cask "karabiner-elements"
 # GPU-based terminal emulator
 cask "kitty"
 # Software for Logitech devices
-cask "logi-options-plus"
+cask "logi-options+"
 # Tool to create text-based art
 cask "monodraw"
 # Unofficial Google Nearby Share app
