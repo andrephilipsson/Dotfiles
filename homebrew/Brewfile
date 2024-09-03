@@ -63,6 +63,8 @@ cask "notion-calendar"
 cask "orbstack"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Team communication and collaboration software
+cask "slack"
 # Music streaming service
 cask "spotify"
 # Native GUI tool for relational databases
