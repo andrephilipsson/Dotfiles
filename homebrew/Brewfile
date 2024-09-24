@@ -2,42 +2,22 @@ tap "coursier/formulas"
 tap "grishka/grishka"
 tap "homebrew/bundle"
 tap "homebrew/services"
-# Play, record, convert, and stream audio and video
-brew "ffmpeg"
-# Fast and simple Node.js version manager
-brew "fnm"
-# GitHub command-line tool
-brew "gh"
-# Distributed revision control system
-brew "git"
-# Syntax-highlighting pager for git and diff output
-brew "git-delta"
-# GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # Mac App Store command-line interface
 brew "mas"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Download videos from https://www.svtplay.se/
-brew "svtplay-dl"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
-# Launcher for Coursier
-brew "coursier/formulas/coursier"
+# Manages environments across the software lifecycle
+cask "flox"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# Command-line interface for 1Password
-cask "1password-cli"
 # Chromium based browser
 cask "arc"
 # Multi-cloud backup application
 cask "arq"
 # Screen capturing tool
 cask "cleanshot"
-# Database version management tool
-cask "dbngin"
 # Voice and text chat software
 cask "discord"
 # Client for the Dropbox cloud storage service
@@ -69,10 +49,6 @@ cask "slack"
 cask "spotify"
 # Native GUI tool for relational databases
 cask "tableplus"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin@17"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin@21"
 # Multiplayer code editor
 cask "zed"
 mas "Hand Mirror", id: 1502839586
