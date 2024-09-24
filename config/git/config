@@ -51,7 +51,7 @@
 	autoSetupRemote = true
 
 [gpg]
-	program = /opt/homebrew/bin/gpg
+	program = /Users/andre/.flox/run/aarch64-darwin.default/bin/gpg
 
 [rebase]
 	updateRefs = true
