@@ -147,7 +147,7 @@
         }
       },
       "arc": {
-        "version": "1.61.0,53949",
+        "version": "1.61.1,54104",
         "options": {
           "full_name": "arc"
         }
@@ -207,7 +207,7 @@
         }
       },
       "kitty": {
-        "version": "0.36.2",
+        "version": "0.36.3",
         "options": {
           "full_name": "kitty"
         }
@@ -237,7 +237,7 @@
         }
       },
       "orbstack": {
-        "version": "1.7.2_17389",
+        "version": "1.7.4_17448",
         "options": {
           "full_name": "orbstack"
         }
@@ -261,7 +261,7 @@
         }
       },
       "zed": {
-        "version": "0.153.6",
+        "version": "0.153.7",
         "options": {
           "full_name": "zed"
         }
@@ -276,6 +276,18 @@
         "version": "4.40.128",
         "options": {
           "full_name": "slack"
+        }
+      },
+      "figma": {
+        "version": "124.3.3",
+        "options": {
+          "full_name": "figma"
+        }
+      },
+      "notion": {
+        "version": "3.15.0",
+        "options": {
+          "full_name": "notion"
         }
       }
     },

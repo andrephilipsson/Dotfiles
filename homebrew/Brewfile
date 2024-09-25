@@ -1,13 +1,13 @@
-tap "coursier/formulas"
 tap "grishka/grishka"
 tap "homebrew/bundle"
-tap "homebrew/services"
 # Mac App Store command-line interface
 brew "mas"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Collaborative team software
+cask "figma"
 # Manages environments across the software lifecycle
 cask "flox"
 # Password manager that keeps all passwords secure behind one password
@@ -37,6 +37,8 @@ cask "logi-options+"
 cask "monodraw"
 # Unofficial Google Nearby Share app
 cask "neardrop"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Calendar for professionals and teams
 cask "notion-calendar"
 # Replacement for Docker Desktop
