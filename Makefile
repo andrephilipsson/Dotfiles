@@ -17,6 +17,7 @@ home:
 	@for file in $(HOME_FILES); do \
 		target=$(HOME_PATH)/$$(echo $$file | sed 's|home/||'); \
 		echo "Linking $$file to $$target"; \
+		mkdir -p $$(dirname $$target); \
 		ln -sf $(DOTFILE_PATH)/$$file $$target; \
 	done
 
