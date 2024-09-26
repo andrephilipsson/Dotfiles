@@ -1,5 +1,4 @@
-export LANG=en_SE.UTF-8
-export LC_TIME=en_SE.UTF-8
+export LANG=en_US.UTF-8
 export ZDOTDIR="$HOME/.config/zsh"
 
 if [[ $(uname -s) = Darwin ]]; then
