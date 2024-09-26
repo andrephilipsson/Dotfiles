@@ -35,6 +35,7 @@ eza.pkg-path = "eza"
 fd.pkg-path = "fd"
 openssh.pkg-path = "openssh"
 glow.pkg-path = "glow"
+skim.pkg-path = "skim"
 
 # Set environment variables in the `[vars]` section. These variables may not
 # reference one another, and are added to the environment without first

@@ -69,6 +69,9 @@
       "ripgrep": {
         "pkg-path": "ripgrep"
       },
+      "skim": {
+        "pkg-path": "skim"
+      },
       "svtplay-dl": {
         "pkg-path": "svtplay-dl"
       },
@@ -2784,6 +2787,126 @@
       ],
       "outputs": {
         "out": "/nix/store/kfwa3x3v9b51j2nszh61adm447jv4nvk-ripgrep-14.1.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "skim",
+      "broken": false,
+      "derivation": "/nix/store/1anszdsk5rsdv3bq4jy7qmnhkj94aj0h-skim-0.10.4.drv",
+      "description": "Command-line fuzzy finder written in Rust",
+      "install_id": "skim",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9357f4f23713673f310988025d9dc261c20e70c6",
+      "name": "skim-0.10.4",
+      "pname": "skim",
+      "rev": "9357f4f23713673f310988025d9dc261c20e70c6",
+      "rev_count": 684053,
+      "rev_date": "2024-09-21T16:51:44Z",
+      "scrape_date": "2024-09-24T03:16:35Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.10.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/81lqsfkik92x958kl7hizrfn47zmdbiy-skim-0.10.4",
+        "vim": "/nix/store/807r17jswqiksiv3xym3bv5k9iibp1sv-skim-0.10.4-vim"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "skim",
+      "broken": false,
+      "derivation": "/nix/store/q1lsr106wyndbba5x0a3rkppp4armf29-skim-0.10.4.drv",
+      "description": "Command-line fuzzy finder written in Rust",
+      "install_id": "skim",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9357f4f23713673f310988025d9dc261c20e70c6",
+      "name": "skim-0.10.4",
+      "pname": "skim",
+      "rev": "9357f4f23713673f310988025d9dc261c20e70c6",
+      "rev_count": 684053,
+      "rev_date": "2024-09-21T16:51:44Z",
+      "scrape_date": "2024-09-24T03:16:35Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.10.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/ys1abvpm6ydcl3ihlcmdav6i0zhnicf3-skim-0.10.4",
+        "vim": "/nix/store/xk4w5q1w55n4y93l3q0gn0qscvagwv8h-skim-0.10.4-vim"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "skim",
+      "broken": false,
+      "derivation": "/nix/store/sxz7gb367lz3xjf7m1qxrfwf7ll1r7fg-skim-0.10.4.drv",
+      "description": "Command-line fuzzy finder written in Rust",
+      "install_id": "skim",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9357f4f23713673f310988025d9dc261c20e70c6",
+      "name": "skim-0.10.4",
+      "pname": "skim",
+      "rev": "9357f4f23713673f310988025d9dc261c20e70c6",
+      "rev_count": 684053,
+      "rev_date": "2024-09-21T16:51:44Z",
+      "scrape_date": "2024-09-24T03:16:35Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.10.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/3rw0mz0h0qjd7lsa7svdxqn2bvd3x4h9-skim-0.10.4",
+        "vim": "/nix/store/gh93pf3ry855d188m8k2pcb3vbjbm0m6-skim-0.10.4-vim"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "skim",
+      "broken": false,
+      "derivation": "/nix/store/a4bpd1imj167h849r6ay2ldj92il4jsv-skim-0.10.4.drv",
+      "description": "Command-line fuzzy finder written in Rust",
+      "install_id": "skim",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=9357f4f23713673f310988025d9dc261c20e70c6",
+      "name": "skim-0.10.4",
+      "pname": "skim",
+      "rev": "9357f4f23713673f310988025d9dc261c20e70c6",
+      "rev_count": 684053,
+      "rev_date": "2024-09-21T16:51:44Z",
+      "scrape_date": "2024-09-24T03:16:35Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.10.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/ad45gg53nif0vqnj7sicdj07b5v330l6-skim-0.10.4",
+        "vim": "/nix/store/c9a829x62vhh14rjn4l7p8jh62bsyd40-skim-0.10.4-vim"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
