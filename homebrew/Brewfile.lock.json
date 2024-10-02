@@ -8,10 +8,10 @@
         "revision": "5a594f99fb2785382f13126a75344ab4d84c41e4"
       },
       "homebrew/bundle": {
-        "revision": "8b0df4d29278e734a00121dd453fe9758e5486ed"
+        "revision": "2bb4d7062eecb3dcd5007c71691e32483107c250"
       },
       "homebrew/services": {
-        "revision": "d4e97512f68222c65048e372c7c2586c5ef3d2b1"
+        "revision": "5e5e076745873c406dd4b94149de3c3ed30b6a6c"
       }
     },
     "brew": {
@@ -134,20 +134,14 @@
       }
     },
     "cask": {
-      "flox": {
-        "version": "1.3.2",
-        "options": {
-          "full_name": "flox"
-        }
-      },
       "1password": {
-        "version": "8.10.44",
+        "version": "8.10.46",
         "options": {
           "full_name": "1password"
         }
       },
       "arc": {
-        "version": "1.61.1,54104",
+        "version": "1.61.2,54148",
         "options": {
           "full_name": "arc"
         }
@@ -164,22 +158,28 @@
           "full_name": "cleanshot"
         }
       },
-      "dbngin": {
-        "version": "7.2,72",
-        "options": {
-          "full_name": "dbngin"
-        }
-      },
       "discord": {
-        "version": "0.0.320",
+        "version": "0.0.321",
         "options": {
           "full_name": "discord"
         }
       },
       "dropbox": {
-        "version": "208.4.5824",
+        "version": "209.4.3647",
         "options": {
           "full_name": "dropbox"
+        }
+      },
+      "figma": {
+        "version": "124.3.3",
+        "options": {
+          "full_name": "figma"
+        }
+      },
+      "flox": {
+        "version": "1.3.3",
+        "options": {
+          "full_name": "flox"
         }
       },
       "font-source-code-pro": {
@@ -189,13 +189,13 @@
         }
       },
       "hey": {
-        "version": "1.2.14",
+        "version": "1.2.15",
         "options": {
           "full_name": "hey"
         }
       },
       "jordanbaird-ice": {
-        "version": "0.11.4",
+        "version": "0.11.6",
         "options": {
           "full_name": "jordanbaird-ice"
         }
@@ -207,15 +207,15 @@
         }
       },
       "kitty": {
-        "version": "0.36.3",
+        "version": "0.36.4",
         "options": {
           "full_name": "kitty"
         }
       },
-      "logi-options-plus": {
-        "version": null,
+      "logi-options+": {
+        "version": "1.82.618412",
         "options": {
-          "full_name": "logi-options-plus"
+          "full_name": "logi-options+"
         }
       },
       "monodraw": {
@@ -228,6 +228,12 @@
         "version": "2.1.0",
         "options": {
           "full_name": "neardrop"
+        }
+      },
+      "notion": {
+        "version": "3.15.0",
+        "options": {
+          "full_name": "notion"
         }
       },
       "notion-calendar": {
@@ -243,13 +249,19 @@
         }
       },
       "raycast": {
-        "version": "1.83.1",
+        "version": "1.83.2",
         "options": {
           "full_name": "raycast"
         }
       },
+      "slack": {
+        "version": "4.40.128",
+        "options": {
+          "full_name": "slack"
+        }
+      },
       "spotify": {
-        "version": "1.2.45.454",
+        "version": "1.2.47.364",
         "options": {
           "full_name": "spotify"
         }
@@ -261,33 +273,15 @@
         }
       },
       "zed": {
-        "version": "0.153.7",
+        "version": "0.154.4",
         "options": {
           "full_name": "zed"
         }
       },
-      "logi-options+": {
-        "version": "1.82.618412",
+      "zoom": {
+        "version": "6.2.3.40682",
         "options": {
-          "full_name": "logi-options+"
-        }
-      },
-      "slack": {
-        "version": "4.40.128",
-        "options": {
-          "full_name": "slack"
-        }
-      },
-      "figma": {
-        "version": "124.3.3",
-        "options": {
-          "full_name": "figma"
-        }
-      },
-      "notion": {
-        "version": "3.15.0",
-        "options": {
-          "full_name": "notion"
+          "full_name": "zoom"
         }
       }
     },
@@ -313,7 +307,7 @@
   "system": {
     "macos": {
       "sequoia": {
-        "HOMEBREW_VERSION": "4.3.24",
+        "HOMEBREW_VERSION": "4.4.0",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "16.0.0.0.1.1724870825",

@@ -1,15 +1,13 @@
+tap "coursier/formulas"
 tap "grishka/grishka"
 tap "homebrew/bundle"
+tap "homebrew/services"
 # Mac App Store command-line interface
 brew "mas"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
-# Collaborative team software
-cask "figma"
-# Manages environments across the software lifecycle
-cask "flox"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Chromium based browser
@@ -22,6 +20,10 @@ cask "cleanshot"
 cask "discord"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+# Collaborative team software
+cask "figma"
+# Manages environments across the software lifecycle
+cask "flox"
 cask "font-source-code-pro"
 # Access the HEY email service
 cask "hey"
@@ -53,6 +55,8 @@ cask "spotify"
 cask "tableplus"
 # Multiplayer code editor
 cask "zed"
+# Video communication and virtual meeting platform
+cask "zoom"
 mas "Hand Mirror", id: 1502839586
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
