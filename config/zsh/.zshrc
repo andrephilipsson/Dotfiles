@@ -117,6 +117,7 @@ alias ll="ls -la"
 alias l="ls -l"
 alias cat="bat"
 alias find="command fd"
+alias j="jump"
 
 #
 # Bindings
