@@ -19,7 +19,6 @@ cask "flox"                # Manages environments across the software lifecycle
 cask "hey"                 # Access the HEY email service
 cask "jordanbaird-ice"     # Menu bar manager
 cask "karabiner-elements"  # Keyboard customiser
-cask "linear-linear"       # App to manage software development and track bugs
 cask "logi-options+"       # Software for Logitech devices
 cask "monodraw"            # Tool to create text-based art
 cask "obsidian"            # Knowledge base that works on top of a local folder of plain text Markdown files
