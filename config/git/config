@@ -54,4 +54,5 @@
 	program = /Users/andre/.flox/run/aarch64-darwin.default/bin/gpg
 
 [rebase]
+	autosquash = true
 	updateRefs = true
