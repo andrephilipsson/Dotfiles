@@ -19,6 +19,7 @@
   "scrollbar": {
     "show": "never"
   },
+  "max_tabs": 5,
   "tab_bar": {
     "show": false
   },
