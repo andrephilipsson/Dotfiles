@@ -7,7 +7,6 @@ brew "mas"                 # Mac App Store command-line interface
 brew "pinentry-mac"        # Pinentry for GPG on Mac
 
 # Casks
-cask "ghostty"             # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "1password"           # Password manager that keeps all passwords secure behind one password
 cask "arc"                 # Chromium based browser
 cask "arq"                 # Multi-cloud backup application
@@ -16,6 +15,7 @@ cask "discord"             # Voice and text chat software
 cask "dropbox"             # Client for the Dropbox cloud storage service
 cask "figma"               # Collaborative team software
 cask "flox"                # Manages environments across the software lifecycle
+cask "ghostty"             # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "hey"                 # Access the HEY email service
 cask "jordanbaird-ice"     # Menu bar manager
 cask "karabiner-elements"  # Keyboard customiser
@@ -27,6 +27,7 @@ cask "raycast"             # Control your tools with a few keystrokes
 cask "slack"               # Team communication and collaboration software
 cask "spotify"             # Music streaming service
 cask "tableplus"           # Native GUI tool for relational databases
+cask "tailscale"           # Mesh VPN based on WireGuard
 cask "zed"                 # Multiplayer code editor
 
 # Fonts
