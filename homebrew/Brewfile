@@ -16,6 +16,7 @@ cask "dropbox"             # Client for the Dropbox cloud storage service
 cask "figma"               # Collaborative team software
 cask "flox"                # Manages environments across the software lifecycle
 cask "ghostty"             # Terminal emulator that uses platform-native UI and GPU acceleration
+cask "google-chrome"       # Web browser
 cask "hey"                 # Access the HEY email service
 cask "jordanbaird-ice"     # Menu bar manager
 cask "karabiner-elements"  # Keyboard customiser
