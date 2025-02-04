@@ -12,6 +12,7 @@ alias t="tmux"
 
 fish_add_path "$HOME/Developer/dotfiles/bin"
 fish_add_path "/opt/homebrew/bin"
+fish_add_path "/usr/local/bin"
 
 # Always activate the default flox environment
 flox activate -m run -d $HOME | source
